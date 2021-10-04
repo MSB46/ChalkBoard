@@ -3,4 +3,4 @@
 ## Contributions
 ### Sitemap by Elvis:
 
-![Sitemap](images\355-Project Sitemap.png)
+![Sitemap](https://raw.githubusercontent.com/MSB46/ChalkBoard/main/images/355%20-%20Project%20Sitemap.PNG)
