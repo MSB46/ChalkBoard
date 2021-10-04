@@ -1,2 +1,4 @@
-# ChalkBoard
-CS355 Project
+# ChalkBoard - CS355 Project
+
+## Contributions
+### Sitemap by Elvis:
