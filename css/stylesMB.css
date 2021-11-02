@@ -1,0 +1,104 @@
+/*Style for navigation bar*/
+.navBar {
+    display: inherit;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 6px;
+    background-color: hsla(100, 2%, 20%, 1);
+}
+
+.navBar a {
+    color: white
+}
+
+.log-out {
+    float: right;
+}
+/*Style for breadcrumb*/
+ul.breadcrumb li {
+    display: inline;
+}
+
+ul.breadcrumb li + li:before {
+    content: " > ";
+}
+/*Style for tables and table info*/
+table {
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 10px 40px;
+    text-align: left;
+    font-size: 1.05em;
+}
+
+.sectionTitle {
+    text-align: center;
+}
+
+.info {
+    float: none;
+    margin: 0 auto 40px auto;
+}
+
+.table-left {
+    float: left;
+    clear: both;
+}
+/*Style for search bar*/
+.search-container .form-input {
+    float: right;
+    display: block;
+    position: absolute;
+    left: 40%;
+    width: 20%;
+}
+/*Style of Login and register related elements */
+.userCreds, .loginArea {
+    max-width: 550px;
+    height: 50vh;
+    border: 1px solid black;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 25px 5px;
+}
+.loginArea{
+    background: url("../img/chalkboardImg.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 85px 200px;
+}
+
+.logo img{
+    max-width: 300px;
+    height:auto;
+    margin: 0 auto;
+}
+
+.logoDiv {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 10px auto;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    width: 90%;
+    margin: 7px 0;
+    box-sizing: border-box;
+}
+
+button {
+    margin: 10px 0;
+}
+
+.classSection {
+    padding: 40px 0 0 0;
+}
+
+.classInfo {
+    float: none;
+    margin: 0 auto 45px auto;
+}
+
+

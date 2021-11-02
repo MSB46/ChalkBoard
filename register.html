@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+    Name: Michael Boodoosingh
+    Date: 11/1/2021
+    Course: CS 355
+    This is the register.html page for the ChalkBoard website. At the moment, it includes
+    four form input elements for username, password, firstname, and lastname. However, it is only for show at the moment
+    since the goal is to implement to HTML first. There is also a link to the login page. Clicking on the logo leads to index.html
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/stylesMB.css">
+</head>
+<body>
+    <div class="logoDiv">
+        <a class="logo" href="index.html"> <img src="img/chalkboardLogo.png" alt="chalkboard logo"> </a>
+    </div>
+    <div class="userCreds">
+        <h3>Register</h3>
+        <form id="registerForm">
+            <input class="cred-input" placeholder="Email" type="email" name="newEmail" id="newEmail">
+            <input class="cred-input" placeholder="Password" type="password" name="password" id="passwordUser">
+            <input class="cred-input" placeholder="First name?" type="text" name="first" id="first">
+            <input class="cred-input" placeholder="Last name?" type="text" name="last" id="last">
+            <button class="form-button" type="submit" id="registerButton">Register</button>
+        </form>
+        <a href="login.html"> Already have an account? Sign in here! </a>
+    </div>
+</body>
+</html>
