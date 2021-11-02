@@ -149,7 +149,7 @@ tr:nth-child(odd) {background: #FFF}
 }
 
 .student-assignments{
-  background-image: url("/img/assignments-pic.png");
+  background-image: url("../img/assignments-pic.png");
   background-repeat: round;
   background-attachment: local;
   background-size: 200px;
