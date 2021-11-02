@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../js/script.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="../home.html" class="active">ChalkBoard</a>
+        <a href="./student.html">Student summary</a>
+        <div class="dropdown">
+          <button class="dropbtn">Go too my
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="./scourses.html">Courses</a>
+            <!-- <a href="#lol">Schedule</a> -->
+            
+          </div>
+        </div>
+        <a href="./enroll.html">Course catalog</a> 
+        <a href="../../index.html">Log out</a>
+       
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+      <div class="course-container">
+          <!-- With javascript it will collect all the courses that a students is
+        enrolled in -->
+        
+          <div class="courses">
+              <h1><span class="subject">Math</span></h1>
+              <h2>Teacher's Name: <span class="teacher-name">Ms. Laura</span></h2>
+              <h2>Class time: <span class="class-time">Th/Fr 1:30pm - 2:30pm</span></h2>
+              <a href="./sassignments.html"><button class="goto-assignments">See assignments</button></a>
+            </div>
+          <div class="courses">
+              <h1><span class="subject">Science</span></h1>
+              <h2>Teacher's Name: <span class="teacher-name">Mr. Fitz</span></h2>
+              <h2>Class time: <span class="class-time">Mon/Wed 10:30am - 11:30am</span></h2>
+              <a href="./sassignments.html"><button class="goto-assignments">See assignments</button></a>
+            </div>
+          <div class="courses">
+              <h1><span class="subject">History</span></h1>
+              <h2>Teacher's Name: <span class="teacher-name">Ms. Hilly</span></h2>
+              <h2>Class time: <span class="class-time">T/Th 8:30am - 10:00am</span></h2>
+              <a href="./sassignments.html"><button class="goto-assignments">See assignments</button></a> 
+          </div>
+      </div>
+</body>
+</html>

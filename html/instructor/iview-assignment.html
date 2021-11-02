@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../js/script.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="../home.html" class="active">ChalkBoard</a>
+        <a href="./instructor.html">Instructor Summary</a>
+        <div class="dropdown">
+          <button class="dropbtn">Go too my
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="./icourses.html">Courses</a>
+            
+          </div>
+        </div>
+        <a href="./irequests.html">Course requests</a> 
+        <a href="../../index.html">Log out</a>
+       
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+      <div class="course-container">
+        <!-- With javascript it will collect an individual assignment that will be in instructor view -->
+      
+        <div class="assignment">
+            <h2>Assignment #: <span id="assignment-number">1</span></h2>
+         <h2>Assignment title: The Spanish Colonization</h2>
+         <h2>Due date: <span id="due-date">1-15-21</span></h2>
+         <h2>Instructions: Based on today's reading about the Spanish Colonization in the Americas answer the following questions</h2>
+         <h2>In what year did Columbies arrived to America?</h2>
+         <h2>
+            <label for="answer">Answer:</label>
+            <input type="text" value="1942" disabled> 
+         </h2>
+         <h2>Initially Columbus thought he arrived, to what country?</h2>
+        <h2><label for="answer">Answer:</label>
+            <input type="text" value="India" disabled> 
+        </h2>
+        <button>Edit assignment</button>
+        </div>
+        
+      
+    </div>
+</body>
+</html>
