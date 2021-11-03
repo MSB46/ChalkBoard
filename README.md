@@ -1,5 +1,7 @@
 # ChalkBoard - CS355 Project
 
+## Link to website:
+https://msb46.github.io/chalkboard/
 ## Contributions
 ### Sitemap by Elvis:
 After finishing the sitemap for this project I learned new syntax for adding images, differents headers, links, and lists to a Markdown file.
