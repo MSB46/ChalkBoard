@@ -51,6 +51,8 @@
         flex-wrap: wrap;
         text-align: center;
         padding: 10px 10px;
+        height: 70vh;
+        overflow: auto;
     }
     
     /* .student-reason{
@@ -223,7 +225,7 @@
     }
     
     .course-container {
-        height: 68vh;
+        height: 68vh !important;
         overflow: auto;
     }
 
@@ -231,6 +233,10 @@
         font-size: 4vw;
     }
     
+    .courses {
+        width: 100% !important;
+    }
+
     .options-courses {
         flex-direction: row !important;
         justify-content: center;
@@ -256,6 +262,10 @@
         font-size: 10px;
     }
     
+    .spr-container {
+        height: 72vh;
+        overflow: auto;
+    }
     .spr-container a {
         display: block;
     }
@@ -313,8 +323,8 @@
         height: fit-content;
     }
 
-    .course-container {
-        height: 78vh;
+    .course-container, .class-roster {
+        height: 80vh;
         overflow: auto;
     }
 
@@ -328,10 +338,7 @@
         font-size: 16px;
     }
     /* class-roster.html */
-    .class-roster {
-        height: 80vh;
-        overflow: auto;
-    }
+
     .roster-container th {
         position: sticky;
         top: 0;
@@ -348,9 +355,10 @@
         box-shadow: inset 0 2px 0 #000000,
                     inset 0 -2px 0 #000000;
     }
+    
     .table-container {
-        height: 78vh;
         overflow: auto;
+        height: 70vh;
     }
     /* irequests.html */
     .srequests-container, .student-container{

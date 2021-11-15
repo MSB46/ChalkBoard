@@ -77,9 +77,9 @@
     border: 2px solid black;
     border-radius: 10px;
   }
-
-  .assignments-container {
-    height: 68vh;
+  /* sassignments.html */
+  .scourses-container, .assignments-container {
+    height: 68vh !important;
     overflow: auto;
   }
   /* scourses.html */
@@ -88,4 +88,12 @@
     overflow: auto;
   }
 
+}
+
+@media only screen and (max-width: 769px) {
+  /* scourses.html, sassignments.html */
+  .scourses-container, .assignments-container {
+    height: 80vh;
+    overflow: auto;
+  }
 }
