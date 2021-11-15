@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<!-- 
+    Name: Elvis Moyolema
+    Date: 11.15.2021
+    Course: CS 355
+
+    This is the student.html page, in here the student will have a general information
+    about their assigments (missing, due) and based on the course they are struggling
+    a list of resouces for that course will be displayed
+ -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,39 +15,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../../js/script.js"></script>
+    <link rel="stylesheet" href="../../css/student.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="../../index.html" class="active">ChalkBoard</a>
-        <a href="./student.html">Student summary</a>
-        <div class="dropdown">
-          <button class="dropbtn">Go too my
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="./scourses.html">Courses</a>
-            
-            <!-- <a href="#lol">Schedule</a> -->
-            
-          </div>
-        </div>
-        <a href="./enroll.html">Course catalog</a> 
-        <a href="../../index.html">Log out</a>
-       
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  <div class="topnav" id="myTopnav">
+    <a href="./student.html" class="active">Student summary</a>
+    <div class="dropdown">
+      <button class="dropbtn">Go too my
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="./scourses.html">Courses</a>
+        <!-- <a href="#lol">Schedule</a> -->
       </div>
+    </div>
+    <a href="./enroll.html">Course catalog</a> 
+    <a href="../../index.html">Log out</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
       <div class="student-container">
         <div class="student-summary">
-          <h2>You have 7 assignments due next week</h2>
+          <h2>You have <span class="total-missing-assignments">9</span> assignments due next week</h2>
+          <hr>
           <h2>Your last submitted assignment has been graded</h2>
-          <h2>You have 2 missing assignments from Math, try reaching out your instructor</h2>
-          <h2>Resources for math:
-            <a href="https://www.youtube.com/channel/UCEWpbFLzoYGPfuWUMFPSaoA" target="_blank">The Organic Chemistry Tutor</a>
-            <a href="https://www.khanacademy.org/math/algebra" target="_blank">Khan Academy: Algebra 1</a>
-            <a href="https://www.youtube.com/c/patrickjmt" target="_blank">Patrickjmt</a>
+          <hr>
+          <h2>You have <span class="total-class-assignments">5</span> missing assignments from Math, try reaching out your instructor</h2>
+          <hr>
+          <h2 class="resources-title">Resources for math:</h2>
+          <h2>
+          <ul>
+          <li><a href="https://www.youtube.com/channel/UCEWpbFLzoYGPfuWUMFPSaoA" target="_blank">The Organic Chemistry Tutor</a></li>
+          <li><a href="https://www.khanacademy.org/math/algebra" target="_blank">Khan Academy: Algebra 1</a></li>
+          <li><a href="https://www.youtube.com/c/patrickjmt" target="_blank">Patrickjmt</a></li>
+          </ul>
           </h2>
+        
+      
         </div>
       </div>
 </body>

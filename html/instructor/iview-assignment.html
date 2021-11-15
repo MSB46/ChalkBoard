@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!-- 
+    Name: Elvis Moyolema
+    Date: 11.15.2021
+    Course: CS 355
+    
+    This is the iview-assignment.html page, this is the instructor view of an individual assignment from a student, they can't not edit any of the student
+    answers they can only look at the progress of the assignment from a student
+ -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,27 +15,27 @@
     <title>Document</title>
     <script src="../../js/script.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/instructor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="../home.html" class="active">ChalkBoard</a>
-        <a href="./instructor.html">Instructor Summary</a>
-        <div class="dropdown">
-          <button class="dropbtn">Go too my
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="./icourses.html">Courses</a>
-            
-          </div>
-        </div>
-        <a href="./irequests.html">Course requests</a> 
-        <a href="../../index.html">Log out</a>
-       
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  <div class="topnav" id="myTopnav">
+    <a href="./instructor.html" class="active">Instructor Summary</a>
+    <div class="dropdown">
+      <button class="dropbtn">Go too my
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="./icourses.html">Courses</a>
+        
       </div>
-      <div class="course-container">
+    </div>
+    <a href="./irequests.html">Course requests</a> 
+    <a href="../../index.html">Log out</a>
+   
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+      <div class="assignment-container">
         <!-- With javascript it will collect an individual assignment that will be in instructor view -->
       
         <div class="assignment">

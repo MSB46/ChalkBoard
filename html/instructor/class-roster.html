@@ -1,18 +1,26 @@
 <!DOCTYPE html>
+<!-- 
+    Name: Elvis Moyolema
+    Date: 11.15.2021
+    Course: CS 355
+    
+    This is the class-roster.html page where the instructor will be able to see
+    the complete roster for a class student names and instructors of a particular course
+ -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Class Roster</title>
     <script src="../../js/script.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/instructor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="./home.html" class="active">ChalkBoard</a>
-        <a href="./instructor.html">Instructor Summary</a>
+        <a href="./instructor.html" class="active">Instructor Summary</a>
         <div class="dropdown">
           <button class="dropbtn">Go too my
             <i class="fa fa-caret-down"></i>
@@ -27,33 +35,87 @@
        
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
-      <div class="instructor-container">
-        <div class="instructor-summary">
-          <h2>Instructors:</h2>
-          <h2>Ms. Olivia</h2>
-          <h2>Mr. Paul</h2>
-          <hr>
-          <h2>Students enrolled:</h2>
-          <h2>student1</h2>
-          <h2>student2</h2>
-          <h2>student3</h2>
-          <h2>student4</h2>
-          <h2>student5</h2>
-          <h2>student6</h2>
-          <h2>student7</h2>
-          <h2>student8</h2>
-          <h2>student9</h2>
-          <h2>student10</h2>
-          <h2>student11</h2>
-          <h2>student12</h2>
-          <h2>student13</h2>
-          <h2>student14</h2>
-          <h2>student15</h2>
-          <h2>student16</h2>
-          <h2>student17</h2>
-          <h2>student18</h2>
-          <h2>student19</h2>
-          <h2>student20</h2>
+      <div class="roster-class-title">
+        <h1>Roster for <span class="class-name">Math class</span></h1>
+    </div>
+    
+      
+      <div class="roster-container">
+          
+        <div class="instructor-roster">
+          <table class="class-roster-names">
+            <tr>
+                <th>Instructor(s)</th>
+           
+            </tr>
+            <tr>
+                <td>Ms. Olivia</td>
+            </tr>
+            <tr>
+                <td>Mr. Paul</td>
+            </tr>
+          </table>
+          
+      </div>
+      <div class="class-roster">
+        <table class="class-roster-names student-roster">
+          <tr>
+              <th>Student Name</th>
+         
+          </tr>
+          <tr>
+              <td>Malcolm Zain</td>
+          </tr>
+          <tr>
+              <td>Fredric Litz</td>
+          </tr>
+          <tr>
+              <td>Beck Guinevere</td>
+          </tr>
+          <tr>
+              <td>Student1</td>
+          </tr>
+          <tr>
+              <td>Student2</td>
+          </tr>
+          <tr>
+              <td>Student3</td>
+          </tr>
+          <tr>
+              <td>Student4</td>
+          </tr>
+          <tr>
+              <td>Student5</td>
+          </tr>
+          <tr>
+              <td>Student6</td>
+          </tr>
+          <tr>
+              <td>Student7</td>
+          </tr>
+          <tr>
+              <td>Student8</td>
+          </tr>
+          <tr>
+              <td>Student9</td>
+          </tr>
+          <tr>
+              <td>Student10</td>
+          </tr>
+          <tr>
+            <td>Student11</td>
+        </tr>
+        <tr>
+            <td>Student12</td>
+        </tr>
+        <tr>
+            <td>Student13</td>
+        </tr>
+        <tr>
+            <td>Student14</td>
+        </tr>
+      </table>
+      </div>
       </div>
 </body>
 </html>

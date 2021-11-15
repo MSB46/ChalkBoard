@@ -18,7 +18,12 @@ body {margin:0;font-family:Arial}
 .active {
   background-color: #5375e2;
   color: white;
+  font-weight: bold;
 }
+/* @media only screen and (max-width: 360px) {
+  .active{
+    font-weight: bold;
+  } */
 
 .topnav .icon {
   display: none;
@@ -38,6 +43,7 @@ body {margin:0;font-family:Arial}
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  z-index: 0;
 }
 
 .dropdown-content {
@@ -46,7 +52,7 @@ body {margin:0;font-family:Arial}
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 0;
 }
 
 .dropdown-content a {
@@ -103,45 +109,21 @@ body {margin:0;font-family:Arial}
   }
 }
 
-.course-container, .student-container{
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 10px;
+  /* Making responsive for Nexus 5 */
+  @media only screen and (max-width: 361px) {
+    .home-title{
+      font-size: 8vw;
+    }
+  }
+
+
+.home-container{
+  padding: 10px 10px;
 }
 
-.courses{
-  border: 2px solid black;
-  border-radius: 10px;
-}
 a{
   text-decoration: none;
 }
-.student-request, .student-assignments{
-  padding: 10px 10px;
-  border: 2px solid black;
-  border-radius: 10px;
-  margin: 10px 10px;
-}
-.subject-title{
-  text-align: center;
-}
-
-table{
-
-  text-align: center;
-  border-collapse: collapse;
-
-}
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {background: #CCC}
-tr:nth-child(odd) {background: #FFF}
-
 .responsive {
   width: 100%;
   max-width: 400px;
@@ -149,7 +131,7 @@ tr:nth-child(odd) {background: #FFF}
 }
 
 .student-assignments{
-  background-image: url("../img/assignments-pic.png");
+  background-image: url('../img/assignments-pic.png');
   background-repeat: round;
   background-attachment: local;
   background-size: 200px;

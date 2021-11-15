@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<!-- 
+    Name: Elvis Moyolema
+    Date: 11.15.2021
+    Course: CS 355
+    
+    This is the sactual-assignment.html, in this page a student can complete their specific assignment.
+    Additionally they have the options to save it as a draft before submiting, and also attach any files if the
+    assignment requires it
+ -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,44 +16,43 @@
     <title>Document</title>
     <script src="../../js/script.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/student.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="topnav" id="myTopnav">
-      <a href="../../index.html" class="active">ChalkBoard</a>
-        <a href="./student.html">Student summary</a>
+        <a href="./student.html" class="active">Student summary</a>
         <div class="dropdown">
           <button class="dropbtn">Go too my
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
             <a href="./scourses.html">Courses</a>
-            
             <!-- <a href="#lol">Schedule</a> -->
-            
           </div>
         </div>
         <a href="./enroll.html">Course catalog</a> 
         <a href="../../index.html">Log out</a>
-       
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
-      <div class="course-container">
+      <div class="indv-assignment-container">
         <!-- With javascript it will collect an individual assignment that will be in instructor view -->
       
         <div class="assignment">
-            <h2>Assignment #: <span id="assignment-number">1</span></h2>
+            <h1>Assignment #: <span id="assignment-number">1</span></h1>
          <h2>Assignment title: The Spanish Colonization</h2>
          <h2>Due date: <span id="due-date">1-15-21</span></h2>
          <h2>Instructions: Based on today's reading about the Spanish Colonization in the Americas answer the following questions</h2>
-         <h2>In what year did Columbies arrived to America?</h2>
+         <h2>In what year did Columbus arrived to America?</h2>
          <h2>
-            <label for="answer">Answer:</label>
-            <input type="text"> 
-            <button>Attach File</button></h2>
+            <label for="answer1">Answer:</label> <br>
+            <textarea name="answer1" id="answer1" cols="30" rows="4">
+            </textarea> <br>
+            <button>Attach File</button>
+          </h2>
          <h2>Initially Columbus thought he arrived, to what country?</h2>
-        <h2><label for="answer">Answer:</label>
-            <input type="text"> 
+        <h2><label for="answer2">Answer:</label> <br>
+            <textarea name="answer2" id="answer2" cols="30" rows="4"></textarea> <br>
             <button>Attach File</button></h2>
             <button>Submit Assignment</button><button>Save draft</button>
         </div>

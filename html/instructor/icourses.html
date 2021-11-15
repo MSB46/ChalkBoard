@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<!-- 
+    Name: Elvis Moyolema
+    Date: 11.15.2021
+    Course: CS 355
+    
+    This is the icourses.html page, in here the instructor will see the courses they are are in (whether they have been added or created it themselves.)
+    They can see information such as subject name, instructor name and 5 options.
+    They have option to see all the assignments related to a course, add an instructor to a course, leave a specific coursem delete a specific course
+    and check the roster of that course
+ -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,51 +17,94 @@
     <title>Document</title>
     <script src="../../js/script.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/instructor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="../home.html" class="active">ChalkBoard</a>
-        <a href="./instructor.html">Instructor Summary</a>
-        <div class="dropdown">
-          <button class="dropbtn">Go too my
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="./icourses.html">Courses</a>
-            
-          </div>
-        </div>
-        <a href="./irequests.html">Course requests</a> 
-        <a href="../../index.html">Log out</a>
-       
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  <div class="topnav" id="myTopnav">
+    <a href="./instructor.html" class="active">Instructor Summary</a>
+    <div class="dropdown">
+      <button class="dropbtn">Go too my
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="./icourses.html">Courses</a>
+        
       </div>
+    </div>
+    <a href="./irequests.html">Course requests</a> 
+    <a href="../../index.html">Log out</a>
+   
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  <div class="instructor-courses">
+    <h1>My Courses</h1>
+  </div>
       <div class="course-container">
         <!-- With javascript it will collect all the courses that a students is
       enrolled in -->
-      
+      <div class="courses">
+        <h2><span class="subject">Course: Math</span></h2>
+        <h2>Teacher's Name: <span class="teacher-name">Ms. Laura</span></h2>
+        <div class="options-courses">
+          <a href="./iassignments.html">See assignments</a>
+          <a href="#">Add Instructor</a>
+          <a href="#">Leave</a>
+          <!-- <a href="#">Remove instructor</a> -->
+          <a href="#"> Delete Course</a>
+          <a href="./class-roster.html">Check Roester</a>
+        </div>
+
+    </div>
         <div class="courses">
-            <h1><span class="subject">Math</span></h1>
+            <h2><span class="subject">Course: Math</span></h2>
             <h2>Teacher's Name: <span class="teacher-name">Ms. Laura</span></h2>
-            <a href="./iassignments.html"><button class="goto-assignments">See assignments</button></a>
-            <button>Leave</button> <button>Add Instructor</button> <button>Delete Course</button>
-        <a href="./class-roster.html"><button>Check Roester</button></a>
+            <div class="options-courses">
+              <a href="./iassignments.html">See assignments</a>
+              <a href="#">Add Instructor</a>
+              <a href="#">Leave</a>
+              <!-- <a href="#">Remove instructor</a> -->
+              <a href="#"> Delete Course</a>
+              <a href="./class-roster.html">Check Roester</a>
+            </div>
+  
         </div>
         <div class="courses">
-            <h1><span class="subject">Science</span></h1>
+            <h2><span class="subject">Course: Science</span></h2>
             <h2>Teacher's Name: <span class="teacher-name">Mr. Fitz</span></h2>
-            <a href="./iassignments.html"><button class="goto-assignments">See assignments</button></a>
-            <button>Leave</button> <button>Add Instructor</button> <button>Delete Course</button>
-       <a href="./class-roster.html"><button>Check Roester</button></a>
+            <div class="options-courses">
+              <a href="./iassignments.html">See assignments</a>
+              <a href="#">Add Instructor</a>
+              <a href="#">Leave</a>
+              <!-- <a href="#">Remove instructor</a> -->
+              <a href="#"> Delete Course</a>
+              <a href="./class-roster.html">Check Roester</a>
+            </div>
         </div>
         <div class="courses">
-            <h1><span class="subject">History</span></h1>
+            <h2><span class="subject">Course: History</span></h2>
             <h2>Teacher's Name: <span class="teacher-name">Ms. Hilly</span></h2>
-            <a href="./iassignments.html"><button class="goto-assignments">See assignments</button></a>
-            <button>Leave</button> <button>Add Instructor</button> <button>Delete Course</button>
-        <a href="./class-roster.html"><button>Check Roester</button></a>
-        </div>
+            <div class="options-courses">
+              <a href="./iassignments.html">See assignments</a>
+              <a href="#">Add Instructor</a>
+              <a href="#">Leave</a>
+              <!-- <a href="#">Remove instructor</a> -->
+              <a href="#"> Delete Course</a>
+              <a href="./class-roster.html">Check Roester</a>
+            </div>
+         </div>
+         <div class="courses">
+          <h2><span class="subject">Course: History</span></h2>
+          <h2>Teacher's Name: <span class="teacher-name">Ms. Hilly</span></h2>
+          <div class="options-courses">
+            <a href="./iassignments.html">See assignments</a>
+            <a href="#">Add Instructor</a>
+            <a href="#">Leave</a>
+            <!-- <a href="#">Remove instructor</a> -->
+            <a href="#"> Delete Course</a>
+            <a href="./class-roster.html">Check Roester</a>
+          </div>
+       </div>         
     </div>
 </body>
 </html>

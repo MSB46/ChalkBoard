@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<!-- 
+    Name: Elvis Moyolema
+    Date: 11.15.2021
+    Course: CS 355
+    
+    This is the iassignments-status.html page, in here instructor will be able to see the students
+    progress of a single assigment and they have the option to check the progrss of a single assigment from
+    any student by clicking on "Check Assignment", in this page instructors also have the option to grade students
+    and edit them.
+ -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +17,12 @@
     <title>Document</title>
     <script src="../../js/script.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/instructor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="../home.html" class="active">ChalkBoard</a>
-        <a href="./instructor.html">Instructor Summary</a>
+        <a href="./instructor.html" class="active">Instructor Summary</a>
         <div class="dropdown">
           <button class="dropbtn">Go too my
             <i class="fa fa-caret-down"></i>
@@ -31,93 +41,122 @@
         <h1>Assignment 1</h1>
       </div>
       <div class="spr-container">
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Status</th>
-                <th>Action</th>
-                <th>Grade</th>
-            </tr>
-            <tr>
-                <td>Malcolm Zain</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>87</td>
-            </tr>
-            <tr>
-                <td>Fredric Litz</td>
-                <td>Missing</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Beck Guinevere</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>98</td>
-            </tr>
-            <tr>
-                <td>Student1</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>71</td>
-            </tr>
-            <tr>
-                <td>Student2</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>72</td>
-            </tr>
-            <tr>
-                <td>Student3</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>73</td>
-            </tr>
-            <tr>
-                <td>Student4</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>74</td>
-            </tr>
-            <tr>
-                <td>Student5</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>75</td>
-            </tr>
-            <tr>
-                <td>Student6</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>76</td>
-            </tr>
-            <tr>
-                <td>Student7</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>77</td>
-            </tr>
-            <tr>
-                <td>Student8</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>78</td>
-            </tr>
-            <tr>
-                <td>Student9</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>79</td>
-            </tr>
-            <tr>
-                <td>Student10</td>
-                <td>Submitted</td>
-                <td><a href="./iview-assignment.html"><button>Check Assignment</button></a></td>
-                <td>80</td>
-            </tr>
-        </table>
-       
+          <div class="table-container">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                    <th>Grade</th>
+                    <th>Edit Grade</th>
+                </tr>
+                <tr>
+                    <td>Malcolm Zain</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>87</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Fredric Litz</td>
+                    <td>Missing</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>0</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Beck Guinevere</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>98</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student1</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>71</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student2</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>72</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student3</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>73</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student4</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>74</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student5</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>75</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student6</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>76</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student7</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>77</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student8</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>78</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student9</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>79</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student10</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>80</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student11</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>80</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+                <tr>
+                    <td>Student12</td>
+                    <td>Submitted</td>
+                    <td><a href="./iview-assignment.html">Check Assignment</a></td>
+                    <td>80</td>
+                    <td><a href="#">Edit Grade</a></td>
+                </tr>
+            </table>
+          </div>
       </div>
 </body>
 </html>

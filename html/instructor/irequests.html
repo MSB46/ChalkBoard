@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<!-- 
+    Name: Elvis Moyolema
+    Date: 11.15.2021
+    Course: CS 355
+    
+    This is the irequests.html in here the instructor will see al the requests
+    from students who are trying to join a course. In here the instructor will see the student name
+    and the class they are questing. Needlesly to say, instructors have the option to accept or reject
+    a student request to join a course
+ -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,55 +17,133 @@
     <title>Document</title>
     <script src="../../js/script.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/instructor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="../home.html" class="active">ChalkBoard</a>
-        <a href="./instructor.html">Instructor Summary</a>
-        <div class="dropdown">
-          <button class="dropbtn">Go too my
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="./icourses.html">Courses</a>
-            
-          </div>
-        </div>
-        <a href="./irequests.html">Course requests</a> 
-        <a href="../../index.html">Log out</a>
-       
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  <div class="topnav" id="myTopnav">
+    <a href="./instructor.html" class="active">Instructor Summary</a>
+    <div class="dropdown">
+      <button class="dropbtn">Go too my
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="./icourses.html">Courses</a>
+        
       </div>
+    </div>
+    <a href="./irequests.html">Course requests</a> 
+    <a href="../../index.html">Log out</a>
+   
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
       <!-- Here will appear all students request to join a particular course
     and the instructor will have the authority to accept or deny any request
 either deny or accept will make the student request disappear -->
+      <div class="requests-title">
+        <h1 class="lol">Student Requests</h1>
+      </div>
       <div class="srequests-container">
         <div class="student-request">
-            <h1>Name: <span id="student-name">Samuel Grutz</span></h1>
+            <h2>Name: <span class="student-name">Samuel Grutz</span></h2>
             <h2>Class requested: <span id="class-name">Math</span></h2>
-            <h2>Reason for request: <span id="student-reason">Ms. Dalia recommended me
-                to take this math class since I'm advanced than the rest of my class and said that this class will challenge me, so I'm
-                looking foward to it
-            </span></h2>
-            <a href="#"><button>Accept</button></a> <a href="#"><button>Deny</button></a>
+            <!-- <h3 class="student-reason">Reason for request: </h3><p class="reason-write1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit. 
+              Qui, quae tenetur, facilis ex a est rem minus quos delectus iusto, similique sit ut atque at culpa doloribus eum porro dicta corrupti ipsum corporis molestias deleniti. Ducimus, praesentium voluptatum.
+              </p> -->
+            <hr>
+            <a href="#">Accept</a> <a href="#">Deny</a>
         </div>
         <div class="student-request">
-            <h1>Name: <span id="student-name">Maria Dulcth</span></h1>
+            <h2>Name: <span class="student-name">Maria Dulcth</span></h2>
             <h2>Class requested: <span id="class-name">Science</span></h2>
-            <h2>Reason for request: <span id="student-reason">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente adipisci iste voluptates tenetur! Voluptate quasi natus tempora! Asperiores quaerat nostrum incidunt reprehenderit nesciunt eos quae soluta temporibus numquam molestias. Exercitationem!
-            Maiores architecto ratione libero autem facere quo porro assumenda fugit! Suscipit tempora dignissimos, id itaque, quas atque recusandae totam modi nam aut ea incidunt nostrum quod. Nam incidunt itaque a?
-            </span></h2>
-            <a href="#"><button>Accept</button></a> <a href="#"><button>Deny</button></a>
+            <!-- <h3 class="student-reason">Reason for request: </h3><p class="reason-write1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit. 
+              Qui, quae tenetur, facilis ex a est rem minus quos delectus iusto, similique sit ut atque at culpa doloribus eum porro dicta corrupti ipsum corporis molestias deleniti. Ducimus, praesentium voluptatum.
+            </p> -->
+            <hr>
+            <a href="#">Accept</a> <a href="#">Deny</a>
         </div>
         <div class="student-request">
-            <h1>Name: <span id="student-name">Martin Loussen</span></h1>
+            <h2>Name: <span class="student-name">Martin Loussen</span></h2>
             <h2>Class requested: <span id="class-name">History</span></h2>
-            <h2>Reason for request: <span id="student-reason">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit.
+            <!-- <h3 class="student-reason">Reason for request: </h3><p class="reason-write1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit. 
             Qui, quae tenetur, facilis ex a est rem minus quos delectus iusto, similique sit ut atque at culpa doloribus eum porro dicta corrupti ipsum corporis molestias deleniti. Ducimus, praesentium voluptatum.
-            </span></h2>
-            <a href="#"><button>Accept</button></a> <a href="#"><button>Deny</button></a>
+            </p> -->
+            <hr>
+            <a href="#">Accept</a> <a href="#">Deny</a>
         </div>
+        <div class="student-request">
+          <h2>Name: <span class="student-name">Martin Loussen</span></h2>
+          <h2>Class requested: <span id="class-name">History</span></h2>
+          <!-- <h3 class="student-reason">Reason for request: </h3><p class="reason-write1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit. 
+          Qui, quae tenetur, facilis ex a est rem minus quos delectus iusto, similique sit ut atque at culpa doloribus eum porro dicta corrupti ipsum corporis molestias deleniti. Ducimus, praesentium voluptatum.
+          </p> -->
+          <hr>
+          <a href="#">Accept</a> <a href="#">Deny</a>
+        </div>
+        <div class="student-request">
+          <h2>Name: <span class="student-name">Martin Loussen</span></h2>
+          <h2>Class requested: <span id="class-name">History</span></h2>
+          <!-- <h3 class="student-reason">Reason for request: </h3><p class="reason-write1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit. 
+          Qui, quae tenetur, facilis ex a est rem minus quos delectus iusto, similique sit ut atque at culpa doloribus eum porro dicta corrupti ipsum corporis molestias deleniti. Ducimus, praesentium voluptatum.
+          </p> -->
+          <hr>
+          <a href="#">Accept</a> <a href="#">Deny</a>
+        </div>
+        <div class="student-request">
+          <h2>Name: <span class="student-name">Martin Loussen</span></h2>
+          <h2>Class requested: <span id="class-name">History</span></h2>
+          <!-- <h3 class="student-reason">Reason for request: </h3><p class="reason-write1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit. 
+          Qui, quae tenetur, facilis ex a est rem minus quos delectus iusto, similique sit ut atque at culpa doloribus eum porro dicta corrupti ipsum corporis molestias deleniti. Ducimus, praesentium voluptatum.
+          </p> -->
+          <hr>
+          <a href="#">Accept</a> <a href="#">Deny</a>
+        </div>
+        <div class="student-request">
+          <h2>Name: <span class="student-name">Martin Loussen</span></h2>
+          <h2>Class requested: <span id="class-name">History</span></h2>
+          <!-- <h3 class="student-reason">Reason for request: </h3><p class="reason-write1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit. 
+          Qui, quae tenetur, facilis ex a est rem minus quos delectus iusto, similique sit ut atque at culpa doloribus eum porro dicta corrupti ipsum corporis molestias deleniti. Ducimus, praesentium voluptatum.
+          </p> -->
+          <hr>
+          <a href="#">Accept</a> <a href="#">Deny</a>
+        </div>
+        <div class="student-request">
+          <h2>Name: <span class="student-name">Martin Loussen</span></h2>
+          <h2>Class requested: <span id="class-name">History</span></h2>
+          <!-- <h3 class="student-reason">Reason for request: </h3><p class="reason-write1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit. 
+          Qui, quae tenetur, facilis ex a est rem minus quos delectus iusto, similique sit ut atque at culpa doloribus eum porro dicta corrupti ipsum corporis molestias deleniti. Ducimus, praesentium voluptatum.
+          </p> -->
+          <hr>
+          <a href="#">Accept</a> <a href="#">Deny</a>
+        </div>
+        <div class="student-request">
+          <h2>Name: <span class="student-name">Martin Loussen</span></h2>
+          <h2>Class requested: <span id="class-name">History</span></h2>
+          <!-- <h3 class="student-reason">Reason for request: </h3><p class="reason-write1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit. 
+          Qui, quae tenetur, facilis ex a est rem minus quos delectus iusto, similique sit ut atque at culpa doloribus eum porro dicta corrupti ipsum corporis molestias deleniti. Ducimus, praesentium voluptatum.
+          </p> -->
+          <hr>
+          <a href="#">Accept</a> <a href="#">Deny</a>
+        </div>
+        <div class="student-request">
+          <h2>Name: <span class="student-name">Martin Loussen</span></h2>
+          <h2>Class requested: <span id="class-name">History</span></h2>
+          <!-- <h3 class="student-reason">Reason for request: </h3><p class="reason-write1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit. 
+          Qui, quae tenetur, facilis ex a est rem minus quos delectus iusto, similique sit ut atque at culpa doloribus eum porro dicta corrupti ipsum corporis molestias deleniti. Ducimus, praesentium voluptatum.
+          </p> -->
+          <hr>
+          <a href="#">Accept</a> <a href="#">Deny</a>
+        </div>
+        <div class="student-request">
+          <h2>Name: <span class="student-name">Martin Loussen</span></h2>
+          <h2>Class requested: <span id="class-name">History</span></h2>
+          <!-- <h3 class="student-reason">Reason for request: </h3><p class="reason-write1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore ad suscipit maiores, et repudiandae, hic cupiditate odio dolores eaque eos maxime ea vel. Corporis ipsam pariatur voluptatum asperiores sit. 
+          Qui, quae tenetur, facilis ex a est rem minus quos delectus iusto, similique sit ut atque at culpa doloribus eum porro dicta corrupti ipsum corporis molestias deleniti. Ducimus, praesentium voluptatum.
+          </p> -->
+          <hr>
+          <a href="#">Accept</a> <a href="#">Deny</a>
+        </div>
+      
     </div>
 </body>
 </html>
