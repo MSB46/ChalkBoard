@@ -1,0 +1,170 @@
+body{
+    margin: 0;
+    font-family: 'Rubik', sans-serif, Arial;
+    background: beige;
+}
+
+.topnav a:last-child{
+    float: right;
+}
+
+.sectionTitle{
+    color: #252424;
+    text-shadow: hsla(240, 100%, 94%, 0.9) 0px 3px 1px;;
+}
+
+input[type=text], textarea{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin: 0 0 20px 0;
+}
+
+
+.form-input{
+    padding: 5px;
+    border: 2px solid #f3dede;
+    border-radius: 10px;
+}
+
+.form-input:focus{
+    border: 3px solid black;
+}
+
+.breadcrumb{
+    list-style: none;
+    display: inline-block;
+    margin: 30px 50px;
+    padding: 10px;
+    background-color: #faf2f2;
+
+    text-align: center;
+    box-shadow: 0 1px 4px rgb(52, 52, 52);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.breadcrumb li a{
+    text-decoration: none;
+    color: #048bff;
+}
+
+
+@media screen and (min-width: 700px) {
+    .topnav{
+        padding: 20px;
+        height: auto;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+    .topnav a{
+        font-size: 1.5em;
+    }
+
+
+    .search-container{
+        display: inline-block;
+        font-size: 1.5em;
+        width: 100%;
+        bottom: 10px;
+        z-index: 1;
+    }
+
+    .breadcrumb{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-size: 2em;
+    }
+
+    .classSection{
+        /*margin: 50px;*/
+        margin: 100px 0 0 0;
+    }
+
+    table td{
+        padding: 50px;
+    }
+
+    .inst-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .inst-container table{
+        width: 100%;
+        margin: 20px auto;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1000px) {
+    .topnav{
+        position: static;
+    }
+
+
+    .filter-form-input{
+        font-size: 1.1em;
+        position: relative;
+        top: 70px;
+        left: -200px;
+
+    }
+
+    .sectionTitle{
+        font-size: 2em;
+        position: relative;
+        margin: 10px 0 20px 0;
+    }
+
+    .classSection{
+        margin: 50px;
+        /*margin: 100px 0 0 0;*/
+    }
+
+    .breadcrumb{
+        position: relative;
+        top:20px;
+        left: 30px;
+        display: inline-block;
+        justify-content: normal;
+        padding: 10px;
+        margin:30px;
+    }
+
+    .mainContentArea{
+        margin: 70px 35px 0 35px;
+    }
+
+    table{
+        /*display: block;*/
+        width: 20%;
+        margin: 0 auto;
+    }
+
+    table td{
+        padding: 50px;
+    }
+
+    .instructor-info{
+        margin: 0 auto;
+    }
+
+    .inst-container{
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+
+    .course-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+}

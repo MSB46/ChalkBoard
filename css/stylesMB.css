@@ -1,19 +1,144 @@
-/*Style for navigation bar*/
-.navBar {
-    display: inherit;
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif, Arial;
+    background: beige;
+}
+
+/*!*Style for navigation bar*!*/
+.topnav {
+    overflow: hidden;
+    background-color: #5c616e;
+}
+
+
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.logo-mini{
+    max-width: 35%;
+    max-height: 20%;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.active {
+    background-color: #5375e2;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
     text-align: left;
-    padding: 10px;
-    margin-bottom: 6px;
-    background-color: hsla(100, 2%, 20%, 1);
 }
 
-.navBar a {
-    color: white
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #7791a1;
+    color: white;
 }
 
-.log-out {
-    float: right;
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
 }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+/*End of nav div*/
+
+/*.navBar {*/
+/*    display: inherit;*/
+/*    text-align: left;*/
+/*    padding: 10px;*/
+/*    margin-bottom: 6px;*/
+/*    background-color: hsla(100, 2%, 20%, 1);*/
+/*}*/
+
+/*.navBar a {*/
+/*    color: white*/
+/*}*/
+
+/*.log-out {*/
+/*    float: right;*/
+/*}*/
+
+.sectionTitle{
+    text-align: center;
+}
+
+
 /*Style for breadcrumb*/
 ul.breadcrumb li {
     display: inline;
@@ -22,31 +147,8 @@ ul.breadcrumb li {
 ul.breadcrumb li + li:before {
     content: " > ";
 }
-/*Style for tables and table info*/
-table {
-    margin: 0 auto;
-}
 
-th, td {
-    padding: 10px 40px;
-    text-align: left;
-    font-size: 1.05em;
-}
-
-.sectionTitle {
-    text-align: center;
-}
-
-.info {
-    float: none;
-    margin: 0 auto 40px auto;
-}
-
-.table-left {
-    float: left;
-    clear: both;
-}
-/*Style for search bar*/
+/*Style for form input*/
 .search-container .form-input {
     float: right;
     display: block;
@@ -54,20 +156,13 @@ th, td {
     left: 40%;
     width: 20%;
 }
-/*Style of Login and register related elements */
-.userCreds, .loginArea {
-    max-width: 550px;
-    height: 50vh;
-    border: 1px solid black;
-    margin: 0 auto;
-    display: block;
+
+.search-container .filter-form-input{
+    display: flex;
+    width: 50%;
+    position: relative;
+    left: 25%;
     text-align: center;
-    padding: 25px 5px;
-}
-.loginArea{
-    background: url("../img/chalkboardImg.png") no-repeat;
-    background-size: 100% 100%;
-    padding: 85px 200px;
 }
 
 .logo img{

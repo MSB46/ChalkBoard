@@ -12,10 +12,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Student Info</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../../css/stylesMB.css">
+    <link rel="stylesheet" href="../../css/admin-style.css">
+    <link rel="stylesheet" href="../../css/table-style.css">
 </head>
 <body>
-<nav class="navBar">
+<nav class="topnav">
     <a id="logo" href="../../index.html">ChalkBoard</a>
     <a class="log-out" href="login.html">Log out</a>
 </nav>
@@ -26,36 +33,42 @@
     <li>Student Data</li>
 </ul>
 <h1 class="sectionTitle">[Clicked Student Name Goes Here]</h1>
-<table class="info">
-    <tr>
-        <th>Student ID</th>
-        <th>Email</th>
-        <th>Phone number</th>
-    </tr>
-    <tr>
-        <td>S##</td>
-        <td>sunknown00@kingmail.com</td>
-        <td>098-765-4321</td>
-    </tr>
-</table>
-<h3 class="sectionTitle">Enrolled Courses</h3>
-<table class="courseInfo">
-    <tr>
-        <th>Class Number</th>
-        <th>Class Name</th>
-        <th>Meeting Info</th>
-    </tr>
-    <tr>
-        <td><a href="course-data.html">TEST XYZ</a></td>
-        <td>Introduction to Placeholding</td>
-        <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
-    </tr>
-    <tr>
-        <td><a href="course-data.html">TEST ABC</a></td>
-        <td>Placeholding II</td>
-        <td>Sat/Sun CC:DD</td>
-    </tr>
-</table>
+<div class="inst-container">
+    <div class="table1">
+        <table class="info">
+            <tr>
+                <th>Student ID</th>
+                <th>Email</th>
+                <th>Phone number</th>
+            </tr>
+            <tr>
+                <td>S##</td>
+                <td>sunknown00@kingmail.com</td>
+                <td>098-765-4321</td>
+            </tr>
+        </table>
+    </div>
+    <div class="table2">
+        <h3 class="sectionTitle">Enrolled Courses</h3>
+        <table class="courseInfo">
+            <tr>
+                <th>Class Number</th>
+                <th>Class Name</th>
+                <th>Meeting Info</th>
+            </tr>
+            <tr>
+                <td><a href="course-data.html">TEST XYZ</a></td>
+                <td>Introduction to Placeholding</td>
+                <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
+            </tr>
+            <tr>
+                <td><a href="course-data.html">TEST ABC</a></td>
+                <td>Placeholding II</td>
+                <td>Sat/Sun CC:DD</td>
+            </tr>
+        </table>
+    </div>
+</div>
 
 </body>
 </html>

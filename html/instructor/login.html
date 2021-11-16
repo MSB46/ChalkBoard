@@ -13,23 +13,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="../../css/stylesMB.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/login-style.css">
+
 </head>
 <body>
-    <div class="logoDiv">
-        <a class="logo" href="../../index.html"> <img src="../../img/chalkboardLogo.png" alt="chalkboard logo"> </a>
-    </div>
+<div class="logoDiv">
+    <a class="logo outside" href="../../index.html"> <img src="../../img/chalkboardLogo.png" alt="chalkboard logo"> </a>
+</div>
 
-    <div class="loginArea">
+<div class="userCreds">
+    <div class="withinCover">
+        <a class="logo inside" href="../../index.html"> <img src="../../img/chalkboardLogo.png"
+                                                             alt="chalkboard logo"></a>
         <h3>Instructor - Sign In</h3>
         <form id="signInForm">
+            <span class="askingFor">User/Email</span>
             <input class="cred-input" placeholder="Email" type="email" name="email" id="emailUser">
+            <span class="askingFor">Password</span>
             <input class="cred-input" placeholder="Password" type="password" name="password" id="passwordUser">
             <!-- <button class="form-button" type="submit" id="signInButton">Sign in</button> -->
+            <br>
+            <button class="form-button" type="submit" id="signInButton"
+                    formaction="./instructor.html">Sign in
+            </button>
         </form>
-        <a href="./instructor.html"><button class="form-button" type="submit" id="signInButton">Sign in</button></a> <br>
         <br>
         <a href="./register.html"> Don't have an account? Sign up here! </a>
     </div>
+</div>
 </body>
 </html>

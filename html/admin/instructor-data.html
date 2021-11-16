@@ -12,52 +12,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Instructor Data</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../../css/stylesMB.css">
+    <link rel="stylesheet" href="../../css/admin-style.css">
+    <link rel="stylesheet" href="../../css/table-style.css">
 </head>
 <body>
-<nav class="navBar">
+<div class="topnav">
     <a href="../../index.html">ChalkBoard</a>
     <a class="log-out" href="./login.html">Log out</a>
-</nav>
+</div>
 
 <ul class="breadcrumb">
     <li><a href="../../index.html">Home</a></li>
     <li><a href="./admin-view.html">Admin View</a></li>
     <li>Instructor Data</li>
 </ul>
-<h1 class="sectionTitle">Instructor Unknown (Clicked Name Goes Here)</h1>
-<table class="info">
-    <tr>
-        <th>Instructor ID</th>
-        <th>Instructor Email</th>
-        <th>Phone Number</th>
-    </tr>
-    <tr>
-        <td>T##</td>
-        <td>iunknown999@kingmail.com</td>
-        <td>123-4567-8910</td>
-    </tr>
-</table>
 
-<h3 class="sectionTitle">Associated Courses</h3>
-<table class="courseInfo">
-    <tr>
-        <th>Class Number</th>
-        <th>Class Name</th>
-        <th>Meeting Info</th>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">TEST XYZ</a></td>
-        <td>Introduction to Placeholding</td>
-        <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">TEST ABC</a></td>
-        <td>Placeholding II</td>
-        <td>Sat/Sun CC:DD</td>
-    </tr>
-</table>
-
+<h3 class="sectionTitle">Instructor Unknown (Clicked Name Goes Here)</h3>
+<div class="inst-container">
+    <div class="table1">
+        <table class="instructor-info">
+            <tr>
+                <th>Instructor ID</th>
+                <th>Instructor Email</th>
+                <th>Phone Number</th>
+            </tr>
+            <tr>
+                <td>T##</td>
+                <td>iunknown999@kingmail.com</td>
+                <td>123-4567-8910</td>
+            </tr>
+        </table>
+    </div>
+    <div class="table2">
+        <h3 class="sectionTitle">Associated Courses</h3>
+        <table class="courseInfo instructor-info">
+            <tr>
+                <th>Section</th>
+                <th>Class Number</th>
+                <th>Class Name</th>
+                <th>Meeting Info</th>
+            </tr>
+            <tr>
+                <td>ABCDE</td>
+                <td><a href="./course-data.html">TEST XYZ</a></td>
+                <td>Introduction to Placeholding</td>
+                <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
+            </tr>
+            <tr>
+                <td>12345</td>
+                <td><a href="./course-data.html">TEST ABC</a></td>
+                <td>Placeholding II</td>
+                <td>Sat/Sun CC:DD</td>
+            </tr>
+        </table>
+    </div>
+</div>
 
 </body>
 </html>
