@@ -31,7 +31,6 @@ This is the sassignments.html page, in here students will be able to see all the
 ### Student view of a single assignment
 This is the sactual-assignment.html, in this page, a student can complete their specific assignment. Additionally, they have the options to save it as a draft before submitting, and also attach any files if the assignment requires it.
 ![sactual-assignment-html](https://user-images.githubusercontent.com/44810371/142473228-0457232b-749d-426a-a5c9-80a294d42ab8.png)
-### 
 
 ## Instructor features:
 ### Instructor homepage
@@ -55,4 +54,3 @@ This is the iview-assignment.html page, this is the instructor's view of an indi
 ### Instructor view of student course requests
 This is the irequests.html in here the instructor will see all the requests from students who are trying to join a course. In here the instructor will see the student name and the class they are questing. Needless to say, instructors have the option to accept or reject a student's request to join a course.
 ![irequests-html](https://user-images.githubusercontent.com/44810371/142476659-84e419fd-1dc8-4f60-bdc5-0f522e4e3c70.png)
-)
