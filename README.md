@@ -15,15 +15,13 @@ By the time I finished the wireframe, I realized how difficult it can be to desi
 ## Chalkboard features
 ## Student features:
 ### Homepage
-This is the index.html page, the home page of our website where the user/instructor have the options to go 
-to their pages to log in/sign up and also there is the option for the admin to log in.
+This is the index.html page, the home page of our website where the user/instructor have the options to go to their pages to log in/sign up and also there is the option for the admin to log in.
 ![index-html](https://user-images.githubusercontent.com/44810371/142471484-b5659577-e70f-4574-9d86-376ada2602d6.png)
 ### Student homepage
 This is the student.html page, in here the student will have general information about their assignments (missing, due, etc), and based on the course they are struggling a list of resources for that course will be displayed.
-![student-html](https://user-images.githubusercontent.com/44810371/142472207-ab5f3467-3b6d-4e57-82c2-d59623048551.png)
+![student-ht](https://user-images.githubusercontent.com/44810371/142472207-ab5f3467-3b6d-4e57-82c2-d59623048551.png)
 ### Student view of courses
-This is the scourses.html page, in here the students will see all the courses in whichthey are enrolled in. They can see information such as subject name, subject instructor name, class time.
-If they click "See assignments" they will be directed to all the assignments page of that course.
+This is the scourses.html page, in here the students will see all the courses in whichthey are enrolled in. They can see information such as subject name, subject instructor name, class time. If they click "See assignments" they will be directed to all the assignments page of that course.
 ![scourses-html](https://user-images.githubusercontent.com/44810371/142472510-b23d4c74-9e1d-4f58-9cff-2ba84e895f0a.png)
 ### Student view of their assignments
 This is the sassignments.html page, in here students will be able to see all the assignments of a specific course. They can see information such as assignment number, assignment title, and due date. If they click on "Start Now" they will be directed to the specific assignment that they have clicked on and get started.
