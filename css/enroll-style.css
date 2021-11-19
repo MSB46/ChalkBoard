@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: Rubik, sans-serif, Arial;
+  background: beige;
+}
+
+.section-title {
+  margin: 0;
+  color: #252424;
+  font-size: 2.2em;
+  text-shadow: #868686 0 3px 1px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.form-input {
+  border: 2px solid #f3dede;
+  border-radius: 10px;
+}
+
+.form-input:focus {
+  border: 3px solid black;
+}
+
+.breadcrumb {
+  list-style: none;
+  margin: 30px 50px;
+  padding: 10px;
+  background-color: #faf2f2;
+  text-align: center;
+  box-shadow: 0 1px 4px rgb(52 52 52);
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: #048bff;
+}
+
+button {
+  border: 2px solid white;
+  background-color: #1f6e1f;
+  color: white;
+}
+
+button:hover {
+  background-color: #58b958;
+}
+
+#container {
+  display: grid;
+  position: relative;
+  border-radius: 10px;
+  grid-template-rows: auto auto;
+}
+
+input[type="text"],
+select,
+textarea {
+  margin: 0 0 20px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.class-section {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1052px) {
+  .topnav {
+    padding: 10px;
+  }
+
+  .topnav a {
+    font-size: 2em;
+  }
+
+  .breadcrumb {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.15em;
+  }
+
+  button {
+    font-size: 1.5em;
+    padding: 30px;
+    border-radius: 50px;
+  }
+}
+
+@media screen and (min-width: 1053px) {
+  .form-input {
+    padding: 5px;
+  }
+
+  .search-container {
+    margin: 0 0 17px;
+    padding: 5px;
+  }
+
+  .breadcrumb {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    display: inline-block;
+    justify-content: normal;
+    padding: 10px;
+    margin: 30px;
+  }
+
+  button {
+    font-size: 1.1em;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .class-section {
+    margin: 40px;
+  }
+}

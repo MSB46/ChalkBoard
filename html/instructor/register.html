@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <!--
     Name: Michael Boodoosingh
-    Date: 11/1/2021
+    Date: 11/16/2021
     Course: CS 355
     This is the register.html page for the ChalkBoard website. At the moment, it includes
-    four form input elements for username, password, firstname, and lastname. However, it is only for show at the moment
-    since the goal is to implement to HTML first. There is also a link to the login page. Clicking on the logo leads to index.html
+    four form input elements for username, password, firstname, and lastname.
+    There is also a link to the login page. Clicking on the logo leads to index.html
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link rel="stylesheet" href="../../css/stylesMB.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" href="../../css/stylesMB.css">-->
+    <link rel="stylesheet" href="../../css/register-style.css">
 </head>
 <body>
-    <div class="logoDiv">
-        <a class="logo" href="../../index.html"> <img src="../../img/chalkboardLogo.png" alt="chalkboard logo"> </a>
+<div class="logoDiv">
+    <a class="logo outside" href="../../index.html"> <img src="../../img/chalkboardLogo.png" alt="chalkboard logo"> </a>
+</div>
+<div id="container">
+    <div class="user-creds">
+        <div class="register-area">
+            <a class="logo inside" href="../../index.html"> <img src="../../img/chalkboardLogo.png"
+                                                                 alt="chalkboard logo">
+            </a>
+            <h3>Instructor<br>Register</h3>
+            <form id="registerForm">
+                <label class="askingFor">User/Email</label> <br>
+                <input class="cred-input" placeholder="Email" type="email" name="newEmail" id="newEmail"> <br>
+                <label class="askingFor">Password</label> <br>
+                <input class="cred-input" placeholder="Password" type="password" name="password" id="passwordUser"> <br>
+                <label class="askingFor">First name</label> <br>
+                <input class="cred-input" placeholder="First name?" type="text" name="first" id="first"> <br>
+                <label class="askingFor">Last name</label> <br>
+                <input class="cred-input" placeholder="Last name?" type="text" name="last" id="last">
+                <br>
+                <button class="form-button" type="submit" id="registerButton">Register</button>
+            </form>
+        </div>
     </div>
-    <div class="userCreds">
-        <h3>Instructor Register</h3>
-        <form id="registerForm">
-            <input class="cred-input" placeholder="Email" type="email" name="newEmail" id="newEmail">
-            <input class="cred-input" placeholder="Password" type="password" name="password" id="passwordUser">
-            <input class="cred-input" placeholder="First name?" type="text" name="first" id="first">
-            <input class="cred-input" placeholder="Last name?" type="text" name="last" id="last">
-            <button class="form-button" type="submit" id="registerButton">Register</button>
-        </form>
-        <a href="./login.html"> Already have an account? Sign in here! </a>
+    <div class="welcome">
+        <div class="greet-message">
+        <h2>Good to see you!</h2>
+        <p>Whether you're young, old, experienced, or new, <br> we hope you have
+            a pleasant experience using ChalkBoard.</p>
+        </div>
+        <a class="to-login" href="./login.html"> Already have an account? Sign in here! </a>
     </div>
+
+</div>
 </body>
 </html>

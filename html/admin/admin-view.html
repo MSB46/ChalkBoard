@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <!--
     Name: Michael Boodoosingh
-    Date: 11/1/2021
+    Date: 11/16/2021
     Course: CS 355
     This is the admin-view.html page for the ChalkBoard website. The goal for this page is to preview
-    the all available students, courses, and instructors. There is also a search bar which is supposed
-    to be used to filter specific courses/people. All data is placeholder values for the time being.
-    Includes a navigation bar and breadcrumbs for convenience.
+    the all available courses. There is also a search bar which is supposed
+    to be used to filter specific courses. All data is placeholder values for the time being.
+    Includes a navigation bar and breadcrumbs for convenience. The tables are responsive such that
+    not all columns of a particular row will appear unless toggled. Tables are created with the help of FooTable.
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin View</title>
+    <script src="../../js/script.js"></script>
+
     <link rel="stylesheet" href="../../css/stylesMB.css">
+    <link rel="stylesheet" href="../../css/admin-style.css">
+    <link rel="stylesheet" href="../../css/table-style.css">
+
+    <!-- FooTable Bootstrap CSS -->
+    <link href="../../css/footable.bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../../js/footable.min.js"></script>
+    <script src="../../js/footable.js"></script>
+    <script>
+        jQuery(function ($) {
+            $('.info').footable();
+        });</script>
+
 </head>
 <body>
-<nav class="navBar">
+<div class="topnav" id="myTopnav">
     <a href="../../index.html">ChalkBoard</a>
     <a class="log-out" href="./login.html">Log out</a>
-</nav>
-
-<div class="search-container">
-    <form>
-        <input class="form-input" placeholder="Search for class, student, or instructor" type="text" name="filter"
-               id="filter">
-    </form>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
 <ul class="breadcrumb">
@@ -32,610 +50,201 @@
     <li>Admin View</li>
 </ul>
 
-<h3 class="sectionTitle">Current Courses</h3>
-<table class="info" id="courses">
-    <tr>
-        <th>Class Number</th>
-        <th>Class Name</th>
-        <th>Instructor</th>
-        <th>Number of students</th>
-        <th>Meeting Info</th>
-        <th>Semester</th>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">MATH 141</a></td>
-        <td>Calculus I</td>
-        <td><a href="./instructor-data.html">Eric Smith</a></td>
-        <td>22</td>
-        <td>Tue/Thr 1:00PM - 2:15PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">MATH 141</a></td>
-        <td>Calculus I</td>
-        <td><a href="./instructor-data.html">Eric Smith</a></td>
-        <td>19</td>
-        <td>Mon/Wed 12:30PM - 1:45PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">HIST 101</a></td>
-        <td>Introduction to History</td>
-        <td><a href="./instructor-data.html">George Washington Lincoln</a></td>
-        <td>30</td>
-        <td>Mon/Wed 12:00PM - 2:00PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">HIST 102</a></td>
-        <td>American History</td>
-        <td><a href="./instructor-data.html">John Teller</a></td>
-        <td>29</td>
-        <td>Mon/Wed 12:30PM - 1:45PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">HIST 102</a></td>
-        <td>American History</td>
-        <td><a href="./instructor-data.html">John Teller</a></td>
-        <td>30</td>
-        <td>Tue/Thur 3:30PM - 4:45PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">HIST 200</a></td>
-        <td>American Politics</td>
-        <td><a href="./instructor-data.html">Polly Dole</a></td>
-        <td>10</td>
-        <td>Fri 12:00PM - 2:50PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">HIST 300</a></td>
-        <td>History of Barbeque</td>
-        <td><a href="./instructor-data.html">Jones King</a></td>
-        <td>5</td>
-        <td>Wed 5:30PM - 7:00PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">DRAM 100</a></td>
-        <td>Introduction to Acting</td>
-        <td><a href="./instructor-data.html">Erica Manning</a></td>
-        <td>38</td>
-        <td>Tue 3:30PM - 6:00PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">DRAM 200</a></td>
-        <td>Intermediate Acting</td>
-        <td><a href="./instructor-data.html">Erica Manning</a></td>
-        <td>16</td>
-        <td>Thr 12:30PM - 3:00PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">BIO 1</a></td>
-        <td>Introduction to Biology</td>
-        <td><a href="./instructor-data.html">Mai Tow Andrea</a></td>
-        <td>63</td>
-        <td>Mon/Wed 8:00AM - 9:15AM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">CHEM 1</a></td>
-        <td>Introduction to Chemistry</td>
-        <td><a href="./instructor-data.html">Perry Odic</a></td>
-        <td>71</td>
-        <td>Tue/Thr 11:00AM - 12:15PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">PHYS 1</a></td>
-        <td>Introduction to Physics</td>
-        <td><a href="./instructor-data.html">Jerry Pryce</a></td>
-        <td>43</td>
-        <td>Mon/Wed 2:00PM - 3:15PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">ENG 110</a></td>
-        <td>College Writing I</td>
-        <td><a href="./instructor-data.html">Buck Fincher</a></td>
-        <td>20</td>
-        <td>Tue/Thr 10:00AM - 12:00PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">ENG 110</a></td>
-        <td>College Writing I</td>
-        <td><a href="./instructor-data.html">Buck Fincher</a></td>
-        <td>21</td>
-        <td>Tue/Thr 2:00PM - 4:00PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">ENG 110</a></td>
-        <td>College Writing I</td>
-        <td><a href="./instructor-data.html">Teresa Finn</a></td>
-        <td>20</td>
-        <td>Mon/Wed 11:00AM - 1:00PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">ENG 110</a></td>
-        <td>College Writing I</td>
-        <td><a href="./instructor-data.html">Teresa Finn</a></td>
-        <td>15</td>
-        <td>Tue/Thr 1:00PM - 3:00PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">ENG 130</a></td>
-        <td>College Writing II</td>
-        <td><a href="./instructor-data.html">Buck Fincher</a></td>
-        <td>20</td>
-        <td>Mon/Wed 1:00PM - 3:00PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">ENG 130</a></td>
-        <td>College Writing II</td>
-        <td><a href="./instructor-data.html">Teresa Finn</a></td>
-        <td>20</td>
-        <td>Fri 10:00AM - 12:00PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">FREN 101</a></td>
-        <td>French I</td>
-        <td><a href="./instructor-data.html">Bonnie Jour</a></td>
-        <td>13</td>
-        <td>Mon/Wed 10:00AM - 11:15AM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">FREN 201</a></td>
-        <td>French II</td>
-        <td><a href="./instructor-data.html">Mon Emily</a></td>
-        <td>12</td>
-        <td>Fri 3:00PM - 5:50PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">SPAN 101</a></td>
-        <td>Spanish I</td>
-        <td><a href="./instructor-data.html">Ami Go</a></td>
-        <td>22</td>
-        <td>Tue/Thr 1:00PM - 2:15PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">SPAN 201</a></td>
-        <td>Spanish II</td>
-        <td><a href="./instructor-data.html">Cinn Urita</a></td>
-        <td>13</td>
-        <td>Mon/Wed 10:00AM - 11:15AM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">SPAN 301</a></td>
-        <td>Spanish III</td>
-        <td><a href="./instructor-data.html">Ami Go</a></td>
-        <td>12</td>
-        <td>Fri 3:00PM - 5:50PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">ECON 120</a></td>
-        <td>Concept of Monopolies</td>
-        <td><a href="./instructor-data.html">Lawmond Ray</a></td>
-        <td>22</td>
-        <td>Wed 1:00PM - 2:15PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">ECON 120</a></td>
-        <td>Concept of Monopolies</td>
-        <td><a href="./instructor-data.html">Lawmond Ray</a></td>
-        <td>14</td>
-        <td>Thr 1:00PM - 2:15PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">ECON 120</a></td>
-        <td>Concept of Monopolies</td>
-        <td><a href="./instructor-data.html">Lawmond Ray</a></td>
-        <td>13</td>
-        <td>Fri 3:00PM - 4:15PM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">ECON 120</a></td>
-        <td>Concept of Monopolies</td>
-        <td><a href="./instructor-data.html">Lawmond Ray</a></td>
-        <td>9</td>
-        <td>Sat 9:00AM - 10:15AM</td>
-        <td>Spring 2025</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">ECON 120</a></td>
-        <td>Concept of Monopolies</td>
-        <td><a href="./instructor-data.html">Lawmond Ray</a></td>
-        <td>8</td>
-        <td>Sun 10:00AM - 11:15AM</td>
-        <td>Spring 2025</td>
-    </tr>
-</table>
-<h3 class="sectionTitle"> Current Instructors </h3>
-<table class="info" id="instructor">
-    <tr>
-        <th>Instructor Name</th>
-        <th>Instructor ID</th>
-        <th>Instructor Email</th>
-        <th>Instructor Phone Number</th>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Eric Smith</a></td>
-        <td> T01</td>
-        <td> esmith01@kingmail.com</td>
-        <td>347-111-2222</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">George Washington Lincoln</a></td>
-        <td> T02</td>
-        <td> glincoln02@kingmail.com</td>
-        <td>347-222-3333</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">John Teller</a></td>
-        <td> T03</td>
-        <td> jteller03@kingmail.com</td>
-        <td>917-333-4444</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Polly Dole</a></td>
-        <td> T04</td>
-        <td> pdole04@kingmail.com</td>
-        <td>917-444-5555</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Jones King</a></td>
-        <td> T05</td>
-        <td> jking05@kingmail.com</td>
-        <td>347-555-6666</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Erica Manning</a></td>
-        <td> T06</td>
-        <td> emanning06@kingmail.com</td>
-        <td>347-666-7777</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Mai Tow Andrea</a></td>
-        <td> T07</td>
-        <td> mandrea07@kingmail.com</td>
-        <td>347-777-8888</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Perry Odic</a></td>
-        <td> T08</td>
-        <td> podic08@kingmail.com</td>
-        <td>917-888-9999</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Jerry Pryce</a></td>
-        <td> T09</td>
-        <td> jpryce09@kingmail.com</td>
-        <td>347-999-0000</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Buck Fincher</a></td>
-        <td> T10</td>
-        <td> bfincher10@kingmail.com</td>
-        <td>347-000-1111</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Teresa Finn</a></td>
-        <td> T11</td>
-        <td> tfinn11@kingmail.com</td>
-        <td>347-111-2233</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Bonnie Jour</a></td>
-        <td> T12</td>
-        <td> bjour12@kingmail.com</td>
-        <td>347-222-3344</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Mon Emily</a></td>
-        <td> T13</td>
-        <td> memily13@kingmail.com</td>
-        <td>347-333-4455</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Ami Go</a></td>
-        <td> T14</td>
-        <td> amigo14@kingmail.com</td>
-        <td>347-444-5566</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Laymond Ray</a></td>
-        <td> T15</td>
-        <td> lray15@kingmail.com</td>
-        <td>347-555-6677</td>
-    </tr>
-    <tr>
-        <td><a href="./instructor-data.html">Instructor Unknown</a></td>
-        <td> T##</td>
-        <td> iunknown99@kingmail.com</td>
-        <td>123-456-7890</td>
-    </tr>
-</table>
-<h3 class="sectionTitle"> Current Students </h3>
-<table id="roster">
-    <tr>
-        <th>Student Name</th>
-        <th>Student ID</th>
-        <th>Email</th>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Annie Murphy </a></td>
-        <td> S01</td>
-        <td> amurphy1@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Janiya Witting </a></td>
-        <td> S02</td>
-        <td> jwitting2@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Melyssa Rath </a></td>
-        <td> S03</td>
-        <td> mrath3@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Justyn Welch </a></td>
-        <td> S04</td>
-        <td> jwelch4@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Claudia Bergstrom </a></td>
-        <td> S05</td>
-        <td> cbergstorm5@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Baby Wunsch </a></td>
-        <td> S06</td>
-        <td> bwunsch6@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Arielle Collier </a></td>
-        <td> S07</td>
-        <td> acollier7@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Emmet Douglas </a></td>
-        <td> S08</td>
-        <td> edouglas8@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Elna Williamson </a></td>
-        <td> S09</td>
-        <td> ewilliamson9@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Geraldine Rodrigue </a></td>
-        <td> S10</td>
-        <td> grodrigue10@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Elmer Rohan </a></td>
-        <td> S11</td>
-        <td> erohan11@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Zoe Spinka </a></td>
-        <td> S12</td>
-        <td> zspinka12@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Roma Lubowitz </a></td>
-        <td> S13</td>
-        <td> rlubowitz13@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Ardella Quitzon </a></td>
-        <td> S14</td>
-        <td> aquitzon14@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Garnett Connelly </a></td>
-        <td> S15</td>
-        <td> gconnelly15@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Brigitte Bartell </a></td>
-        <td> S16</td>
-        <td> bbartell16@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Garth Schuster </a></td>
-        <td> S17</td>
-        <td> gschuster17@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Larry Lind </a></td>
-        <td> S18</td>
-        <td> llind18@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Quinten Koch </a></td>
-        <td> S19</td>
-        <td> qkoch19@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Bart Carroll </a></td>
-        <td> S20</td>
-        <td> bcarroll20@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Louvenia Jaskolski </a></td>
-        <td> S21</td>
-        <td> ljaskolski21@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Leslie Bayer </a></td>
-        <td> S22</td>
-        <td> lbayer22@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Olga Moore </a></td>
-        <td> S23</td>
-        <td> omoore23@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Myles Schuster </a></td>
-        <td> S24</td>
-        <td> mschuster24@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Charlie Ortiz </a></td>
-        <td> S25</td>
-        <td> cortiz25@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Gerald Mills </a></td>
-        <td> S26</td>
-        <td> gmills26@kingmail.com</td>
-    </tr>
+<h1 class="section-title">Current Courses</h1>
+<div class="search-container">
+    <form>
+        <input class="filter-form-input" placeholder="Search examples: MATH141, 12345, Steve Urkel" type="text"
+               name="filter"
+               id="filter">
+    </form>
+</div>
 
-    <tr>
-        <td><a href="student-data.html"> Milton Herman </a></td>
-        <td> S27</td>
-        <td> mherman27@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Janiya Cronin </a></td>
-        <td> S28</td>
-        <td> jcronin28@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Reagan Hintz </a></td>
-        <td> S29</td>
-        <td> rhintz29@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Margaret Sporer </a></td>
-        <td> S30</td>
-        <td> msporer30@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Coralie Muller </a></td>
-        <td> S31</td>
-        <td> cmuller31@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Nicole Aufderhar </a></td>
-        <td> S32</td>
-        <td> naufderhar32@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Duane Koch </a></td>
-        <td> S33</td>
-        <td> dkoch33@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Ian Gleason </a></td>
-        <td> S34</td>
-        <td> igleason34@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Casey Nitzsche</a></td>
-        <td> S35</td>
-        <td> cnitzsche35@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Florida Hudson </a></td>
-        <td> S36</td>
-        <td> fhudson@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Opal Carroll</a></td>
-        <td> S37</td>
-        <td> ocarroll37@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Jaylon Bechtelar </a></td>
-        <td> S38</td>
-        <td> jbechtelar38@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Niko Jenkins </a></td>
-        <td> S39</td>
-        <td> njenkins39@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Sammie King </a></td>
-        <td> S40</td>
-        <td> sking40@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Hans Stokes </a></td>
-        <td> S41</td>
-        <td> hstokes41@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Robbie Considine </a></td>
-        <td> S42</td>
-        <td> rconsidine42@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Odie Hayes</a></td>
-        <td> S43</td>
-        <td> ohayes43@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Hertha Denesik </a></td>
-        <td> S44</td>
-        <td> hdenesik44@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Alexanne Wintheiser </a></td>
-        <td> S45</td>
-        <td> awintheiser45@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Vickie Stanton </a></td>
-        <td> S46</td>
-        <td> vstanton46@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Howard Schroeder </a></td>
-        <td> S47</td>
-        <td> hschroeder47@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Jacques Roob </a></td>
-        <td> S48</td>
-        <td> jroob48@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Thelma Ullrich </a></td>
-        <td> S49</td>
-        <td> tullrich49@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Nichole Koss </a></td>
-        <td> S50</td>
-        <td> nkoss50@kingmail.com</td>
-    </tr>
-    <tr>
-        <td><a href="student-data.html"> Tad Glover </a></td>
-        <td> S51</td>
-        <td> tglover51@kingmail.com</td>
-    </tr>
-</table>
-
+<div class="main-content-area">
+    <table class="info" id="courses">
+        <thead>
+        <tr>
+            <th>Section</th>
+            <th data-breakpoints="xs">Class Number</th>
+            <th data-breakpoints="xs sm">Class Name</th>
+            <th>Instructor</th>
+            <th data-breakpoints="xs sm">Number of students</th>
+            <th data-breakpoints="xs sm">Meeting Info</th>
+            <th data-breakpoints="xs sm">Semester</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>00001</td>
+            <td><a href="./course-data.html">MATH 141</a></td>
+            <td>Calculus I</td>
+            <td><a href="./instructor-data.html">Eric Smith</a></td>
+            <td>22</td>
+            <td>Tue/Thr 1:00PM - 2:15PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00002</td>
+            <td><a href="./course-data.html">MATH 141</a></td>
+            <td>Calculus I</td>
+            <td><a href="./instructor-data.html">Eric Smith</a></td>
+            <td>19</td>
+            <td>Mon/Wed 12:30PM - 1:45PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00003</td>
+            <td><a href="./course-data.html">HIST 101</a></td>
+            <td>Introduction to History</td>
+            <td><a href="./instructor-data.html">George Washington Lincoln</a></td>
+            <td>30</td>
+            <td>Mon/Wed 12:00PM - 2:00PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00004</td>
+            <td><a href="./course-data.html">HIST 102</a></td>
+            <td>American History</td>
+            <td><a href="./instructor-data.html">John Teller</a></td>
+            <td>29</td>
+            <td>Mon/Wed 12:30PM - 1:45PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00005</td>
+            <td><a href="./course-data.html">HIST 102</a></td>
+            <td>American History</td>
+            <td><a href="./instructor-data.html">John Teller</a></td>
+            <td>30</td>
+            <td>Tue/Thur 3:30PM - 4:45PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00006</td>
+            <td><a href="./course-data.html">HIST 200</a></td>
+            <td>American Politics</td>
+            <td><a href="./instructor-data.html">Polly Dole</a></td>
+            <td>10</td>
+            <td>Fri 12:00PM - 2:50PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00007</td>
+            <td><a href="./course-data.html">HIST 300</a></td>
+            <td>History of Barbeque</td>
+            <td><a href="./instructor-data.html">Jones King</a></td>
+            <td>5</td>
+            <td>Wed 5:30PM - 7:00PM</td>
+            <td>Spring 2025</td>
+        <tr>
+            <td>00008</td>
+            <td><a href="./course-data.html">DRAM 100</a></td>
+            <td>Introduction to Acting</td>
+            <td><a href="./instructor-data.html">Erica Manning</a></td>
+            <td>38</td>
+            <td>Tue 3:30PM - 6:00PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00009</td>
+            <td><a href="./course-data.html">DRAM 200</a></td>
+            <td>Intermediate Acting</td>
+            <td><a href="./instructor-data.html">Erica Manning</a></td>
+            <td>16</td>
+            <td>Thr 12:30PM - 3:00PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00010</td>
+            <td><a href="./course-data.html">BIO 1</a></td>
+            <td>Introduction to Biology</td>
+            <td><a href="./instructor-data.html">Mai Toek Andrea</a></td>
+            <td>63</td>
+            <td>Mon/Wed 8:00AM - 9:15AM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00011</td>
+            <td><a href="./course-data.html">CHEM 1</a></td>
+            <td>Introduction to Chemistry</td>
+            <td><a href="./instructor-data.html">Perry Odic</a></td>
+            <td>71</td>
+            <td>Tue/Thr 11:00AM - 12:15PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00012</td>
+            <td><a href="./course-data.html">PHYS 1</a></td>
+            <td>Introduction to Physics</td>
+            <td><a href="./instructor-data.html">Jerry Pryce</a></td>
+            <td>43</td>
+            <td>Mon/Wed 2:00PM - 3:15PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00013</td>
+            <td><a href="./course-data.html">ENG 110</a></td>
+            <td>College Writing I</td>
+            <td><a href="./instructor-data.html">Buck Fincher</a></td>
+            <td>20</td>
+            <td>Tue/Thr 10:00AM - 12:00PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00014</td>
+            <td><a href="./course-data.html">ENG 110</a></td>
+            <td>College Writing I</td>
+            <td><a href="./instructor-data.html">Buck Fincher</a></td>
+            <td>21</td>
+            <td>Tue/Thr 2:00PM - 4:00PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00015</td>
+            <td><a href="./course-data.html">ENG 110</a></td>
+            <td>College Writing I</td>
+            <td><a href="./instructor-data.html">Teresa Finn</a></td>
+            <td>20</td>
+            <td>Mon/Wed 11:00AM - 1:00PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00016</td>
+            <td><a href="./course-data.html">ENG 110</a></td>
+            <td>College Writing I</td>
+            <td><a href="./instructor-data.html">Teresa Finn</a></td>
+            <td>15</td>
+            <td>Tue/Thr 1:00PM - 3:00PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00017</td>
+            <td><a href="./course-data.html">ENG 130</a></td>
+            <td>College Writing II</td>
+            <td><a href="./instructor-data.html">Buck Fincher</a></td>
+            <td>20</td>
+            <td>Mon/Wed 1:00PM - 3:00PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00018</td>
+            <td><a href="./course-data.html">ENG 130</a></td>
+            <td>College Writing II</td>
+            <td><a href="./instructor-data.html">Teresa Finn</a></td>
+            <td>20</td>
+            <td>Fri 10:00AM - 12:00PM</td>
+            <td>Spring 2025</td>
+        </tr>
+        <tr>
+            <td>00019</td>
+            <td><a href="./course-data.html">ECON 120</a></td>
+            <td>Concept of Monopolies</td>
+            <td><a href="./instructor-data.html">Lawmond Ray</a></td>
+            <td>8</td>
+            <td>Sun 10:00AM - 11:15AM</td>
+            <td>Spring 2025</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

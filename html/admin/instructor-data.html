@@ -1,63 +1,108 @@
 <!DOCTYPE html>
 <!--
     Name: Michael Boodoosingh
-    Date: 11/1/2021
+    Date: 11/16/2021
     Course: CS 355
     This is the instructor-data.html page for the ChalkBoard website. Clicking on the name of an instructor is supposed to lead to this page.
     Here, it would show various information regarding the clicked instructor like the courses they're teaching, email, ID, etc. (not all info values are final)
     All data is placeholder values for the time being.
     Includes a navigation bar and breadcrumbs for convenience.
+
+    FooTable, a jQuery plugin is used to help create the vertical layout tables on mobile.
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instructor Data</title>
+    <script src="../../js/script.js"></script>
+
     <link rel="stylesheet" href="../../css/stylesMB.css">
+    <link rel="stylesheet" href="../../css/admin-style.css">
+    <link rel="stylesheet" href="../../css/table-style.css">
+
+    <!-- FooTable Bootstrap CSS -->
+    <link href="../../css/footable.bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../../js/footable.min.js"></script>
+    <script src="../../js/footable.js"></script>
+    <script>
+        jQuery(function ($) {
+            $('.table1').footable();
+        });
+
+        jQuery(function ($) {
+            $('.table2').footable();
+        });
+
+    </script>
+
 </head>
 <body>
-<nav class="navBar">
+<div class="topnav" id="myTopnav">
     <a href="../../index.html">ChalkBoard</a>
     <a class="log-out" href="./login.html">Log out</a>
-</nav>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
 
 <ul class="breadcrumb">
     <li><a href="../../index.html">Home</a></li>
     <li><a href="./admin-view.html">Admin View</a></li>
     <li>Instructor Data</li>
 </ul>
-<h1 class="sectionTitle">Instructor Unknown (Clicked Name Goes Here)</h1>
-<table class="info">
-    <tr>
-        <th>Instructor ID</th>
-        <th>Instructor Email</th>
-        <th>Phone Number</th>
-    </tr>
-    <tr>
-        <td>T##</td>
-        <td>iunknown999@kingmail.com</td>
-        <td>123-4567-8910</td>
-    </tr>
-</table>
 
-<h3 class="sectionTitle">Associated Courses</h3>
-<table class="courseInfo">
-    <tr>
-        <th>Class Number</th>
-        <th>Class Name</th>
-        <th>Meeting Info</th>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">TEST XYZ</a></td>
-        <td>Introduction to Placeholding</td>
-        <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
-    </tr>
-    <tr>
-        <td><a href="./course-data.html">TEST ABC</a></td>
-        <td>Placeholding II</td>
-        <td>Sat/Sun CC:DD</td>
-    </tr>
-</table>
+<h3 class="section-title">Instructor Unknown (Clicked Name Goes Here)</h3>
+<div class="main-content-area">
 
+    <table class="table1">
+        <thead>
+        <tr>
+            <th>Instructor ID</th>
+            <th data-breakpoints="xs sm">Instructor Email</th>
+            <th data-breakpoints="xs sm">Phone Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>T##</td>
+            <td>iunknown999@kingmail.com</td>
+            <td>123-4567-8910</td>
+        </tr>
+        </tbody>
+
+    </table>
+
+    <h3 class="section-title">Associated Courses</h3>
+    <table class="table2">
+        <tr>
+            <th>Section</th>
+            <th data-breakpoints="xs">Class Number</th>
+            <th data-breakpoints="xs sm">Class Name</th>
+            <th data-breakpoints="xs sm">Meeting Info</th>
+        </tr>
+        <tr>
+            <td>ABCDE</td>
+            <td><a href="./course-data.html">TEST XYZ</a></td>
+            <td>Introduction to Placeholding</td>
+            <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
+        </tr>
+        <tr>
+            <td>12345</td>
+            <td><a href="./course-data.html">TEST ABC</a></td>
+            <td>Placeholding II</td>
+            <td>Sat/Sun CC:DD</td>
+        </tr>
+    </table>
+
+</div>
 
 </body>
 </html>

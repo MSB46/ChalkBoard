@@ -1,85 +1,126 @@
 <!DOCTYPE html>
 <!--
     Name: Michael Boodoosingh
-    Date: 11/1/2021
+    Date: 11/16/2021
     Course: CS 355
     This is the enroll.html page for the ChalkBoard website. This is where the user is supposed to view the information about the available courses.
     There is also a searchbar to filter specific classes the user may be interested in. Additionally, the user would be given the option to enroll in the class
     All data is placeholder values for the time being.
     Includes a navigation bar and breadcrumbs for convenience.
+
+    FooTable, a jQuery plugin is used to help create the vertical layout tables on mobile.
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Enroll</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/script.js"></script>
+
     <link rel="stylesheet" href="../../css/stylesMB.css">
+    <link rel="stylesheet" href="../../css/enroll-style.css">
+    <link rel="stylesheet" href="../../css/table-style.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- FooTable Bootstrap CSS -->
+    <link href="../../css/footable.bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+    <script src="../../js/footable.min.js"></script>
+    <script src="../../js/footable.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $('.class-info').footable();
+        });</script>
+
 </head>
 
 <body>
-<nav class="navBar">
+<div class="topnav" id="myTopnav">
     <a href="../../index.html">ChalkBoard</a>
     <a class="log-out" href="./login.html">Log out</a>
-</nav>
-
-<ul class="breadcrumb">
-    <li><a href="../../index.html">Home</a></li>
-    <li><a href="./student.html">Student View</a></li>
-    <li>Enroll</li>
-</ul>
-
-<div class="search-container">
-    <form>
-        <input class="form-input"
-               placeholder="Search examples: MATH101, Art, Barbeque" type="text" name="filter" id="filter">
-    </form>
-</div>
-<br>
-<h3 class="sectionTitle">Enroll in a class</h3>
-<div class="classSection">
-    <table class="classInfo">
-        <tr>
-            <th>Class Number</th>
-            <th>Class Name</th>
-            <th>Instructor</th>
-            <th>Enrolled/Total Seats</th>
-            <th>Meeting Info</th>
-            <th>Semester</th>
-        </tr>
-        <tr>
-            <td>DRAM 200</td>
-            <td>Intermediate Acting</td>
-            <td>Erica Manning</td>
-            <td>16 / 25</td>
-            <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
-            <td>Spring 2025</td>
-            <td>
-                <button class="enrollBtn">Enroll</button>
-            </td>
-        </tr>
-        <tr>
-            <td>CHEM 1</td>
-            <td>Introduction to Chemistry</td>
-            <td>Perry Odic</td>
-            <td>71 / 75</td>
-            <td>Tue/Thr 11:00AM - 12:15PM</td>
-            <td>Spring 2025</td>
-            <td>
-                <button class="enrollBtn">Enroll</button>
-            </td>
-        </tr>
-        <tr>
-            <td>HIST 300</td>
-            <td>History of Barbeque</td>
-            <td>Jones King</td>
-            <td>5 / 30</td>
-            <td>Wed 5:30PM - 7:00PM</td>
-            <td>Spring 2025</td>
-            <td>
-                <button class="enrollBtn">Enroll</button>
-            </td>
-        </tr>
-    </table>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
+<div id="container">
+    <div class="breadcrumbDiv">
+        <ul class="breadcrumb">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="./student.html">Student View</a></li>
+            <li>Enroll</li>
+        </ul>
+    </div>
+    <div class="mainContainer">
+        <h1 class="sectionTitle">Enroll in a class</h1>
+        <br>
+        <div class="search-container">
+            <form>
+                <input class="filter-form-input"
+                       placeholder="Search examples: MATH101, Art, Barbeque" type="text" name="filter" id="filter">
+            </form>
+        </div>
+        <div class="info">
+            <table class="class-info">
+                <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Class Number</th>
+                    <th data-breakpoints="xs">Class Name</th>
+                    <th data-breakpoints="xs">Instructor</th>
+                    <th data-breakpoints="xs sm">Enrolled/Total Seats</th>
+                    <th data-breakpoints="xs sm">Meeting Info</th>
+                    <th data-breakpoints="xs sm">Semester</th>
+                    <th data-breakpoints="xs sm"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="moderate">
+                    <td>00020</td>
+                    <td>DRAM 200</td>
+                    <td>Intermediate Acting</td>
+                    <td>Erica Manning</td>
+                    <td>16 / 25</td>
+                    <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
+                    <td>Spring 2025</td>
+                    <td>
+                        <button class="enrollBtn">Enroll</button>
+                    </td>
+                </tr>
+                <tr class="danger">
+                    <td>00021</td>
+                    <td>CHEM 1</td>
+                    <td>Introduction to Chemistry</td>
+                    <td>Perry Odic</td>
+                    <td>71 / 75</td>
+                    <td>Tue/Thr 11:00AM - 12:15PM</td>
+                    <td>Spring 2025</td>
+                    <td>
+                        <button class="enrollBtn">Enroll</button>
+                    </td>
+                </tr>
+                <tr class="safe">
+                    <td>00050</td>
+                    <td>HIST 300</td>
+                    <td>History of Barbeque</td>
+                    <td>Jones King</td>
+                    <td>5 / 30</td>
+                    <td>Wed 5:30PM - 7:00PM</td>
+                    <td>Spring 2025</td>
+                    <td>
+                        <button class="enrollBtn">Enroll</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 </body>
 </html>

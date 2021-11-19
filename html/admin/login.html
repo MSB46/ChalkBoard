@@ -5,29 +5,42 @@
     Course: CS 355
     This is the login.html page for the ChalkBoard website. At the moment, it includes
     a two form input elements for username and password. However, it is only for show at the moment
-    since the goal is to implement to HTML first. There is also a link to register and
-    a temporary link to see the admin interface (since we haven't implemented login access yet).
+    since the goal is to implement to HTML first.
     Clicking on the logo leads to index.html
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="../../css/stylesMB.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/login-style.css">
+
 </head>
 <body>
-    <div class="logoDiv">
-        <a class="logo" href="../../index.html"> <img src="../../img/chalkboardLogo.png" alt="chalkboard logo"> </a>
-    </div>
+<div class="logo-div">
+    <a class="logo outside" href="../../index.html"> <img src="../../img/chalkboardLogo.png" alt="chalkboard logo"> </a>
+</div>
 
-    <div class="loginArea">
+<div class="user-creds">
+    <div class="within-cover">
+        <a class="logo inside" href="../../index.html"> <img src="../../img/chalkboardLogo.png"
+                                                             alt="chalkboard logo"></a>
         <h3>Admin - Sign In</h3>
         <form id="signInForm">
+            <span class="asking-for">User/Email</span>
             <input class="cred-input" placeholder="Email" type="email" name="email" id="emailUser">
+            <span class="asking-for">Password</span>
             <input class="cred-input" placeholder="Password" type="password" name="password" id="passwordUser">
             <!-- <button class="form-button" type="submit" id="signInButton">Sign in</button> -->
+            <br>
+            <button class="form-button" type="submit" id="signInButton"
+                    formaction="./admin-view.html">Sign in
+            </button>
         </form>
-        <a href="./admin-view.html"><button class="form-button" type="submit" id="signInButton">Sign in</button></a> <br>
     </div>
+</div>
 </body>
 </html>

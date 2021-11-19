@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: Rubik, sans-serif, Arial;
+  background: beige;
+}
+
+h3 {
+  color: beige;
+  font-size: 1.75em;
+}
+
+.welcome {
+  background: url("../img/chalkboardImg.png") no-repeat;
+  background-size: 100% 100%;
+  border: 5px inset #232020;
+}
+
+.user-creds {
+  display: block;
+  text-align: center;
+  padding: 25px 5px;
+  border: 5px inset #232020;
+  background: url("../img/chalkboardImgB.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.register-area {
+  position: relative;
+  top: -15%;
+}
+
+.logo img {
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.logo-div {
+  font-size: 2.5em;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.logo img:hover {
+  filter: drop-shadow(0 5px 0.75rem #ecec3e);
+}
+
+.cred-input {
+  display: inline-block;
+  padding: 15px 100px 15px 20px;
+  border-radius: 10px;
+  margin: 30px 10px;
+  box-sizing: inherit;
+}
+
+label {
+  font-size: 1.5em;
+  color: white;
+}
+
+input:focus {
+  border: 2px solid black;
+}
+
+button,
+.welcome a {
+  border: 2px solid black;
+  text-shadow: whitesmoke 0 1px 3px;
+  background-color: #82ee57;
+  font-weight: bolder;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+button {
+  margin: 20px 0;
+}
+
+.welcome a {
+  color: black;
+  text-decoration: none;
+}
+
+button:hover,
+.welcome a:hover {
+  background-color: lightslategrey;
+}
+
+.greet-message {
+  margin: 46px 30px;
+  padding: 10px;
+  color: whitesmoke;
+  background-color: rgb(245 245 245 / 51%);
+  text-shadow: #2c2828 0 1px 3px;
+  border: 2px inset white;
+  border-radius: 118px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+@media screen and (max-width: 1052px) {
+  .outside {
+    display: none;
+  }
+
+  .logo .inside {
+    width: 10vw;
+  }
+
+  .user-creds {
+    padding: 39% 159px;
+    height: 85vh;
+  }
+
+  .asking-for {
+    display: block;
+    text-align: center;
+    clear: both;
+    color: whitesmoke;
+    font-size: 1.5em;
+    margin: 0 0 5px;
+  }
+
+  .asking-for:first-child {
+    margin: 20px 0 0;
+  }
+
+  .cred-input {
+    font-size: 1.4em;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1.4em;
+  }
+
+  #container {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+
+  .welcome {
+    display: block;
+    height: 130vh;
+  }
+
+  .welcome h2,
+  .welcome p {
+    font-size: 4em;
+    color: white;
+    text-align: center;
+  }
+
+  .welcome p {
+    font-size: 2em;
+  }
+
+  .welcome.to-login {
+    display: inline-block;
+  }
+
+  .welcome a {
+    position: relative;
+    left: 33%;
+    top: 10vh;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1053px) {
+  .outside {
+    display: inline-block;
+    margin: 0 39%;
+  }
+
+  .inside {
+    display: none;
+  }
+
+  .cred-input {
+    padding: 3px 8px;
+
+    /* width: 50%; */
+    margin: 10px 0;
+    font-size: 0.7em;
+  }
+
+  .welcome {
+    display: block;
+    height: 363px;
+    padding: 0;
+  }
+
+  #container {
+    display: flex;
+    margin: 0 10px 0 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #container > div {
+    text-align: center;
+    padding: 100px;
+  }
+
+  .user-creds,
+  .welcome {
+    padding: 0;
+    margin: 0;
+  }
+
+  .user-creds {
+    height: 50vh;
+  }
+
+  .user-creds:first-child {
+    margin: 0;
+  }
+
+  .register-area {
+    position: relative;
+    top: -8vh;
+  }
+
+  .welcome a {
+    position: relative;
+    top: 100px;
+    margin: 100px 75px;
+  }
+
+  .welcome h2,
+  .welcome p {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+  }
+
+  .welcome p {
+    font-size: 1.1em;
+  }
+
+  .greet-message {
+    margin: 46px 4px;
+  }
+}
