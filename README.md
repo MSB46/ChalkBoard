@@ -17,6 +17,14 @@ By the time I finished the wireframe, I realized how difficult it can be to desi
 ### Homepage
 This is the index.html page, the home page of our website where the user/instructor have the options to go to their pages to log in/sign up and also there is the option for the admin to log in.
 ![index-html](https://user-images.githubusercontent.com/44810371/142471484-b5659577-e70f-4574-9d86-376ada2602d6.png)
+### Student Login
+This is the student's login.html page for the ChalkBoard website. At the moment, it includes two form-input elements for username and password. There is also a link to register if the instructor wants to make a new account. Clicking on the logo leads to index.html
+![student-login-desktop](https://user-images.githubusercontent.com/33902649/143247587-ffdfeb61-7029-4c3a-a85e-e0374366fe9f.png)
+![student-login-mobile](https://user-images.githubusercontent.com/33902649/143247868-33d2aa0a-26ba-4e3a-a9bf-d3ff551c9967.png)
+### Student Register
+This is the student's register.html page for the ChalkBoard website. At the moment, it includes four form input elements for username, password, firstname, and lastname. There is also a link to the login page. Clicking on the logo leads to index.html
+![student-register-desktop](https://user-images.githubusercontent.com/33902649/143248036-d598165c-3d55-45dc-84bc-e276a93232b4.png)
+![student-register-mobile](https://user-images.githubusercontent.com/33902649/143247953-181e3e4a-b24a-4c86-9af5-89f89c76fc83.png)
 ### Student homepage
 This is the student.html page, in here the student will have general information about their assignments (missing, due, etc), and based on the course they are struggling a list of resources for that course will be displayed.
 ![student-ht](https://user-images.githubusercontent.com/44810371/142472207-ab5f3467-3b6d-4e57-82c2-d59623048551.png)
@@ -40,12 +48,12 @@ _FooTable, a jQuery plugin is used to help create the vertical layout tables on 
 ## Instructor features:
 ### Instructor Login
 This is the instructor's login.html page for the ChalkBoard website. At the moment, it includes two form-input elements for username and password. There is also a link to register if the instructor wants to make a new account. Clicking on the logo leads to index.html
-![instructor-login-desktop](https://user-images.githubusercontent.com/33902649/142571584-56da7a5d-cb9a-480a-9682-111e36d6e031.png)
+![instructor-login-desktop](https://user-images.githubusercontent.com/33902649/143246638-b0204373-4dc9-44f9-8736-4f526f512357.png)
 ![instructor-login-mobile](https://user-images.githubusercontent.com/33902649/142571542-159907a8-6faf-4f04-81e5-a09a69199bd9.png)
 ### Instructor Register
 This is the register.html page for the ChalkBoard website. At the moment, it includes four form input elements for username, password, firstname, and lastname. There is also a link to the login page. Clicking on the logo leads to index.html
 ![instructor-register-desktop](https://user-images.githubusercontent.com/33902649/142571885-ee2671df-4067-4e71-9bfe-54fb8faa3598.png)
-![instructor-register-mobile](https://user-images.githubusercontent.com/33902649/142571943-d1948762-3292-42f1-a5f8-3fa091809ef1.png)
+![instructor-register-mobile](https://user-images.githubusercontent.com/33902649/143248333-22bbd1bb-d6a4-4dba-92af-16c70a937976.png)
 ### Instructor homepage
 This is the instructor.html in this page the instructor will see general information such as assignments to grade, students who submitted late, requests pending (a student request to join their course.)
 ![instructor-html](https://user-images.githubusercontent.com/44810371/142474194-2e34c1c5-6877-4567-aa28-58e01694b5dc.png)
