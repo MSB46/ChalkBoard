@@ -52,7 +52,8 @@ This is the instructor's login.html page for the ChalkBoard website. At the mome
 ![instructor-login-mobile](https://user-images.githubusercontent.com/33902649/142571542-159907a8-6faf-4f04-81e5-a09a69199bd9.png)
 ### Instructor Register
 This is the register.html page for the ChalkBoard website. At the moment, it includes four form input elements for username, password, firstname, and lastname. There is also a link to the login page. Clicking on the logo leads to index.html
-![instructor-register-desktop](https://user-images.githubusercontent.com/33902649/142571885-ee2671df-4067-4e71-9bfe-54fb8faa3598.png)
+![instructor-register-desktop](https://user-images.githubusercontent.com/33902649/143248713-b11bf665-b4b2-4911-8a8a-1da1676ca330.png)
+
 ![instructor-register-mobile](https://user-images.githubusercontent.com/33902649/143248333-22bbd1bb-d6a4-4dba-92af-16c70a937976.png)
 ### Instructor homepage
 This is the instructor.html in this page the instructor will see general information such as assignments to grade, students who submitted late, requests pending (a student request to join their course.)
