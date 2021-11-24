@@ -26,7 +26,7 @@ h3 {
 
 .register-area {
   position: relative;
-  top: -15%;
+  top: -35%;
 }
 
 .logo img {
@@ -90,7 +90,6 @@ button:hover,
   margin: 46px 30px;
   padding: 10px;
   color: whitesmoke;
-  background-color: rgb(245 245 245 / 51%);
   text-shadow: #2c2828 0 1px 3px;
   border: 2px inset white;
   border-radius: 118px;
@@ -98,9 +97,37 @@ button:hover,
   text-align: center;
 }
 
-@media screen and (max-width: 1052px) {
+@media screen and (max-width: 767px) and (min-width: 360px) {
   .outside {
     display: none;
+  }
+
+  .register-area {
+    top: -35%;
+  }
+
+  .to-login {
+    display: inline-block;
+  }
+
+  a.to-login {
+    margin: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1052px) {
+  .outside {
+    display: none;
+  }
+
+  .to-login {
+    display: inline-block;
+  }
+
+  a.to-login {
+    margin: 20px;
+    text-align: center;
   }
 
   .logo .inside {
@@ -110,6 +137,10 @@ button:hover,
   .user-creds {
     padding: 39% 159px;
     height: 85vh;
+  }
+
+  .register-area {
+    top: -15%;
   }
 
   .asking-for {
@@ -155,14 +186,9 @@ button:hover,
     font-size: 2em;
   }
 
-  .welcome.to-login {
-    display: inline-block;
-  }
-
   .welcome a {
     position: relative;
-    left: 33%;
-    top: 10vh;
+    left: 25vw;
     padding: 20px;
   }
 }
