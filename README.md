@@ -3,6 +3,9 @@
 ## Link to website:
 https://msb46.github.io/chalkboard/
 ## Contributions
+Elvis: Responsive CSS and HTML of homepage, student homepage, student view of courses, student view of assignments, instructor view of class roster/students/assignments, and instructor view of student enroll requests
+
+Michael: Responsive CSS and HTML of student enroll, instructor/student/admin login, instructor/student register, admin view of classes, courses, instructors, and students
 ### Sitemap by Elvis:
 After finishing the sitemap for this project I learned new syntax for adding images, differents headers, links, and lists to a Markdown file.
 It was a bit challenging at first because for some reason it did not want to upload local images, so I then found about [this](https://gist.github.com/vinkla/dca76249ba6b73c5dd66a4e986df4c8d) website that taught me how to upload images to a Markdown file. It is useful to learn about editing a Markdown file because in almost any GitHub project the READ.md file is crucial because it explains your project "in a nutshell." And adding visuals, links, and more features to explain your project helps anyone to understand what it is about. I wil definelty put it in practice on my future personal web projects because it could help me to land interships, or even attract potential clients with a great presentation about my personal web projects. And this sitemap will give a broad idea to my partner and me about what pages we should include in our project, along the wireframes it will be a great guide to follow.
