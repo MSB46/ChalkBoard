@@ -16,6 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../css/login-style.css">
+    <script src="../../js/startsession.js"></script>
+
 </head>
 <body>
 <div class="logo-div">
@@ -26,12 +28,12 @@
     <div class="within-cover">
         <a class="logo inside" href="../../index.html"> <img src="../../img/chalkboardLogo.png" alt="chalkboard logo"></a>
         <h3>Student - Sign In</h3>
-        <form id="signInForm">
-            <input class="cred-input" placeholder="Email" type="email" name="email" id="emailUser">
-            <input class="cred-input" placeholder="Password" type="password" name="password" id="passwordUser">
-            <!-- <a href="./student.html"><button class="form-button" type="submit" id="signInButton">Sign in</button></a> -->
+        <form id="signInForm" onsubmit="login(event)">
+            <input class="cred-input" placeholder="Email" type="email" name="email" id="emailUser" autocomplete="username">
+            <input class="cred-input" placeholder="Password" type="password" name="password" id="passwordUser" autocomplete="current-password">
+            <!-- <a href="./student.html"><button class="form-button" type="submit" id="signInButton">Sign in</button></a>  -->
             <br>
-            <button class="form-button" type="submit" id="signInButton" formaction="./student.html">Sign in</button>
+        <button class="form-button" type="submit" id="signInButton">Sign in</button>
         </form>
 
 

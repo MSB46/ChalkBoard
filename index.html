@@ -16,6 +16,7 @@
     <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./js/startsession.js"></script>
 </head>
 <body>
     <!-- Responsive nav bar for now just the HTML -->
@@ -30,8 +31,8 @@
             
           </div>
         </div>  -->
-        <a href="./html/student/login.html">Student Log in/Sign up</a>
-        <a href="./html/instructor/login.html">Instructor Log in/Sign up</a>
+        <a href="./html/student/login.html" onclick="setUser('students')">Student Log in/Sign up</a>
+        <a href="./html/instructor/login.html" onclick="setUser('instructors')">Instructor Log in/Sign up</a>
         <!-- <a href="#about">About</a> -->
         <a href="./html/admin/login.html">Admin Log in</a>
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>

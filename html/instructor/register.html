@@ -15,6 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--    <link rel="stylesheet" href="../../css/stylesMB.css">-->
     <link rel="stylesheet" href="../../css/register-style.css">
+    <script src="../../js/startsession.js"></script>
+
 </head>
 <body>
 <div class="logoDiv">
@@ -27,7 +29,7 @@
                                                                  alt="chalkboard logo">
             </a>
             <h3>Instructor<br>Register</h3>
-            <form id="registerForm">
+            <form id="registerForm" onsubmit="register(event)">
                 <label class="askingFor">User/Email</label> <br>
                 <input class="cred-input" placeholder="Email" type="email" name="newEmail" id="newEmail"> <br>
                 <label class="askingFor">Password</label> <br>
