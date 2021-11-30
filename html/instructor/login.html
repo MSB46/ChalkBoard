@@ -28,10 +28,13 @@
         <a class="logo inside" href="../../index.html"> <img src="../../img/chalkboardLogo.png"
                                                              alt="chalkboard logo"></a>
         <h3>Instructor - Sign In</h3>
+        <section class="error-message hide">
+            <ul>
+                <li id="error-1">Wrong credentials, try again</li>
+            </ul>
+        </section>
         <form id="signInForm" onsubmit="login(event)">
-            <span class="asking-for">User/Email</span>
-            <input class="cred-input" placeholder="Email" type="email" name="email" id="emailUser">
-            <span class="asking-for">Password</span>
+            <input class="cred-input" placeholder="Email" type="email" name="email" id="emailUser"> <br>
             <input class="cred-input" placeholder="Password" type="password" name="password" id="passwordUser">
             <!-- <button class="form-button" type="submit" id="signInButton">Sign in</button> -->
             <br>

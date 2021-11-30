@@ -13,7 +13,7 @@
     <title>Register</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <link rel="stylesheet" href="../../css/stylesMB.css">-->
+    <!--    <link rel="stylesheet" href="../../css/stylesMB.css">-->
     <link rel="stylesheet" href="../../css/register-style.css">
     <script src="../../js/startsession.js"></script>
 
@@ -22,21 +22,33 @@
 <div class="logoDiv">
     <a class="logo outside" href="../../index.html"> <img src="../../img/chalkboardLogo.png" alt="chalkboard logo"> </a>
 </div>
+<section id="outside-error-box" class="error-message outside hide">
+    <ul>
+        <li class="error-0">Something went wrong. Are you sure you filled out everything properly?</li>
+    </ul>
+</section>
 <div id="container">
     <div class="user-creds">
         <div class="register-area">
             <a class="logo inside" href="../../index.html"> <img src="../../img/chalkboardLogo.png"
                                                                  alt="chalkboard logo">
             </a>
-            <h3>Instructor<br>Register</h3>
+            <h3>Instructor Register</h3>
+            <section id="inside-error-box" class="error-message inside hide">
+                <ul>
+                    <li class="error-0">Something went wrong. Are you sure you filled out everything properly?</li>
+                </ul>
+            </section>
             <form id="registerForm" onsubmit="register(event)">
-                <label class="askingFor">User/Email</label> <br>
+                <label class="asking-for">User/Email</label> <br>
                 <input class="cred-input" placeholder="Email" type="email" name="newEmail" id="newEmail"> <br>
-                <label class="askingFor">Password</label> <br>
+                <label class="asking-for">Password</label> <br>
                 <input class="cred-input" placeholder="Password" type="password" name="password" id="passwordUser"> <br>
-                <label class="askingFor">First name</label> <br>
+                <label class="asking-for">Confirm Password</label> <br>
+                <input class="cred-input" placeholder="Confirm" type="password" name="password" id="confirmPw"> <br>
+                <label class="asking-for">First name</label> <br>
                 <input class="cred-input" placeholder="First name?" type="text" name="first" id="first"> <br>
-                <label class="askingFor">Last name</label> <br>
+                <label class="asking-for">Last name</label> <br>
                 <input class="cred-input" placeholder="Last name?" type="text" name="last" id="last">
                 <br>
                 <button class="form-button" type="submit" id="registerButton">Register</button>
@@ -45,11 +57,13 @@
     </div>
     <div class="welcome">
         <div class="greet-message">
-        <h2>Good to see you!</h2>
-        <p>Whether you're young, old, experienced, or new, <br> we hope you have
-            a pleasant experience using ChalkBoard.</p>
+            <h2>Good to see you!</h2>
+            <p>Whether you're young, old, experienced, or new, <br> we hope you have
+                a pleasant experience using ChalkBoard.</p>
         </div>
-        <a class="to-login" href="./login.html"> Already have an account? Sign in here! </a>
+        <div class="to-login">
+            <a href="./login.html"> Already have an account? Sign in here! </a>
+        </div>
     </div>
 
 </div>
