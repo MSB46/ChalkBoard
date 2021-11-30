@@ -6,22 +6,21 @@ body {
 
 h3 {
   color: beige;
-  font-size: 1.75em;
+  font-size: 1.135em;
 }
 
-.welcome {
-  background: url("../img/chalkboardImg.png") no-repeat;
+#container{
+  background: url("../img/chalkboardImgC.png") no-repeat;
   background-size: 100% 100%;
-  border: 5px inset #232020;
 }
 
 .user-creds {
   display: block;
   text-align: center;
   padding: 25px 5px;
-  border: 5px inset #232020;
-  background: url("../img/chalkboardImgB.png") no-repeat;
-  background-size: 100% 100%;
+  /*border: 5px inset #232020;*/
+  /*background: url("../img/chalkboardImgB.png") no-repeat;*/
+  /*background-size: 100% 100%;*/
 }
 
 .register-area {
@@ -54,7 +53,7 @@ h3 {
 }
 
 label {
-  font-size: 1.5em;
+  font-size: 0.7em;
   color: white;
 }
 
@@ -79,6 +78,7 @@ button {
 .welcome a {
   color: black;
   text-decoration: none;
+  display: inline-block;
 }
 
 button:hover,
@@ -88,7 +88,7 @@ button:hover,
 
 .greet-message {
   margin: 46px 30px;
-  padding: 10px;
+  padding: 2px;
   color: whitesmoke;
   text-shadow: #2c2828 0 1px 3px;
   border: 2px inset white;
@@ -97,7 +97,41 @@ button:hover,
   text-align: center;
 }
 
-@media screen and (max-width: 767px) and (min-width: 360px) {
+.to-login {
+  text-align: center;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px #262626;
+  margin: 0 0 10px;
+
+}
+
+.error-message ul {
+  margin: 1px 0;
+  background-color: hsla(0, 79%, 70%, 0.68);
+  border: 3px inset #1e1d1d;
+  border-radius: 1.3px;
+
+}
+
+.error-message ul li {
+  padding: 2px 13px;
+}
+
+.hide {
+  display: none;
+}
+
+#formErrors {
+  color: red;
+}
+
+
+@media screen and (max-width: 767px) and (min-width: 300px) {
   .outside {
     display: none;
   }
@@ -106,30 +140,14 @@ button:hover,
     top: -35%;
   }
 
-  .to-login {
-    display: inline-block;
-  }
 
-  a.to-login {
-    margin: 20px;
-    text-align: center;
-  }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1052px) {
   .outside {
     display: none;
   }
-
-  .to-login {
-    display: inline-block;
-  }
-
-  a.to-login {
-    margin: 20px;
-    text-align: center;
-  }
-
   .logo .inside {
     width: 10vw;
   }
@@ -173,6 +191,7 @@ button:hover,
   .welcome {
     display: block;
     height: 130vh;
+    max-height: 500px;
   }
 
   .welcome h2,
@@ -195,7 +214,7 @@ button:hover,
 
 @media screen and (min-width: 1053px) {
   .outside {
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 0 39%;
   }
 
@@ -213,15 +232,16 @@ button:hover,
 
   .welcome {
     display: block;
-    height: 363px;
     padding: 0;
   }
 
   #container {
     display: flex;
-    margin: 0 10px 0 0;
+    margin: 0 200px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    background: url("../img/chalkboardImgB.png") no-repeat;
+    background-size: 100% 100%;
   }
 
   #container > div {
@@ -245,13 +265,12 @@ button:hover,
 
   .register-area {
     position: relative;
-    top: -8vh;
+    top: -10%;
   }
 
   .welcome a {
     position: relative;
-    top: 100px;
-    margin: 100px 75px;
+    top: 20px;
   }
 
   .welcome h2,
@@ -266,6 +285,6 @@ button:hover,
   }
 
   .greet-message {
-    margin: 46px 4px;
+    margin: 19px 4px;
   }
 }

@@ -35,7 +35,7 @@ h3 {
 
 .within-cover {
   position: relative;
-  top: -50px;
+  top: -20px;
 }
 
 .to-login,
@@ -84,7 +84,77 @@ button:hover,
   background-color: forestgreen;
 }
 
-@media screen and (max-width: 1052px) {
+label{
+  color: whitesmoke;
+  display: block;
+  text-align: center;
+  clear: both;
+  color: whitesmoke;
+  font-size: 1.5em;
+  margin: 0 0 5px;
+}
+
+.label:first-child {
+  margin: 20px 0 0;
+}
+
+.error-message {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px #262626;
+
+}
+
+.error-message ul {
+  margin: 0;
+  justify-content: center;
+  padding: 5px 30px;
+  background-color: hsla(0, 79%, 70%, 0.68);
+  border: 2px inset #1e1d1d;
+  border-radius: 1.3px;
+
+}
+
+.error-message ul li {
+  padding: 3px 0
+}
+
+.hide {
+  display: none;
+}
+
+#formErrors {
+  color: red;
+}
+
+@media screen and (max-width: 767px) and (min-width: 300px) {
+  .outside {
+    display: none;
+  }
+
+  .user-creds{
+    background: url("../img/chalkboardImgC.png") no-repeat;
+    background-size: 100% 100%;
+  }
+
+
+  .register-area {
+    top: -35%;
+  }
+
+  .to-login {
+    display: inline-block;
+  }
+
+  a.to-login {
+    margin: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1052px) {
   .outside {
     display: none;
   }
@@ -95,21 +165,8 @@ button:hover,
 
   .user-creds {
     padding: 300px 200px;
-    display: inline-block;
+    /*display: inline-block;*/
     height: auto;
-  }
-
-  .asking-for {
-    display: block;
-    text-align: center;
-    clear: both;
-    color: whitesmoke;
-    font-size: 1.5em;
-    margin: 0 0 5px;
-  }
-
-  .asking-for:first-child {
-    margin: 20px 0 0;
   }
 
   .cred-input {
@@ -132,6 +189,10 @@ button:hover,
     display: none;
   }
 
+  .within-cover{
+    top: -40px;
+  }
+
   .cred-input {
     padding: 5px;
     width: 60%;
@@ -140,7 +201,7 @@ button:hover,
   }
 
   .user-creds {
-    padding: 100px 0 0;
+    padding: 130px 0 40px;
     margin: 0 auto;
     display: block;
     height: 50vh;
