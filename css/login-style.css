@@ -3,6 +3,7 @@
 body {
   font-family: Rubik, sans-serif, Arial;
   background: beige;
+  margin: 0;
 }
 
 h3 {
@@ -71,7 +72,7 @@ button {
   display: inline-block;
   padding: 15px 100px 15px 20px;
   border-radius: 10px;
-  margin: 30px 10px;
+  margin: -10px 10px 30px;
   box-sizing: inherit;
 }
 
@@ -99,7 +100,7 @@ label{
 }
 
 .error-message {
-  margin: 0;
+  margin: -10px 0 10px;
   display: flex;
   justify-content: center;
   color: whitesmoke;
@@ -135,8 +136,10 @@ label{
   }
 
   .user-creds{
+    display: inherit;
     background: url("../img/chalkboardImgC.png") no-repeat;
     background-size: 100% 100%;
+    /*padding: 300px 200px;*/
   }
 
 
@@ -190,7 +193,7 @@ label{
   }
 
   .within-cover{
-    top: -40px;
+    top: -48px;
   }
 
   .cred-input {
