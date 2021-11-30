@@ -28,16 +28,20 @@
     <div class="within-cover">
         <a class="logo inside" href="../../index.html"> <img src="../../img/chalkboardLogo.png" alt="chalkboard logo"></a>
         <h3>Student - Sign In</h3>
+        <section id="error-msg" class="error-message hide">
+            <ul>
+                <li id="error-1">Invalid email and/or password</li>
+            </ul>
+        </section>
         <form id="signInForm" onsubmit="login(event)">
-            <input class="cred-input" placeholder="Email" type="email" name="email" id="emailUser" autocomplete="username">
+            <label class="asking-for">User/Email</label> <br>
+            <input class="cred-input" placeholder="Email" type="email" name="email" id="emailUser" autocomplete="username"> <br>
+            <label class="asking-for">Password</label> <br>
             <input class="cred-input" placeholder="Password" type="password" name="password" id="passwordUser" autocomplete="current-password">
             <!-- <a href="./student.html"><button class="form-button" type="submit" id="signInButton">Sign in</button></a>  -->
             <br>
         <button class="form-button" type="submit" id="signInButton">Sign in</button>
         </form>
-
-
-
         <br>
         <a class="to-login" href="register.html"> Don't have an account? Sign up here! </a>
     </div>
