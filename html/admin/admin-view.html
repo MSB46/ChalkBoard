@@ -51,23 +51,23 @@
 </ul>
 
 <h1 class="section-title">Current Courses</h1>
-<div class="search-container">
-    <form>
-        <input class="filter-form-input" placeholder="Search examples: MATH141, 12345, Steve Urkel" type="text"
-               name="filter"
-               id="filter">
-    </form>
-</div>
+<!--<div class="search-container">-->
+<!--    <form>-->
+<!--        <input class="filter-form-input" placeholder="Search examples: MATH141, 12345, Steve Urkel" type="text"-->
+<!--               name="filter"-->
+<!--               id="filter">-->
+<!--    </form>-->
+<!--</div>-->
 
 <div class="main-content-area">
-    <table class="info" id="courses">
+    <table class="info" id="courses" data-filtering="true">
         <thead>
         <tr>
             <th>Section</th>
             <th data-breakpoints="xs">Class Number</th>
             <th data-breakpoints="xs sm">Class Name</th>
             <th>Instructor</th>
-            <th data-breakpoints="xs sm">Number of students</th>
+            <th data-breakpoints="xs sm" data-filterable="false">Number of students</th>
             <th data-breakpoints="xs sm">Meeting Info</th>
             <th data-breakpoints="xs sm">Semester</th>
         </tr>
