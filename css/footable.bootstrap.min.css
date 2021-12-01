@@ -134,25 +134,34 @@ div.footable-loader > span.fooicon {
   animation: fooicon-spin-r 2s infinite linear;
 }
 
-/* @-webkit-keyframes fooicon-spin-r { */
+btn-primary{
+  display: none;
+}
 
-/*    0% { */
+.dropdown-menu{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: .6em;
+  text-align: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-/*        !*-webkit-transform: rotate(0);*! */
+/*.form-control{*/
+/*  width: 40%;*/
+/*}*/
 
-/*        transform: rotate(0) */
+.dropdown-menu li{
 
-/*    } */
+  padding: .5px 0;
+}
 
-/*    100% { */
-
-/*        !*-webkit-transform: rotate(359deg);*! */
-
-/*        transform: rotate(359deg) */
-
-/*    } */
-
-/* } */
+.btn{
+  display: none;
+}
 
 @keyframes fooicon-spin-r {
   0% {
@@ -390,4 +399,27 @@ table.footable-editing.footable-editing-always-show button.footable-add,
 table.footable-editing.footable-editing-show button.footable-add,
 table.footable-editing.footable-editing-show button.footable-hide {
   display: inline-block;
+}
+
+.dropdown-menu{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: .6em;
+  text-align: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*.form-control{*/
+/*  width: 40%;*/
+/*}*/
+
+.dropdown-menu li{
+
+  padding: .5px 0;
+}
+
+.btn{
+  display: none;
 }

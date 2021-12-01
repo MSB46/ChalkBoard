@@ -8,11 +8,6 @@ thead {
   background-color: #d0d1d2;
 }
 
-table th {
-  position: sticky;
-  top: 0;
-}
-
 table td {
   background-color: #dbd1f1;
 }
@@ -52,7 +47,7 @@ tr:nth-child(even) {
   }
 
   table td {
-    padding: 50px;
+    padding: 20px;
   }
 }
 
