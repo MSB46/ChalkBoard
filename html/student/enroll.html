@@ -60,24 +60,24 @@
     <div class="mainContainer">
         <h1 class="sectionTitle">Enroll in a class</h1>
         <br>
-        <div class="search-container">
-            <form>
-                <input class="filter-form-input"
-                       placeholder="Search examples: MATH101, Art, Barbeque" type="text" name="filter" id="filter">
-            </form>
-        </div>
+<!--        <div class="search-container">-->
+<!--            <form>-->
+<!--                <input class="filter-form-input"-->
+<!--                       placeholder="Search examples: MATH101, Art, Barbeque" type="text" name="filter" id="filter">-->
+<!--            </form>-->
+<!--        </div>-->
         <div class="info">
-            <table class="class-info">
+            <table class="class-info" data-filtering="true">
                 <thead>
                 <tr>
                     <th>Section</th>
                     <th>Class Number</th>
                     <th data-breakpoints="xs">Class Name</th>
                     <th data-breakpoints="xs">Instructor</th>
-                    <th data-breakpoints="xs sm">Enrolled/Total Seats</th>
+                    <th data-breakpoints="xs sm" data-filterable="false">Enrolled/Total Seats</th>
                     <th data-breakpoints="xs sm">Meeting Info</th>
                     <th data-breakpoints="xs sm">Semester</th>
-                    <th data-breakpoints="xs sm"></th>
+                    <th data-breakpoints="xs sm" data-filterable="false">Enroll</th>
                 </tr>
                 </thead>
                 <tbody>
