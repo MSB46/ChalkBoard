@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Course</title>
+    <script src="../../js/script.js"></script>
+
+
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+<!--            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
+<!--            crossorigin="anonymous"></script>-->
+
+<!--    <script src="../../js/for-course-add.js"></script>-->
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/stylesMB.css">
+    <link rel="stylesheet" href="../../css/instructor.css">
+    <link rel="stylesheet" href="../../css/add-course.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+    </style>
+
+
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <a href="./instructor.html" class="active">Instructor Summary</a>
+    <div class="dropdown">
+        <button class="dropbtn">Go too my
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="./icourses.html">Courses</a>
+
+        </div>
+    </div>
+    <a href="./irequests.html">Course requests</a>
+    <a href="../../index.html">Log out</a>
+
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<ul class="breadcrumb">
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="instructor.html">Instructor</a></li>
+    <li>Add Course</li>
+</ul>
+
+<div class="input-container">
+    <div class="input-area">
+        <h3>Add a new Course</h3>
+        <span id="add-course-msg"></span>
+        <form id="courseForm">
+            <label for="course-number" class="asking-for">Course Number</label>
+            <input class="cred-input" placeholder="MATH141, HIST101, etc." type="text" name="course-number" id="course-number" required> <br>
+
+            <label for="course-name" class="asking-for">Course Name</label>
+            <input class="cred-input" placeholder="Add the name of your course here" type="text" name="course-name" id="course-name" required> <br>
+
+            <label for="meeting-input" class="asking-for">Meeting</label>
+            <input class="cred-input" placeholder="Add the time and date of your course here" type="text" name="meeting-input" id="meeting-input" required> <br>
+
+            <label for="semester-input" class="asking-for">Semester</label>
+            <input class="cred-input" placeholder="Add the semester of the class here" type="text" name="semester-input" id="semester-input" required> <br>
+
+            <label for="desc-input" class="asking-for">Description</label> <br>
+            <textarea class="cred-input" placeholder="Add your description of the course here" name="desc-input" id="desc-input" rows="10" cols="80" required> </textarea>
+
+            <div class="button-area">
+                <button class="form-button" type="submit" id="addButton" onclick="send()">Add new course</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
