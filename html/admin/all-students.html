@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+    Name: Michael Boodoosingh
+    Date: 11/16/2021
+    Course: CS 355
+    This is the admin-view.html page for the ChalkBoard website. The goal for this page is to preview
+    the all available courses. There is also a search bar which is supposed
+    to be used to filter specific courses. All data is placeholder values for the time being.
+    Includes a navigation bar and breadcrumbs for convenience. The tables are responsive such that
+    not all columns of a particular row will appear unless toggled. Tables are created with the help of FooTable.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin View</title>
+    <script src="../../js/admin/getStudents.js"></script>
+
+    <script src="../../js/script.js"></script>
+
+    <link rel="stylesheet" href="../../css/stylesMB.css">
+    <link rel="stylesheet" href="../../css/admin-style.css">
+    <link rel="stylesheet" href="../../css/table-style.css">
+
+    <!-- FooTable Bootstrap CSS -->
+    <link href="../../css/footable.bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../../js/footable.min.js"></script>
+    <script src="../../js/footable.js"></script>
+    <script>
+        jQuery(function ($) {
+            $('.info').footable();
+        });</script>
+
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <a href="../../index.html">ChalkBoard</a>
+    <a class="log-out" href="./login.html">Log out</a>
+    <a href="./all-students.html">Students Data</a>
+    <a href="./all-instructors.html">Instructors Data</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<ul class="breadcrumb">
+    <li><a href="./admin-view.html">Admin View</a></li>
+    <li>Students Data</li>
+</ul>
+
+<h1 class="section-title">All Students</h1>
+<!--<div class="search-container">-->
+<!--    <form>-->
+<!--        <input class="filter-form-input" placeholder="Search examples: MATH141, 12345, Steve Urkel" type="text"-->
+<!--               name="filter"-->
+<!--               id="filter">-->
+<!--    </form>-->
+<!--</div>-->
+
+<div class="main-content-area">
+    <table class="info" id="courses" data-filtering="true">
+        <thead>
+        <tr>
+            <!-- <th>Section</th> -->
+            <th data-breakpoints="xs">Student ID</th>
+            <th data-breakpoints="xs sm">Email</th>
+            <!-- <th>Instructor</th> -->
+            <!-- <th data-breakpoints="xs sm" data-filterable="false">Number of students</th> -->
+            <th data-breakpoints="xs sm">Name</th>
+            <!-- <th data-breakpoints="xs sm">Semester</th> -->
+        </tr>
+        </thead>
+        <tbody id="data-students">
+        
+            <!-- <tr>
+                <td>123456</td>
+                <td>example@exmaple.com</td>
+                <td><a href="./student-data.html">Name</a></td>
+            </tr> -->
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

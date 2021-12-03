@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../../css/login-style.css">
+    <script src="../../js/admin/login.js"></script>
 
 </head>
 <body>
@@ -28,18 +29,22 @@
     <div class="within-cover">
         <a class="logo inside" href="../../index.html"> <img src="../../img/chalkboardLogo.png"
                                                              alt="chalkboard logo"></a>
-        <h3>Admin - Sign In</h3>
-        <form id="signInForm">
-            <span class="asking-for">User/Email</span>
-            <input class="cred-input" placeholder="Email" type="email" name="email" id="emailUser">
-            <span class="asking-for">Password</span>
+        <h3>Instructor - Sign In</h3>
+        <section id="error-msg" class="error-message hide">
+            <ul>
+                <li id="error-1">Wrong credentials, try again</li>
+            </ul>
+        </section>
+        <form id="signInForm" onsubmit="login(event)">
+            <input class="cred-input" placeholder="Email" type="email" name="email" id="emailUser"> <br>
             <input class="cred-input" placeholder="Password" type="password" name="password" id="passwordUser">
             <!-- <button class="form-button" type="submit" id="signInButton">Sign in</button> -->
             <br>
-            <button class="form-button" type="submit" id="signInButton"
-                    formaction="./admin-view.html">Sign in
+            <button class="form-button" type="submit" id="signInButton">Sign in
             </button>
         </form>
+        <br>
+        <a class="to-login" href="./register.html"> Don't have an account? Sign up here! </a>
     </div>
 </div>
 </body>
