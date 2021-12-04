@@ -76,9 +76,12 @@ let API_C = `https://us-central1-project-93bdb.cloudfun
 ctions.net/api/getCourses/${student.id}&${student.usertype}&${name}`
 
 fetch(API_C, requestOptions).then(data=>{
+    if(!data.ok)
+    console.log("Message for users with no courses");
     return data.json();
 }).then(data=>{
-
+    if(data.error)
+    return console.log({error: data.error});
     let html  = "";
     for(let key in data){
      html += `<tr><td>${data[key].courseId}</td>

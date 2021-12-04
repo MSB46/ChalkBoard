@@ -51,6 +51,21 @@ const setCourse = (id) => {
     localStorage.setItem('courseId', id);
 }
 
+
+function displayInstructor(instructor){
+
+    console.log(instructor);
+    let name = `${instructor.firstname} ${instructor.lastname}`;
+    document.querySelector('.section-title').textContent = name;
+
+    let html = ` <tr>
+    <td>${instructor.id}</td>
+    <td>${name}</td>
+    <td>${instructor.email}</td>
+</tr>`
+    document.querySelector('#ins-info-data').innerHTML = html;
+
+}
 function displayCourses (instructor) {
 
     let name = `${instructor.firstname} ${instructor.lastname}`;
@@ -58,8 +73,15 @@ let API_C = `https://us-central1-project-93bdb.cloudfun
 ctions.net/api/getCourses/${instructor.id}&${instructor.usertype}&${name}`
 
 fetch(API_C, requestOptions).then(data=>{
-    return data.json();;
+    if(!data.ok){
+    console.log("Message for users with no courses");
+    }
+    return data.json();
 }).then(data=>{
+    if(data.error)
+    return console.log({error: data.error});
+
+
 
     let html  = "";
     for(let key in data){
@@ -80,20 +102,6 @@ fetch(API_C, requestOptions).then(data=>{
 
 
 
-function displayInstructor(instructor){
-
-    console.log(instructor);
-    let name = `${instructor.firstname} ${instructor.lastname}`;
-    document.querySelector('.section-title').textContent = name;
-
-    let html = ` <tr>
-    <td>${instructor.id}</td>
-    <td>${name}</td>
-    <td>${instructor.email}</td>
-</tr>`
-    document.querySelector('#ins-info-data').innerHTML = html;
-
-}
 
 
 window.onload = () => {
