@@ -34,8 +34,9 @@ const getAllStudents = () => {
         });
 }
 
-const setUserId=(id, email, name)=>{
+const setUserId=(id, user)=>{
     localStorage.setItem('userId', id);
+    localStorage.setItem('searchUser', user)
 }
 
 const setCourse = (id) => {
@@ -48,7 +49,7 @@ function displayStudents(data){
         console.log(data[key].student_id);
     html += `<tr><td>${data[key].id}</td>
     <td>${data[key].email}</td>
-    <td><a href="./student-data.html" onclick="setUserId(${data[key].id})">${data[key].firstname} ${data[key].lastname}</a>
+    <td><a href="./student-data.html" onclick="setUserId(${data[key].id}, '${data[key].usertype}')">${data[key].firstname} ${data[key].lastname}</a>
     </td></tr>`
     }
   

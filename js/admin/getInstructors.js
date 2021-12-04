@@ -36,14 +36,14 @@ const getAllInstructors = () => {
         });
 }
 
-const setUserId=(id, email, name)=>{
+const setUserId=(id, user)=>{
     localStorage.setItem('userId', id);
-    localStorage.setItem('email', email);
-    localStorage.setItem('name', name)
+    localStorage.setItem('searchUser', user);;
 }
 
-const setCourse = (id) => {
-    localStorage.setItem('courseId', id)
+const setCourse = (id, user) => {
+    localStorage.setItem('courseId', id);
+    localStorage.setItem('searchUser', user);
 }
 
 function displayInstructors(data){
@@ -55,7 +55,7 @@ function displayInstructors(data){
     html += `<tr>
     <td>${data[key].id}</td>
     <td>${data[key].email}</td>
-    <td><a href="./instructor-data.html" onclick="setUserId(${data[key].id})">${data[key].firstname} ${data[key].lastname}</a></td>
+    <td><a href="./instructor-data.html" onclick="setUserId(${data[key].id}, '${data[key].usertype}')">${data[key].firstname} ${data[key].lastname}</a></td>
 </tr>`
     }
   
