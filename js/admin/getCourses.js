@@ -36,8 +36,9 @@ const getAllCourses = () => {
         });
 }
 
-const setUserId=(id)=>{
+const setUserId=(id, type)=>{
     localStorage.setItem('userId', id)
+    localStorage.setItem('searchUser', type)
 }
 
 const setCourse = (id) => {
@@ -52,7 +53,7 @@ function displayCourses(data){
     html += `<tr><td>${data[key].courseId}</td>
     <td><a href="./course-data.html" class="test" onclick="setCourse(${data[key].courseId})">${data[key].course_number}</a></td>
     <td>${data[key].course_name}</td>
-    <td><a href="./instructor-data.html" onclick="setUserId(${data[key].main_ins.instructor_id}, '${data[key].main_ins.email}')">${data[key].main_ins.name}</a></td>
+    <td><a href="./instructor-data.html" onclick="setUserId(${data[key].main_ins.instructor_id}, 'instructors')">${data[key].main_ins.name}</a></td>
     <td>${Object.keys(data[key].roster.students).length}</td>
     <td>${data[key].meeting}</td>
     <td>${data[key].semester}</td>

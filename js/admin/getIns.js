@@ -89,6 +89,7 @@ fetch(API_C, requestOptions).then(data=>{
     <td><a href="./course-data.html" class="test" onclick="setCourse(${data[key].courseId})">${data[key].course_number}</a></td>
     <td>${data[key].course_name}</td>
     <td><a href="./instructor-data.html" onclick="setUserId(${data[key].main_ins.instructor_id})">${data[key].main_ins.name}</a></td>
+    <td>${Object.keys(data[key].roster.students).length}</td>
     <td>${data[key].meeting}</td>
     <td>${data[key].semester}</td>
     </tr>`
