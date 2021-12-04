@@ -1,4 +1,4 @@
-const API_LOGIN = "https://us-central1-project-93bdb.cloudfunctions.net/api/login";
+const API_LOGIN = "https://us-central1-project-93bdb.cloudfunctions.net/api/loginAdmin";
 
 
 const login = (e) => {

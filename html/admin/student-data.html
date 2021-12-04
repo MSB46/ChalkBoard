@@ -32,7 +32,7 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../../js/footable.min.js"></script>
+    <!-- <script src="../../js/footable.min.js"></script>
     <script src="../../js/footable.js"></script>
     <script>
         jQuery(function ($) {
@@ -43,7 +43,7 @@
             $('.table2').footable();
         })
 
-    </script>
+    </script> -->
 </head>
 <body>
 <div class="topnav" id="myTopnav">
@@ -66,11 +66,11 @@
         <thead>
         <tr>
             <th>Student ID</th>
+            <th>Name</th>
             <th data-breakpoints="xs sm">Email</th>
-            <th>Phone number</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody id="stu-info-data">
         <tr>
             <td>S##</td>
             <td>sunknown00@kingmail.com</td>
@@ -84,27 +84,19 @@
         <thead>
         <tr>
             <th>Section</th>
-            <th>Class Number</th>
-            <th data-breakpoints="xs">Class Name</th>
+            <th data-breakpoints="xs">Class Number</th>
+            <th data-breakpoints="xs sm">Class Name</th>
+            <th data-breakpoints="xs sm">Instructor</th>
             <th data-breakpoints="xs sm">Meeting Info</th>
+            <th data-breakpoints="xs sm">Semester</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-            <td>ABC456</td>
-            <td><a href="course-data.html">TEST XYZ</a></td>
-            <td>Introduction to Placeholding</td>
-            <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
-        </tr>
-        <tr>
-            <td>XYZ789</td>
-            <td><a href="course-data.html">TEST ABC</a></td>
-            <td>Placeholding II</td>
-            <td>Sat/Sun CC:DD</td>
-        </tr>
+        <tbody id="stu-courses">
+       
         </tbody>
     </table>
 </div>
 
+<script async src="../../js/admin/getStu.js"></script>
 </body>
 </html>

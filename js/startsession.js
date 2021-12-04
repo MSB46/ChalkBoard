@@ -1,6 +1,12 @@
-const API_LOGIN = "https://us-central1-project-93bdb.cloudfunctions.net/api/login";
-const API_REGISTER = "https://us-central1-project-93bdb.cloudfunctions.net/api/signup";
+const API_LOGIN = "https://us-central1-project-93bdb.cloudfunctions.net/api/loginStudent";
 
+let usertpe = localStorage.getItem('user')
+
+let API_REGISTER = "";
+if(usertpe == 'students')
+    API_REGISTER = "https://us-central1-project-93bdb.cloudfunctions.net/api/studentSignUp";
+else
+    API_REGISTER = "https://us-central1-project-93bdb.cloudfunctions.net/api/instructorSignUp";
 
 const setUser = (user) => {
     localStorage.setItem('user', user);
@@ -75,7 +81,6 @@ const register = (e) => {
     }
     var requestOptions = {
         method: 'POST',
-        redirect: 'follow',
         body: JSON.stringify(data),
         contentType: "application/json"
     };

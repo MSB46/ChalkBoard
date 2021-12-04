@@ -1,7 +1,7 @@
 
 let usertype = localStorage.getItem('user');
 
-let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/getAllStudents/${usertype}`
+let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/getAllStudents`
 
 const getAllStudents = () => {
     let myHeaders = new Headers();
@@ -34,9 +34,8 @@ const getAllStudents = () => {
         });
 }
 
-const setUserId=(id, email)=>{
+const setUserId=(id, email, name)=>{
     localStorage.setItem('userId', id);
-    localStorage.setItem('email', email);
 }
 
 const setCourse = (id) => {
@@ -47,9 +46,9 @@ function displayStudents(data){
     let html = "";
     for(let key in data){
         console.log(data[key].student_id);
-    html += `<tr><td>${data[key].student_id}</td>
+    html += `<tr><td>${data[key].id}</td>
     <td>${data[key].email}</td>
-    <td><a href="./student-data.html" onclick=setUserId(${data[key].student_id}, ${data[key].email})>${data[key].firstname} ${data[key].lastname}</a>
+    <td><a href="./student-data.html" onclick="setUserId(${data[key].id})">${data[key].firstname} ${data[key].lastname}</a>
     </td></tr>`
     }
   

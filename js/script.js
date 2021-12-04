@@ -6,3 +6,10 @@ function myFunction() {
       x.className = "topnav";
     }
   }
+
+  localStorage.getItem('courseId')
+    localStorage.getItem('cnumber')
+    localStorage.getItem('cname')
+    localStorage.getItem('meet')
+    localStorage.getItem('roster')
+    localStorage.getItem('sem')

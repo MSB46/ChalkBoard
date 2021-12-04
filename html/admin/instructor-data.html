@@ -32,10 +32,9 @@
 
             
     <!-- Gte info -->
-    <script src="../../js/admin/getIns.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../../js/footable.min.js"></script>
+    <!-- <script src="../../js/footable.min.js"></script>
     <script src="../../js/footable.js"></script>
     <script>
         jQuery(function ($) {
@@ -46,7 +45,7 @@
             $('.table2').footable();
         });
 
-    </script>
+    </script> -->
 
 </head>
 <body>
@@ -64,21 +63,22 @@
     <li>Instructor Data</li>
 </ul>
 
-<h3 class="section-title">Instructor Unknown (Clicked Name Goes Here)</h3>
+<h3 class="section-title">Loading</h3>
 <div class="main-content-area">
 
     <table class="table1">
         <thead>
         <tr>
             <th>Instructor ID</th>
+            <th>Name</th>
             <th data-breakpoints="xs sm">Instructor Email</th>
         </tr>
         </thead>
         <tbody id="ins-info-data">
         <tr>
             <td>T##</td>
+            <td>Name</td>
             <td>iunknown999@kingmail.com</td>
-            <td>123-4567-8910</td>
         </tr>
         </tbody>
 
@@ -90,23 +90,18 @@
             <th>Section</th>
             <th data-breakpoints="xs">Class Number</th>
             <th data-breakpoints="xs sm">Class Name</th>
+            <th data-breakpoints="xs sm">Instructor</th>
             <th data-breakpoints="xs sm">Meeting Info</th>
+            <th data-breakpoints="xs sm">Semester</th>
         </tr>
-        <tr>
-            <td>ABCDE</td>
-            <td><a href="./course-data.html">TEST XYZ</a></td>
-            <td>Introduction to Placeholding</td>
-            <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
-        </tr>
-        <tr>
-            <td>12345</td>
-            <td><a href="./course-data.html">TEST ABC</a></td>
-            <td>Placeholding II</td>
-            <td>Sat/Sun CC:DD</td>
-        </tr>
+        <tbody id="ins-courses">
+       
+    </tbody>
     </table>
 
 </div>
 
 </body>
+<script defer src="../../js/admin/getIns.js"></script>
+
 </html>
