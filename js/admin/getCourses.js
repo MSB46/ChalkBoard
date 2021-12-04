@@ -26,8 +26,7 @@ const getAllCourses = () => {
           // This means that the user has no authorization to be on the /student.html page so reederict to homepage
             // console.log(result);
             if(courses.error)
-            console.log(courses.error);
-            // return window.location.href = "../../index.html";
+            return window.location.href = "../../index.html";
             // displayCourses(courses);
             displayCourses(courses);
         })

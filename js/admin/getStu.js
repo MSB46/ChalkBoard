@@ -25,10 +25,10 @@ const getInsCourse= () => {
         .then(courses => {
           // This means that the user has no authorization to be on the /student.html page so reederict to homepage
             // console.log(result);
-            // if(courses.error)
-            // return window.location.href = "../../index.html";
-            // displaystudent(courses);
-            displaystudent(courses);
+            if(courses.error)
+            return window.location.href = "../../index.html";
+            // displayStudent(courses);
+            displayStudent(courses);
             displayCourses(courses);
         })
         .catch(error => { 
@@ -54,7 +54,7 @@ const setCourse = (id) => {
 
 
 
-function displaystudent(student){
+function displayStudent(student){
 
     console.log(student);
     let name = `${student.firstname} ${student.lastname}`;
