@@ -1,216 +1,227 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 body {
-  font-family: Rubik, sans-serif, Arial;
-  background: beige;
-  margin: 0;
+    font-family: Rubik, sans-serif, Arial;
+    margin: 10px;
 }
 
 h3 {
-  color: beige;
-  font-size: 1.75em;
+    color: beige;
+    font-size: 1.75em;
 }
 
 .welcome {
-  max-width: 750px;
-  height: 50vh;
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-  padding: 25px 5px;
-  border-radius: 5px;
-  background: url("../img/chalkboardImgB.png") no-repeat;
-  background-size: 100% 100%;
+    max-width: 750px;
+    height: 50vh;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 25px 5px;
+    border-radius: 5px;
+    background: url("../img/chalkboardImgB.png") no-repeat;
+    background-size: 100% 100%;
 }
 
 .user-creds {
-  max-width: 750px;
-  border: 1px solid black;
-  margin: 0 auto;
-  text-align: center;
-  padding: 25px 5px;
-  border-radius: 5px;
-  background: url("../img/chalkboardImg.png") no-repeat;
-  background-size: 100% 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px 5px;
+    border-radius: 5px;
 }
 
 .within-cover {
-  position: relative;
-  top: -20px;
+    position: relative;
+    top: -20px;
 }
 
 .to-login,
 button {
-  border: 2px solid black;
-  text-shadow: lightslategrey 0 1px 3px;
-  background-color: #82ee57;
-  font-weight: bolder;
-  padding: 5px 25px;
-  border-radius: 20px;
-  text-decoration: none;
-  margin: 15px;
-  color: black;
+    border: 2px solid black;
+    text-shadow: lightslategrey 0 1px 3px;
+    background-color: #82ee57;
+    font-weight: bolder;
+    padding: 5px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 15px;
+    color: black;
 }
 
 .logo img {
-  max-width: 370px;
-  height: auto;
-  margin: 0 auto;
+    max-width: 325px;
+    height: auto;
+    margin: 0 auto;
 }
 
 .logo img:hover {
-  filter: drop-shadow(0 5px 0.75rem #ecec3e);
+    filter: drop-shadow(0 5px 0.75rem #ecec3e);
 }
 
 .logo-div {
-  font-size: 2.5em;
-  text-align: center;
-  margin: 10px auto;
+    font-size: 2.5em;
+    text-align: center;
+    margin: 10px auto;
 }
 
 .cred-input {
-  display: inline-block;
-  padding: 15px 100px 15px 20px;
-  border-radius: 10px;
-  margin: -10px 10px 30px;
-  box-sizing: inherit;
+    font-size: 1rem;
+    text-align: center;
+    height: 40px;
+    display: inline-block;
+    padding: 2px;
+    border-radius: 4px;
+    box-sizing: inherit;
+    margin: 0 0 25px;
+
 }
 
 input:focus {
-  border: 2px solid black;
+    border: 2px solid black;
 }
 
 button:hover,
 .to-login:hover {
-  background-color: forestgreen;
+    background-color: forestgreen;
 }
 
-label{
-  color: whitesmoke;
-  display: block;
-  text-align: center;
-  clear: both;
-  color: whitesmoke;
-  font-size: 1.5em;
-  margin: 0 0 5px;
+label {
+    color: whitesmoke;
+    display: block;
+    text-align: center;
+    clear: both;
+    font-size: 1.5em;
+    margin: 0 0 -15px;
 }
 
 .label:first-child {
-  margin: 20px 0 0;
+    margin: 20px 0 0;
 }
 
 .error-message {
-  margin: -10px 0 10px;
-  display: flex;
-  justify-content: center;
-  color: whitesmoke;
-  text-shadow: 1px 1px 2px #262626;
-
+    margin: -10px 0 10px;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px #262626;
 }
 
 .error-message ul {
-  margin: 0;
-  justify-content: center;
-  padding: 5px 30px;
-  background-color: hsla(0, 79%, 70%, 0.68);
-  border: 2px inset #1e1d1d;
-  border-radius: 1.3px;
-
+    margin: 0;
+    justify-content: center;
+    padding: 5px 30px;
+    background-color: hsla(0 79% 70% 0.68);
+    border: 2px inset #1e1d1d;
+    border-radius: 1.3px;
 }
 
 .error-message ul li {
-  padding: 3px 0
+    padding: 3px 0;
 }
 
 .hide {
-  display: none;
+    display: none;
 }
 
-#formErrors {
-  color: red;
+#form-errors {
+    color: red;
 }
 
 @media screen and (max-width: 767px) and (min-width: 300px) {
-  .outside {
-    display: none;
-  }
+    body {
+        background: url("../img/chalkboardImgC.png");
+    }
 
-  .user-creds{
-    display: inherit;
-    background: url("../img/chalkboardImgC.png") no-repeat;
-    background-size: 100% 100%;
-    /*padding: 300px 200px;*/
-  }
+    .outside {
+        display: none;
+    }
 
+    .register-area {
+        top: -35%;
+    }
 
-  .register-area {
-    top: -35%;
-  }
+    .to-login {
+        display: inline-block;
+    }
 
-  .to-login {
-    display: inline-block;
-  }
+    a.to-login {
+        margin: 20px;
+        text-align: center;
+    }
 
-  a.to-login {
-    margin: 20px;
-    text-align: center;
-  }
+    .cred-input{
+        height: 8vh;
+        width: 70vw;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1052px) {
-  .outside {
-    display: none;
-  }
+    body {
+        background: url("../img/chalkboardImgC.png") no-repeat;
+        background-size: cover;
+    }
 
-  .logo .inside {
-    width: 10vw;
-  }
+    .outside {
+        display: none;
+    }
 
-  .user-creds {
-    padding: 300px 200px;
-    /*display: inline-block;*/
-    height: auto;
-  }
+    .logo .inside {
+        width: 10vw;
+    }
 
-  .cred-input {
-    font-size: 1.4em;
-  }
+    .user-creds {
+        padding: 300px 200px;
 
-  button {
-    padding: 10px 20px;
-    font-size: 1.4em;
-  }
+        /* display: inline-block; */
+        height: auto;
+    }
+
+    .cred-input {
+        font-size: 1.4em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1.4em;
+    }
 }
 
 @media screen and (min-width: 1053px) {
-  .outside {
-    display: inline;
-  }
+    body {
+        background: beige;
+    }
 
-  .asking-for,
-  .inside {
-    display: none;
-  }
+    .outside {
+        display: inline;
+    }
 
-  .within-cover{
-    top: -48px;
-  }
 
-  .cred-input {
-    padding: 5px;
-    width: 60%;
-    margin: 10px 0;
-    font-size: 1.2em;
-  }
+    .inside {
+        display: none;
+    }
 
-  .user-creds {
-    padding: 130px 0 40px;
-    margin: 0 auto;
-    display: block;
-    height: 50vh;
-  }
+    .within-cover {
+        top: -48px;
+    }
 
-  .user-creds:first-child {
-    margin: 0;
-  }
+    .cred-input {
+        padding: 2px;
+        height: 4vh;
+        width: 30vw;
+        margin: 13px 0;
+        font-size: 1.1rem;
+    }
+
+    .user-creds {
+        padding: 130px 0 40px;
+        margin: 0 auto;
+        display: block;
+        height: 50vh;
+        background: url("../img/chalkboardImg.png") no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .user-creds:first-child {
+        margin: 0;
+    }
 }

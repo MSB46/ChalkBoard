@@ -1,21 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
-.breadcrumb {
-  list-style: none;
-  margin: 30px 50px;
-  padding: 10px;
-  background-color: #faf2f2;
-  text-align: center;
-  box-shadow: 0 1px 4px rgb(52 52 52);
-  overflow: hidden;
-  border-radius: 5px;
-}
-
-.breadcrumb li a {
-  text-decoration: none;
-  color: #048bff;
-}
-
 .topnav a:last-child {
   float: right;
 }
@@ -49,9 +33,6 @@ textarea {
   border: 3px solid black;
 }
 
-tr:hover td {
-  background-color: #de456e;
-}
 
 @media screen and (min-width: 800px) {
   .topnav {

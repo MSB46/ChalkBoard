@@ -1,0 +1,65 @@
+*{
+    color: whitesmoke;
+    margin: 0;
+    text-shadow: #313131 0 0 5px;
+}
+
+.smallPic{
+    border-radius: 1px 1px 40px 1px;
+}
+
+.main{
+    background: linear-gradient(0.33turn, #373D3D, #E8ECEF, #594E48);
+    padding: 24px 10px 250px 4px;
+}
+
+.greeting {
+    display: block;
+    background-color: rgba(43, 61, 96, 0.58);
+    border-radius: 2px 20px 2px 2px;
+
+    padding: 20px;
+}
+
+@media screen and (max-width: 767px) and (min-width: 360px) {
+
+    .greeting{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 3px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1052px) {
+    .greeting{
+        margin: 10px 100px;
+    }
+
+    .smallPic{
+        display: inline;
+    }
+
+}
+
+@media screen and (min-width: 1053px) {
+    .main{
+        padding: 24px 10px 450px 4px;
+        background: url("../img/logo-free.jpg") no-repeat right;
+        background-size: cover;
+    }
+
+    .greeting{
+        width: 50vw;
+        margin: 5px 0 0 20px;
+        padding: 13px 15px;
+        box-shadow: 12px 12px 2px 1px rgba(49, 49, 47, 0.44);
+    }
+
+    .smallPic{
+        display: none;
+    }
+
+}
+

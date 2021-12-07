@@ -2,19 +2,25 @@ table td,
 table th,
 thead {
   border: 3px solid #000;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   text-align: center;
   padding: 10px;
-  background-color: #d0d1d2;
+  background-color: #f1f1f1;
 }
 
 table td {
-  background-color: #dbd1f1;
+  background-color: #e9eef6;
 }
 
-tr:nth-child(even) {
-  background-color: #cae5ff;
+tr:nth-child(odd) > td{
+  background-color: #c2cfdc;
 }
+
+tr:hover td {
+  background-color: #6beaab;
+}
+
+
 
 .safe td:nth-child(even) {
   background-color: #c1ffce;
@@ -40,10 +46,16 @@ tr:nth-child(even) {
   background-color: #f5becc;
 }
 
-@media screen and (min-width: 700px) {
+.table1, .table2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) and (min-width: 300px) {
   .table1,
   .table2 {
-    margin: 0 auto;
+    margin: 3px 4px;
   }
 
   table td {
@@ -51,7 +63,7 @@ tr:nth-child(even) {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) and (max-width: 1052px) {
   .table1,
   .table2 {
     margin: 10px auto;
