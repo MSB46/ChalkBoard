@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../../css/stylesMB.css">
     <link rel="stylesheet" href="../../css/admin-style.css">
     <link rel="stylesheet" href="../../css/table-style.css">
+    <link rel="stylesheet" href="../../css/breadcrumb.css">
 
     <script async src="../../js/admin/getStu.js"></script>
 
@@ -34,71 +35,28 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <script src="../../js/footable.min.js"></script>
-    <script src="../../js/footable.js"></script>
-    <script>
-        jQuery(function ($) {
-            $('.table1').footable();
-        });
-
-        jQuery(function ($) {
-            $('.table2').footable();
-        })
-
-    </script> -->
+    <script src="../../js/footable.min.js"></script>
 </head>
 <body>
 <div class="topnav" id="myTopnav">
     <a href="../../index.html">ChalkBoard</a>
-    <a href="./all-students.html">Students Data</a>
-    <a href="./all-instructors.html">Instructors Data</a>
-    <a class="log-out" href="./login.html">Log out</a>
-
+    <a href="all-students.html">Students Data</a>
+    <a href="all-instructors.html">Instructors Data</a>
+    <a class="log-out" href="login.html">Log out</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
 <ul class="breadcrumb">
     <li><a href="admin-view.html">Admin View</a></li>
-    <li><a href="./all-students.html">Students Data</a></li>
     <li>Student Data</li>
 </ul>
 
 <h1 class="section-title">[Clicked Student Name Goes Here]</h1>
 <div class="main-content-area">
-    <table class="table1">
-        <thead>
-        <tr>
-            <th>Student ID</th>
-            <th>Name</th>
-            <th data-breakpoints="xs sm">Email</th>
-        </tr>
-        </thead>
-        <tbody id="stu-info-data">
-        <tr>
-            <td>S##</td>
-            <td>sunknown00@kingmail.com</td>
-            <td>098-765-4321</td>
-        </tr>
-        </tbody>
-    </table>
-    <h3 class="section-title">Enrolled Courses</h3>
+    <table class="student-info"></table>
 
-    <table class="table2">
-        <thead>
-        <tr>
-            <th>Section</th>
-            <th data-breakpoints="xs">Class Number</th>
-            <th data-breakpoints="xs sm">Class Name</th>
-            <th data-breakpoints="xs sm">Instructor</th>
-            <th data-breakpoints="xs sm" data-filterable="false">Number of students</th>
-            <th data-breakpoints="xs sm">Meeting Info</th>
-            <th data-breakpoints="xs sm">Semester</th>
-        </tr>
-        </thead>
-        <tbody id="stu-courses">
-       
-        </tbody>
-    </table>
+    <h3 class="section-title">Enrolled Courses</h3>
+    <table class="course-info"></table>
 </div>
 
 </body>

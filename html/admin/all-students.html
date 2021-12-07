@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="../../css/stylesMB.css">
     <link rel="stylesheet" href="../../css/admin-style.css">
     <link rel="stylesheet" href="../../css/table-style.css">
+    <link rel="stylesheet" href="../../css/breadcrumb.css">
 
     <script async src="../../js/admin/getStudents.js"></script>
-
 
     <!-- FooTable Bootstrap CSS -->
     <link href="../../css/footable.bootstrap.min.css" rel="stylesheet">
@@ -32,63 +32,27 @@
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
 
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <script src="../../js/footable.min.js"></script>
-    <script src="../../js/footable.js"></script> -->
-    <!-- <script>
-        jQuery(function ($) {
-            $('.info').footable();
-        });</script> -->
-
+    <script src="../../js/footable.min.js"></script>
 </head>
 <body>
 <div class="topnav" id="myTopnav">
     <a href="../../index.html">ChalkBoard</a>
     <a href="./all-students.html">Students Data</a>
-    <a href="./all-instructors.html">Instructors Data</a>
-    <a class="log-out" href="./login.html">Log out</a>
-
+    <a href="all-instructors.html">Instructors Data</a>
+    <a class="log-out" href="login.html">Log out</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
 <ul class="breadcrumb">
-    <li><a href="./admin-view.html">Admin View</a></li>
+    <li><a href="admin-view.html">Admin View</a></li>
     <li>Students Data</li>
 </ul>
 
 <h1 class="section-title">All Students</h1>
-<!--<div class="search-container">-->
-<!--    <form>-->
-<!--        <input class="filter-form-input" placeholder="Search examples: MATH141, 12345, Steve Urkel" type="text"-->
-<!--               name="filter"-->
-<!--               id="filter">-->
-<!--    </form>-->
-<!--</div>-->
 
 <div class="main-content-area">
-    <table class="info" id="courses" data-filtering="true">
-        <thead>
-        <tr>
-            <!-- <th>Section</th> -->
-            <th data-breakpoints="xs">Student ID</th>
-            <th data-breakpoints="xs sm">Email</th>
-            <!-- <th>Instructor</th> -->
-            <!-- <th data-breakpoints="xs sm" data-filterable="false">Number of students</th> -->
-            <th data-breakpoints="xs sm">Name</th>
-            <!-- <th data-breakpoints="xs sm">Semester</th> -->
-        </tr>
-        </thead>
-        <tbody id="data-students">
-        
-            <!-- <tr>
-                <td>123456</td>
-                <td>example@exmaple.com</td>
-                <td><a href="./student-data.html">Name</a></td>
-            </tr> -->
-        </tbody>
-    </table>
+    <table class="student-info" id="courses" data-filtering="true" data-sorting="true"></table>
 </div>
 </body>
 

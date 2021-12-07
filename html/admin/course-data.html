@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../../css/stylesMB.css">
     <link rel="stylesheet" href="../../css/admin-style.css">
     <link rel="stylesheet" href="../../css/table-style.css">
+    <link rel="stylesheet" href="../../css/breadcrumb.css">
 
     <!-- FooTable Bootstrap CSS -->
     <link href="../../css/footable.bootstrap.min.css" rel="stylesheet">
@@ -28,22 +29,23 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
-            <!-- <script src="../../js/footable.min.js"></script>
-            <script src="../../js/footable.js"></script> -->
-    <!-- <script>
-        jQuery(function ($) {
-            $('.courseInfo').footable();
-        });</script> -->
+            <script src="../../js/footable.min.js"></script>
 
+
+<!--    <script>-->
+<!--        jQuery(function ($) {-->
+<!--            $('.courseInfo').footable();-->
+<!--        });</script> -->
+<!--    TODO: Give the rest of the table heavy pages the admin-view treatment -->
     
 
 </head>
 <body>
 <div class="topnav" id="myTopnav">
     <a href="../../index.html">ChalkBoard</a>
-    <a href="./all-students.html">Students Data</a>
-    <a href="./all-instructors.html">Instructors Data</a>
-    <a class="log-out" href="./login.html">Log out</a>
+    <a class="log-out" href="login.html">Log out</a>
+    <a href="all-students.html">Students Data</a>
+    <a href="all-instructors.html">Instructors Data</a>
     
     <script async src="../../js/admin/getC.js"></script>
 
@@ -52,47 +54,47 @@
 
 <ul class="breadcrumb">
     <li><a href="../../index.html">Home</a></li>
-    <li><a href="./admin-view.html">Admin View</a></li>
+    <li><a href="admin-view.html">Admin View</a></li>
     <li>Course Data</li>
 </ul>
-<h1 class="section-title">Course Data for [Clicked Class Number Goes Here]</h1>
+<h1 class="section-title">Loading Data for [Loading Class Number]</h1>
 <div class="class-section">
     <table class="courseInfo">
-        <thead>
-        <tr>
-            <th>Section here</th>
-            <th>Class Number here</th>
-            <th data-breakpoints="xs sm">Class Name here</th>
-            <th data-breakpoints="xs sm">Roster amount here</th>
-            <th data-breakpoints="xs sm">Meeting Info here</th>
-            <th data-breakpoints="xs sm">Course semester here</th>
-        </tr>
-        </thead>
-        <tbody id="course-data-info">
-        <tr>
-            <td>Section X</td>
-            <td>TEST XYZ</td>
-            <td>Introduction to Placeholding</td>
-            <td>## / ??</td>
-            <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
-            <td>Spring 20YY</td>
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th>Section here</th>-->
+<!--            <th>Class Number here</th>-->
+<!--            <th data-breakpoints="xs sm">Class Name here</th>-->
+<!--            <th data-breakpoints="xs sm">Roster amount here</th>-->
+<!--            <th data-breakpoints="xs sm">Meeting Info here</th>-->
+<!--            <th data-breakpoints="xs sm">Course semester here</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody id="course-data-info">-->
+<!--        <tr>-->
+<!--            <td>Section X</td>-->
+<!--            <td>TEST XYZ</td>-->
+<!--            <td>Introduction to Placeholding</td>-->
+<!--            <td>## / ??</td>-->
+<!--            <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>-->
+<!--            <td>Spring 20YY</td>-->
 
-        </tr>
-        </tbody>
+<!--        </tr>-->
+<!--        </tbody>-->
     </table>
 </div>
 
 <div class="course-container">
     <div class="table1">
-        <table class="instructorInfo table-left">
+        <table class="instructorInfo table-left" >
             <tr>
-                <th>Instructor Roster</th>
+                <th>Instructor Name</th>
                 <th>Instructor ID</th>
             </tr>
             <tbody id="ins-info-data">
             <tr>
-                <td><a href="./instructor-data.html"> Instructor Unknown </a></td>
-                <td>T##</td>
+                <td><a href="instructor-data.html"> Loading Name </a></td>
+                <td>Loading ID</td>
             </tr>
         </tbody>
         </table>
@@ -101,16 +103,16 @@
     <div class="table2">
         <table class="rosterInfo table-left">
             <tr>
-                <th>Student roster</th>
+                <th>Student Name</th>
                 <th>Student ID</th>
             </tr>
             <tbody id="stu-info-data">
 
             <tr>
-                <td><a href="./student-data.html"> Annie Murphy </a></td>
-                <td> S01</td>
+                <td><a href="student-data.html"> Loading Murphy </a></td>
+                <td>Loading ID</td>
             </tr>
-         
+
         </tbody>
          
         </table>

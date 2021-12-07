@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../../css/stylesMB.css">
     <link rel="stylesheet" href="../../css/admin-style.css">
     <link rel="stylesheet" href="../../css/table-style.css">
+    <link rel="stylesheet" href="../../css/breadcrumb.css">
 
     <script async src="../../js/admin/getIns.js"></script>
 
@@ -32,79 +33,32 @@
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
 
-            
-    <!-- Gte info -->
 
+    <!-- Get info -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <script src="../../js/footable.min.js"></script>
-    <script src="../../js/footable.js"></script>
-    <script>
-        jQuery(function ($) {
-            $('.table1').footable();
-        });
-
-        jQuery(function ($) {
-            $('.table2').footable();
-        });
-
-    </script> -->
+    <script src="../../js/footable.min.js"></script>
 
 </head>
 <body>
 <div class="topnav" id="myTopnav">
     <a href="../../index.html">ChalkBoard</a>
-    <a href="./all-students.html">Students Data</a>
-    <a href="./all-instructors.html">Instructors Data</a>
-    <a class="log-out" href="./login.html">Log out</a>
-
+    <a href="all-students.html">Students Data</a>
+    <a href="all-instructors.html">Instructors Data</a>
+    <a class="log-out" href="login.html">Log out</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
 <ul class="breadcrumb">
-    <li><a href="./admin-view.html">Admin View</a></li>
-    <li><a href="./all-instructors.html">Instructors Data</a></li>
+    <li><a href="admin-view.html">Admin View</a></li>
     <li>Instructor Data</li>
 </ul>
 
 <h3 class="section-title">Loading</h3>
 <div class="main-content-area">
-
-    <table class="table1">
-        <thead>
-        <tr>
-            <th>Instructor ID</th>
-            <th>Name</th>
-            <th data-breakpoints="xs sm">Instructor Email</th>
-        </tr>
-        </thead>
-        <tbody id="ins-info-data">
-        <tr>
-            <td>T##</td>
-            <td>Name</td>
-            <td>iunknown999@kingmail.com</td>
-        </tr>
-        </tbody>
-
-    </table>
+    <table class="instr-info"></table>
 
     <h3 class="section-title">Associated Courses</h3>
-    <table class="table2">
-        <tr>
-            <th>Section</th>
-            <th data-breakpoints="xs">Class Number</th>
-            <th data-breakpoints="xs sm">Class Name</th>
-            <th data-breakpoints="xs sm">Instructor</th>
-            <th data-breakpoints="xs sm" data-filterable="false">Number of students</th>
-            <th data-breakpoints="xs sm">Meeting Info</th>
-            <th data-breakpoints="xs sm">Semester</th>
-        </tr>
-        <tbody id="ins-courses">
-       
-    </tbody>
-    </table>
-
+    <table class="course-info"></table>
 </div>
-
 </body>
-
 </html>
