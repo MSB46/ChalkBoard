@@ -45,18 +45,47 @@ const setUserId=(id, user)=>{
 
 
 function displayCourses(data){
+    let courseTable = document.querySelector(".courseInfo");
+
+    jQuery(function($){
+        $(courseTable).footable({
+            "columns": [
+                { "name": "section", "title": "Section"},
+                { "name": "classNum", "title": "Class Number" },
+                { "name": "className", "title": "Class Name", "breakpoints": "xs sm" },
+                { "name": "studentAmt", "title": "Number of Students", "breakpoints": "xs sm", "filterable": "false"},
+                { "name": "meetInfo", "title": "Meeting Info", "breakpoints": "xs sm" },
+                { "name": "semester", "title": "Semester", "breakpoints": "xs sm" }
+            ],
+        });
+    });
+    // Allows the tables to convert to vertical layout on mobile devices
+
+    courseTable.innerHTML += `        
+        <thead>
+        <tr>
+            <th>Section</th>
+            <th>Class Number</th>
+            <th>Class Name</th>
+            <th>Number of students</th>
+            <th>Meeting Info</th>
+            <th>Semester</th>
+        </tr>
+        </thead>
+        `;
+
 
     document.querySelector('.section-title').textContent = `${data.course_number} | ${data.course_name}`
 
-    let html = `<td>${data.courseId}</td>
+    let html = `<tr><td>${data.courseId}</td>
     <td>${data.course_number}</td>
     <td>${data.course_name}</td>
     <td>${Object.keys(data.roster.students).length}</td>
     <td>${data.meeting}</td>
-    <td>${data.semester}</td>`
+    <td>${data.semester}</td></tr>`
     
 
-    document.querySelector('#course-data-info').innerHTML = html;
+    courseTable.innerHTML += html;
 
     let ins = "";
     let stu = "";
