@@ -13,43 +13,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <script src="./js/script.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="./js/startsession.js"></script>
+    <script src="js/startsession.js"></script>
 </head>
 <body>
-    <!-- Responsive nav bar for now just the HTML -->
-    <div class="topnav" id="myTopnav">
-        <a href="./index.html" class="active">ChalkBoard</a>
-        <!-- <div class="dropdown">
-          <button class="dropbtn">Student Log in/Sign up
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            
-            
-          </div>
-        </div>  -->
-        <a href="./html/student/login.html" onclick="setUser('students')">Student Log in/Sign up</a>
-        <a href="./html/instructor/login.html" onclick="setUser('instructors')">Instructor Log in/Sign up</a>
-        <!-- <a href="#about">About</a> -->
-        <a href="./html/admin/login.html" onclick="setUser('admin')">Admin Log in</a>
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-      </div>
-      <div class="home-container">
-        <h1 class="home-title">Welcome to ChalkBoard</h1>
-        <p>What is the plan today?</p>
-        <p>Faciliting quality online education since 2011</p>
-        <img src="./img/logo-free.jpg" class="responsive" alt="Online Learning" title="E-Learning">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis molestiae qui odit, repellat esse aut iste eveniet, explicabo eius laborum perspiciatis veniam. Quas est ipsa neque a accusamus consequatur dolore?
-        Doloribus incidunt odio nesciunt aperiam dolorum maiores veniam saepe corrupti modi dolore. Cumque aut nostrum nesciunt soluta, omnis quos veritatis quaerat at! Inventore possimus voluptates minima eligendi praesentium, debitis iste?
-        Quae rem corrupti labore doloremque sint ea, autem eius neque molestiae exercitationem ipsum vero delectus itaque mollitia quam dicta veritatis, esse, provident inventore ut facere repellat? Consequuntur facilis ipsam tempora!
-        Facere ab sed eius quasi omnis praesentium odit, consequatur voluptate non minus libero a saepe incidunt nam perspiciatis alias, voluptas facilis. Fuga expedita rem reiciendis. Nesciunt nihil est quia ad?
-        Dolorum architecto aperiam eveniet nemo et quidem odio, perspiciatis, dolore similique perferendis dignissimos incidunt sit quisquam magni! Est amet ab quae, magnam eius aut assumenda fuga itaque error ex quas!</p>
-        <!-- <h2>Have any questions?</h2>
-        <button>Contact US</button> -->
-
+<!-- Responsive nav bar for now just the HTML -->
+<div class="topnav" id="myTopnav">
+    <a href="./index.html" class="active">ChalkBoard</a>
+    <a href="html/student/login.html" onclick="setUser('students')">Student Log in/Sign up</a>
+    <a href="html/instructor/login.html" onclick="setUser('instructors')">Instructor Log in/Sign up</a>
+    <a href="html/admin/login.html" onclick="setUser('admin')">Admin Log in</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div class="main">
+    <div class="greeting">
+        <h1>Welcome to ChalkBoard</h1>
+        <br>
+        <h2>What is the plan today?</h2>
+        <br>
+        <h5>Faciliting quality online education since 2021</h5>
+        <br>
+        <img src="./img/logo-free.jpg" class="responsive smallPic" alt="Online Learning" title="E-Learning">
+        <br>
+        <p>Our mission is to <i>bring the best in course management</i> and
+            to create a convenient and welcoming interface for
+            college students and professors alike. No matter the location.</p>
+        <br>
+        <p>ChalkBoard prioritizes convenience which means <strong>no more relying on more than one website to view
+            everything
+            relating to your courses</strong>. Sounds neat doesn't it?
+        </p> <br>
+        <p> Why not see for yourself? Get started today!</p>
     </div>
+</div>
 </body>
 </html>
