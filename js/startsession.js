@@ -1,7 +1,6 @@
 const API_LOGIN = "https://us-central1-project-93bdb.cloudfunctions.net/api/loginStudent";
 
 let usertpe = localStorage.getItem('user')
-
 let API_REGISTER = "";
 if(usertpe == 'students')
     API_REGISTER = "https://us-central1-project-93bdb.cloudfunctions.net/api/studentSignUp";
@@ -12,6 +11,7 @@ const setUser = (user) => {
     localStorage.setItem('user', user);
 
 }
+
 
 const login = (e) => {
     e.preventDefault();
@@ -65,9 +65,9 @@ const register = (e) => {
     let firstname = doc('#first');
     let lastname = doc('#last');
     let password = doc('#passwordUser');
-    let confirmPassword = doc('#confirmPw');
+    let confirmp = doc('#confirmPw');
 
-    let userType = localStorage.getItem('user');
+    let usertype = localStorage.getItem('user');
 
     let errorBoxOut = document.querySelector("#outside-error-box");
     let errorBoxIn = document.querySelector("#inside-error-box");
@@ -77,7 +77,8 @@ const register = (e) => {
         firstname: firstname,
         lastname: lastname,
         password: password,
-        usertype: userType
+        usertype: usertype,
+        // confirmp: confirmp
     }
     var requestOptions = {
         method: 'POST',
@@ -89,13 +90,14 @@ const register = (e) => {
         .then(response => {
             return response.json();
         }).then(user => {
+            console.log(user);
         if (!user.token){
             errorBoxOut.classList.remove("hide");
             errorBoxIn.classList.remove("hide");
             return console.log({errors: user});
         }
         localStorage.setItem("token", user.token)
-        if (userType == "students")
+        if (usertype == "students")
             return window.location.href = "login.html";
         return window.location.href = "login.html";
 
