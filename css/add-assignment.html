@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+        Name: ELvis Moyolema
+        Date: 12.6.2021
+        Course: CS 355
+        Used Michael's add-course.html as template to create add-assignment.htmlp page. In here an instrcutor will be able to create a new assignment 
+        for a specific course, and to create the assignment they need to add title, due date, instructions regarding the assignment, and questions regarding the assignment. So later
+        on the student can see this new assignment in their course.
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Course</title>
+    <script async src="../../js/verifyi.js"></script>
+    <script src="../../js/addQuestion.js"></script>
+    <script src="../../js/script.js"></script>
+
+
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+<!--            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
+<!--            crossorigin="anonymous"></script>-->
+
+<!--    <script src="../../js/for-course-add.js"></script>-->
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/stylesMB.css">
+    <link rel="stylesheet" href="../../css/instructor.css">
+    <link rel="stylesheet" href="../../css/add-course.css">
+    <link rel="stylesheet" href="../../css/breadcrumb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+    </style>
+
+
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <a href="./instructor.html" class="active">Instructor Summary</a>
+    <div class="dropdown">
+        <button class="dropbtn">Go too my
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="./icourses.html">Courses</a>
+
+        </div>
+    </div>
+    <a href="./irequests.html">Course requests</a>
+    <a href="../../index.html">Log out</a>
+
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<ul class="breadcrumb">
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="instructor.html">Instructor</a></li>
+    <li>Add Assignment</li>
+</ul>
+
+<div class="input-container">
+    <div class="input-area">
+        <h3>Add a new Assignment</h3>
+        <span id="add-course-msg"></span>
+        <div class="hide error">
+            <h2>Sorry. You can only add up to five questions at this time</h2>
+        </div>
+        <button class="questions-btn" onclick="addQuestion()">New question</button>
+        <button class="questions-btn" onclick="removeQuestion()">Remove last question</button>
+        <form id="courseForm">
+           
+            <label for="course-name" class="asking-for">Assignment Title</label>
+            <input class="cred-input" placeholder="Add the title of your assignment here" type="text" name="course-name" id="course-name" required> <br>
+
+            <label for="instructions-input" class="asking-for">Instructions</label>
+            <input class="cred-input" placeholder="Add the instructions for this assignment" type="text" name="instructions-input" id="instructions-input" required> <br>
+
+            <label for="meeting-input" class="asking-for">Due Date</label>
+            <input class="cred-input" placeholder="Add the time and date of your assigment here" type="text" name="meeting-input" id="meeting-input" required> <br>
+
+            <div class="questions">
+                <label for="desc-input1" class="asking-for" id="q1"> Question 1</label>
+                <textarea class="cred-input" placeholder="Add your questions of this assignment here" name="desc-input1" id="desc-input1" rows="5" cols="80" required> </textarea>
+            </div>
+
+            <div class="button-area">
+                <button class="form-button" type="submit" id="addButton" onclick="send()">Add New Assignment</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
