@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Course</title>
     <script async src="../../js/verifyi.js"></script>
+    <script src="../../js/addQuestion.js"></script>
     <script src="../../js/script.js"></script>
 
 
@@ -63,19 +64,26 @@
     <div class="input-area">
         <h3>Add a new Assignment</h3>
         <span id="add-course-msg"></span>
+        <div class="hide error">
+            <h2>Sorry. You can only add up to five questions at this time</h2>
+        </div>
+        <button class="questions-btn" onclick="addQuestion()">New question</button>
+        <button class="questions-btn" onclick="removeQuestion()">Remove last question</button>
         <form id="courseForm">
            
             <label for="course-name" class="asking-for">Assignment Title</label>
             <input class="cred-input" placeholder="Add the title of your assignment here" type="text" name="course-name" id="course-name" required> <br>
 
             <label for="instructions-input" class="asking-for">Instructions</label>
-            <input class="cred-input" placeholder="Add the instructionsfor this assignment" type="text" name="instructions-input" id="instructions-input" required> <br>
+            <input class="cred-input" placeholder="Add the instructions for this assignment" type="text" name="instructions-input" id="instructions-input" required> <br>
 
             <label for="meeting-input" class="asking-for">Due Date</label>
             <input class="cred-input" placeholder="Add the time and date of your assigment here" type="text" name="meeting-input" id="meeting-input" required> <br>
 
-            <label for="desc-input" class="asking-for">Questions</label> <br>
-            <textarea class="cred-input" placeholder="Add your questions of this assignment here" name="desc-input" id="desc-input" rows="10" cols="80" required> </textarea>
+            <div class="questions">
+                <label for="desc-input1" class="asking-for" id="q1"> Question 1</label> <br>
+                <textarea class="cred-input" placeholder="Add your questions of this assignment here" name="desc-input1" id="desc-input1" rows="5" cols="80" required> </textarea>
+            </div>
 
             <div class="button-area">
                 <button class="form-button" type="submit" id="addButton" onclick="send()">Add New Assignment</button>
