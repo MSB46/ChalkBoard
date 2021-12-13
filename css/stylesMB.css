@@ -88,6 +88,15 @@ body {
   display: block;
 }
 
+.questions-btn{
+  padding: 10px;
+  margin-right: 7px;
+}
+
+.hide {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
