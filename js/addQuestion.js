@@ -9,7 +9,7 @@ function addQuestion(){
 
     counter++;
     questions.innerHTML += (`
-        <label for="desc-input${counter}" class="asking-for" id="q${counter}">Question ${counter}</label> <br>
+        <label for="desc-input${counter}" class="asking-for" id="q${counter}">Question ${counter}</label>
         <textarea class="cred-input" placeholder="Question ${counter}" name="desc-input${counter}" id="desc-input${counter}" rows="5" cols="80" required> </textarea>`);
 }
 
