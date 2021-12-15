@@ -22,12 +22,13 @@ let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/getInsCourse
 
    await fetch(API, requestOptions)
         .then(response => {
-               
-
+            
                 return response.json()
             }
         )
         .then(courses => {
+            if(courses.error.code == "auth/id-token-expired")
+            return window.location.href = "../../index.html";
             console.log(courses);
             displayCourseRoster(courses);
 

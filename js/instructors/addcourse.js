@@ -41,6 +41,8 @@ const addCourse = (e) => {
             }
         )
         .then(response => {
+            if(response.error.code == "auth/id-token-expired")
+            return window.location.href = "../../index.html";
             // On success response, then redirect to courses
             if(response.message)
             return window.location.href = 'icourses.html'

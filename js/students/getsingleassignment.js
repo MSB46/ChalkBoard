@@ -26,6 +26,8 @@ const getSAssignment =()=>{
             }
         )
         .then(assignment => {
+            if(assignment.error.code == "auth/id-token-expired")
+            return window.location.href = "../../index.html";
             console.log(assignment);
             displayAssignment(assignment);
 

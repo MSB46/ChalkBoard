@@ -26,6 +26,8 @@ let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/getStuCourse
             }
         )
         .then(courses => {
+            if(courses.error.code == "auth/id-token-expired")
+            return window.location.href = "../../index.html";
             console.log(courses);
             displayCourses(courses);
 

@@ -1,4 +1,4 @@
-const getInstructor =()=>{
+const getInstructor = async ()=>{
 
     let usertype = localStorage.getItem('user')
     let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/getUserInfo/${usertype}`;
@@ -16,17 +16,20 @@ const getInstructor =()=>{
         headers: myHeaders,
     };
 
-    fetch(API, requestOptions)
+    await fetch(API, requestOptions)
         .then(response => {
                
-
+                console.log(response.status);
                 return response.json()
             }
         )
-        .then(courses => {
-            console.log(courses);
+        .then(instructor => {
+            if(instructor.error.code == "auth/id-token-expired")
+            return window.location.href = "../../index.html";
+            console.log(instructor);
 
-            if (courses.error)
+            displayName(instructor)
+            if (instructor.error)
                 return console.log(user);
             
         })
@@ -34,9 +37,13 @@ const getInstructor =()=>{
 
 }
 
+function displayName(instructor) {
+    document.querySelector('.instructor-name').textContent = `${instructor.firstname} ${instructor.lastname}`
+}
 
 
 
 window.onload =() => {
     getInstructor();
 } 
+

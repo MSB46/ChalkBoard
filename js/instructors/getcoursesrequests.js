@@ -23,6 +23,8 @@ const getAllCoursesRequests = async ()=>{
             }
         )
         .then(courses => {
+            if(courses.error.code == "auth/id-token-expired")
+            return window.location.href = "../../index.html";
             console.log(courses);
             displayCoursesRequests(courses);
 

@@ -22,12 +22,15 @@ let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/getInsCourse
 
    await fetch(API, requestOptions)
         .then(response => {
-               
+             
+
 
                 return response.json()
             }
         )
         .then(courses => {
+            if(courses.error.code == "auth/id-token-expired")
+            return window.location.href = "../../index.html";
             console.log(courses);
             displayInsAs(courses);
 
@@ -52,6 +55,8 @@ const displayInsAs = (course) => {
     let searchSaID = localStorage.getItem('saID')
     // document.querySelector('.course-name').textContent = 
     let assignments = course.s_assignments;
+    console.log(Object.keys(assignments).length);
+    if(Object.keys(assignments).length != 1)
     for(let key in assignments){
         console.log(key);
         html += `

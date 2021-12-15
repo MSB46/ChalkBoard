@@ -25,6 +25,9 @@ const getStudent = async ()=>{
         )
         .then(student => {
             console.log(student);
+            if(student.error.code == "auth/id-token-expired")
+            return window.location.href = "../../index.html";
+            console.log(student);
 
             displayName(student);
             if (student.error)
