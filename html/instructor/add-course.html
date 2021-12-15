@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Course</title>
     <script async src="../../js/verifyi.js"></script>
-    <script src="../../js/script.js"></script>
-
+    <!-- <script src="../../js/script.js"></script> -->
+    <script src="../../js/instructors/addcourse.js"></script>
 
 <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
 <!--            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
@@ -55,24 +55,24 @@
     <div class="input-area">
         <h3>Add a new Course</h3>
         <span id="add-course-msg"></span>
-        <form id="courseForm">
+        <form id="courseForm" onsubmit="addCourse(event)">
             <label for="course-number" class="asking-for">Course Number</label>
-            <input class="cred-input" placeholder="MATH141, HIST101, etc." type="text" name="course-number" id="course-number" required> <br>
+            <input class="cred-input" placeholder="MATH 141, CS - 313 , etc." type="text" name="course-number" id="course-number" required> <br>
 
             <label for="course-name" class="asking-for">Course Name</label>
             <input class="cred-input" placeholder="Add the name of your course here" type="text" name="course-name" id="course-name" required> <br>
 
             <label for="meeting-input" class="asking-for">Meeting</label>
-            <input class="cred-input" placeholder="Add the time and date of your course here" type="text" name="meeting-input" id="meeting-input" required> <br>
+            <input class="cred-input" placeholder="(Eg. M/Th 10:15 am - 11:00 am)" type="text" name="meeting-input" id="meeting-input" required> <br>
 
             <label for="semester-input" class="asking-for">Semester</label>
-            <input class="cred-input" placeholder="Add the semester of the class here" type="text" name="semester-input" id="semester-input" required> <br>
+            <input class="cred-input" placeholder="(Eg. Spring 2022)" type="text" name="semester-input" id="semester-input" required> <br>
 
             <label for="desc-input" class="asking-for">Description</label> <br>
-            <textarea class="cred-input" placeholder="Add your description of the course here" name="desc-input" id="desc-input" rows="10" cols="80" required> </textarea>
+            <textarea class="cred-input" placeholder="Add your description of the course here" name="desc-input" id="desc-input" rows="10" cols="80" required></textarea>
 
             <div class="button-area">
-                <button class="form-button" type="submit" id="addButton" onclick="send()">Add new course</button>
+                <button class="form-button" type="submit" id="addButton">Add new course</button>
             </div>
         </form>
     </div>

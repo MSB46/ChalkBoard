@@ -13,10 +13,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Assignment</title>
-    <script async src="../../js/verifyi.js"></script>
-    <script src="../../js/script.js"></script>
+    <script async src="../../js/script.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/instructor.css">
+    <script src="../../js/instructors/getsinglestuassignment.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -39,22 +39,15 @@
       <div class="assignment-container">
         <!-- With javascript it will collect an individual assignment that will be in instructor view -->
       
-        <div class="assignment">
-            <h2>Assignment #: <span id="assignment-number">1</span></h2>
-         <h2>Assignment title: The Spanish Colonization</h2>
-         <h2>Due date: <span id="due-date">1-15-21</span></h2>
-         <h2>Instructions: Based on today's reading about the Spanish Colonization in the Americas answer the following questions</h2>
-         <h2>In what year did Columbies arrived to America?</h2>
-         <h2>
-            <label for="answer">Answer:</label>
-            <input type="text" value="1942" disabled> 
-         </h2>
-         <h2>Initially Columbus thought he arrived, to what country?</h2>
-        <h2><label for="answer">Answer:</label>
-            <input type="text" value="India" disabled> 
-        </h2>
-        <button>Edit assignment</button>
-        </div>
+        <h1>Assignment #: <span id="assignment-number"></span></h1>
+        <h2>From: <span id="student-name"></span></h2>
+        <h2>Assignment title: <span id="sa-title"></span></h2>
+        <h2>Due date: <span id="due-date"></span></h2>
+        <h2>Instructions: <span id="instructions"></span></h2>
+      <div class="q-content">
+     
+     
+      </div>
         
       
     </div>

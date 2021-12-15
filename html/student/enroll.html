@@ -15,8 +15,10 @@
     <meta charset="UTF-8">
     <title>Enroll</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="../../js/verifys.js"></script>
+    <!-- <script async src="../../js/verifys.js"></script> -->
     <script src="../../js/script.js"></script>
+
+    <script async src="../../js/students/getallcourses.js"></script>
 
     <link rel="stylesheet" href="../../css/stylesMB.css">
     <link rel="stylesheet" href="../../css/enroll-style.css">
@@ -29,9 +31,9 @@
     <link href="../../css/footable.bootstrap.min.css" rel="stylesheet">
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" -->
+            <!-- integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" -->
+            <!-- crossorigin="anonymous"></script> -->
 
     <script src="../../js/footable.min.js"></script>
     <script src="../../js/footable.js"></script>
@@ -81,42 +83,8 @@
                     <th data-breakpoints="xs sm" data-filterable="false">Enroll</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr class="moderate">
-                    <td>00020</td>
-                    <td>DRAM 200</td>
-                    <td>Intermediate Acting</td>
-                    <td>Erica Manning</td>
-                    <td>16 / 25</td>
-                    <td>Mon/Tue/Wed/Thur/Fri AA:BB</td>
-                    <td>Spring 2025</td>
-                    <td>
-                        <button class="enrollBtn">Enroll</button>
-                    </td>
-                </tr>
-                <tr class="danger">
-                    <td>00021</td>
-                    <td>CHEM 1</td>
-                    <td>Introduction to Chemistry</td>
-                    <td>Perry Odic</td>
-                    <td>71 / 75</td>
-                    <td>Tue/Thr 11:00AM - 12:15PM</td>
-                    <td>Spring 2025</td>
-                    <td>
-                        <button class="enrollBtn">Enroll</button>
-                    </td>
-                </tr>
-                <tr class="safe">
-                    <td>00050</td>
-                    <td>HIST 300</td>
-                    <td>History of Barbeque</td>
-                    <td>Jones King</td>
-                    <td>5 / 30</td>
-                    <td>Wed 5:30PM - 7:00PM</td>
-                    <td>Spring 2025</td>
-                    <td>
-                        <button class="enrollBtn">Enroll</button>
-                    </td>
+                <tbody id="all-courses">
+                  
                 </tr>
                 </tbody>
             </table>
