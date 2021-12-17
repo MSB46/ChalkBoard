@@ -13,40 +13,179 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit=no">
     <title>Instructor Courses</title>
     <script src="../../js/script.js"></script>
     <script async src="../../js/instructors/getinscourses.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/stylesMB.css">
     <link rel="stylesheet" href="../../css/instructor.css">
+
+    <script>
+        window.onclick = function(event) {
+            if (event.target != document.querySelector("#delete-btn")) {
+                document.querySelector('#delete-form').reset();
+            }
+
+            if (event.target != document.querySelector("#add-instr-btn")) {
+                document.querySelector('#add-instr-form').reset();
+            }
+
+            if (event.target != document.querySelector("#remove-instr-btn")) {
+                document.querySelector('#remove-instr-form').reset();
+            }
+        };
+    </script>
+
+
 </head>
 <body>
-  <div class="topnav" id="myTopnav">
+<div class="topnav" id="myTopnav">
     <a href="./instructor.html" class="active">Instructor Summary</a>
     <div class="dropdown">
-      <button class="dropbtn">Go too my
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="./icourses.html">Courses</a>
-        
-      </div>
+        <button class="dropbtn">Go too my
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="./icourses.html">Courses</a>
+
+        </div>
     </div>
-    <a href="./irequests.html">Course requests</a> 
+    <a href="./irequests.html">Course requests</a>
     <a href="../../index.html">Log out</a>
-   
+
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-  </div>
-  <div class="instructor-courses">
+</div>
+<div class="instructor-courses">
     <h1>My Courses</h1>
-    
-  </div>
-      <div class="course-container">
-        <!-- With javascript it will collect all the courses that a students is
-      enrolled in -->
-      
-       </div>         
-       <a class="create-new-course" href="./add-course.html">Create New Course</a>
+
+</div>
+
+<!-- Add Modal -->
+<div class="modal" id="modalCenter" tabindex="-1" role="dialog" aria-labelledby="addModalTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add a new instructor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="add-instr-form">
+                    <label for="email-add-target" class="asking-for">Enter the email of the instructor you want to
+                        add</label> <br>
+                    <input class="cred-input" type="email" name="email-add-target" id="email-add-target"
+                           placeholder="example@email.com" required> <br>
+                    <!-- the email value is stored under the value of 'email-add-target'  -->
+                    <span> Once you add an instructor, you can remove them by clicking on <i>Remove Instructor</i></span>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="add-instr-btn" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Remove Modal -->
+<div class="modal" id="modalCenter2" tabindex="-1" role="dialog" aria-labelledby="removeModalTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Remove a current instructor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="remove-instr-form">
+                    <label for="email-add-target" class="asking-for">Enter the email of the instructor you want to
+                        remove</label> <br>
+                    <input class="cred-input" type="email" name="email-add-target" id="email-remove-target"
+                           placeholder="example@email.com" required> <br>
+                    <!-- the email value is stored under the value of 'email-remove-target'  -->
+                    <span> This action cannot be undone once you click <i>Save changes</i>. If you change your mind, you must click <i>Add instuctor</i></span>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="remove-instr-btn" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Delete modal-->
+<div class="modal" id="modalCenter3" tabindex="-1" role="dialog" aria-labelledby="deleteModalTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete the course</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="delete-form">
+                    <label for="delete-target" class="asking-for">WARNING: THIS WILL DELETE THE COURSE INCLUDING ANY INFORMATION STORED HERE</label> <br>
+                    <input class="cred-input" type="text" name="delete-target" id="delete-target"
+                           required> <br>
+                    <!-- the email value is stored under the value of 'delete-target'  -->
+                    <span> This action cannot be undone once done. If you're sure, please type <strong>"Delete Course"</strong> without the quotes</span>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="delete-btn" class="btn btn-primary">Delete this course</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="course-container">
+    <!-- With javascript it will collect all the courses that a students is
+  enrolled in -->
+
+<!--    <div class="courses">-->
+<!--        <h2><span class="course-name">${courses[key].course_number}</span></h2>-->
+<!--        <h2>Instructor: ${courses[key].main_ins.name}</h2>-->
+<!--        <div class="options-courses">-->
+<!--            <a href="./iassignments.html">See assignments</a>-->
+<!--            <p class="instr-add-to">Add Instructor</p>-->
+<!--            <a href="#" class="instr-remove-from">Remove Instructor</a>-->
+<!--            <a href="#"> Delete Course</a>-->
+<!--            <a href="./class-roster.html">Check Roster</a>-->
+<!--        </div>-->
+<!--    </div>-->
+
+</div>
+<a class="create-new-course" href="./add-course.html">Create New Course</a>
 </body>
+
+
 </html>
