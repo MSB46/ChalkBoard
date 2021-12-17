@@ -46,7 +46,7 @@ window.onload =() => {
 
 
 
-async function addStudent (studentID, courseID, name) {
+const addStudent = async (studentID, courseID, name) =>{
 
 
     let data = {
@@ -56,7 +56,7 @@ async function addStudent (studentID, courseID, name) {
     }
 
     
-    let API = "http://localhost:5000/project-93bdb/us-central1/api/addStudent";
+    let API = "https://us-central1-project-93bdb.cloudfunctions.net/api/addStudent";
 
     // Must be added when done
 

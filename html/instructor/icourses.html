@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
+    <script src="../../js/instructors/ard.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/stylesMB.css">
     <link rel="stylesheet" href="../../css/instructor.css">
@@ -87,7 +89,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="add-instr-form">
+                <form id="add-instr-form" onsubmit="addInstructor(event)">
                     <label for="email-add-target" class="asking-for">Enter the email of the instructor you want to
                         add</label> <br>
                     <input class="cred-input" type="email" name="email-add-target" id="email-add-target"
@@ -118,7 +120,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="remove-instr-form">
+                <form id="remove-instr-form" onsubmit="removeInstructor(event)">
                     <label for="email-add-target" class="asking-for">Enter the email of the instructor you want to
                         remove</label> <br>
                     <input class="cred-input" type="email" name="email-add-target" id="email-remove-target"
@@ -148,7 +150,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="delete-form">
+                <form id="delete-form" onsubmit="deleteCourse(event)">
                     <label for="delete-target" class="asking-for">WARNING: THIS WILL DELETE THE COURSE INCLUDING ANY INFORMATION STORED HERE</label> <br>
                     <input class="cred-input" type="text" name="delete-target" id="delete-target"
                            required> <br>
