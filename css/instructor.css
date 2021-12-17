@@ -21,13 +21,14 @@
     .requests-title, .subject-title, 
     .instructor-courses, .spr-title,
     .roster-class-title {
+        padding: 3px;
         text-align: center;
         position: sticky;
         top: 0;
         background-color: orange;
         border: 2px solid black;
-        margin: 10px;
-        border-radius: 10px;
+        margin: 5px;
+        border-radius: 2px;
         z-index: -1;
     }
     .student-request a {
@@ -78,15 +79,15 @@
         font-weight: bold;
     }    
 
-    .courses a{
+    .courses a, .btn{
         text-decoration: none;
         margin: 10px;
-        border-radius: 10px;
+        border-radius: 3px;
         background-color: orange;
         color: blue;
         border: 2px solid black;
         text-align: center;
-        font-size: 20px;
+        /*font-size: 20px;*/
         padding: 5px;
         font-weight: bold;
     }
@@ -94,7 +95,7 @@
     .courses {
         border: 2px solid black;
         margin: 10px;
-        border-radius: 10px;
+        border-radius: 4px;
         padding: 10px;
     }
     /* iassignments.html */
