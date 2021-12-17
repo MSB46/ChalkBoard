@@ -24,6 +24,8 @@ const getSingleStuAssignment = async () => {
 
    await fetch(API, requestOptions)
         .then(response => {
+            if(response.status == 403)
+            return window.location.href = "../../index.html";
                
 
                 return response.json()

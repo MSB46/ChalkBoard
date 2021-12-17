@@ -36,13 +36,13 @@ const addCourse = (e) => {
     fetch(API, requestOptions)
         .then(response => {
                
-
+            if(response.status == 403)
+            return window.location.href = "../../index.html";
                 return response.json()
             }
         )
         .then(response => {
-            if(response.error.code == "auth/id-token-expired")
-            return window.location.href = "../../index.html";
+            
             // On success response, then redirect to courses
             if(response.message)
             return window.location.href = 'icourses.html'

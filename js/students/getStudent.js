@@ -19,14 +19,13 @@ const getStudent = async ()=>{
     await fetch(API, requestOptions)
         .then(response => {
                
-
+            if(response.status == 403)
+            return window.location.href = "../../index.html";
                 return response.json()
             }
         )
         .then(student => {
             console.log(student);
-            if(student.error.code == "auth/id-token-expired")
-            return window.location.href = "../../index.html";
             console.log(student);
 
             displayName(student);

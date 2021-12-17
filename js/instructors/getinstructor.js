@@ -18,14 +18,15 @@ const getInstructor = async ()=>{
 
     await fetch(API, requestOptions)
         .then(response => {
+            if(response.status == 403)
+            return window.location.href = "../../index.html";
                
                 console.log(response.status);
-                return response.json()
+                return response.json();
             }
         )
         .then(instructor => {
-            if(instructor.error.code == "auth/id-token-expired")
-            return window.location.href = "../../index.html";
+            
             console.log(instructor);
 
             displayName(instructor)
