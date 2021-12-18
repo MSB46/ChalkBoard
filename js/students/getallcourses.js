@@ -53,6 +53,39 @@ const displayCourses = (courses) => {
     let x = 0;
     let userID = localStorage.getItem('userId')
     let html = "";
+
+
+    let courseTable = document.querySelector(".info");
+    jQuery(function($){
+        $(courseTable).footable({
+            "columns": [
+                { "name": "section", "title": "Section"},
+                { "name": "classNum", "title": "Class Number", "breakpoints": "xs sm" },
+                { "name": "className", "title": "Class Name", "breakpoints": "xs sm" },
+                { "name": "instr", "title": "Instructor" },
+                { "name": "studentAmt", "title": "Number of Students", "breakpoints": "xs sm", "filterable": "false"},
+                { "name": "meetInfo", "title": "Meeting Info", "breakpoints": "xs sm" },
+                { "name": "semester", "title": "Semester", "breakpoints": "xs sm" }
+            ],
+        });
+    });
+    // Allows the tables to convert to vertical layout on mobile devices
+
+    courseTable.innerHTML += `        
+        <thead>
+        <tr>
+            <th>Section</th>
+            <th>Class Number</th>
+            <th>Class Name</th>
+            <th>Instructor</th>
+            <th>Number of students</th>
+            <th>Meeting Info</th>
+            <th>Semester</th>
+        </tr>
+        </thead>
+        `;
+
+
     for(let key in courses){
 
         if(courses[key].roster.students[userID]){
@@ -75,7 +108,7 @@ const displayCourses = (courses) => {
     x=0;
     }
 
-    document.querySelector("#all-courses").innerHTML = html;
+    courseTable.innerHTML += html;
 
 }
 

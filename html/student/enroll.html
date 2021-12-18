@@ -18,29 +18,22 @@
     <script src="../../js/script.js"></script>
 
     <script async src="../../js/students/getallcourses.js"></script>
-
-    <link rel="stylesheet" href="../../css/stylesMB.css">
     <link rel="stylesheet" href="../../css/enroll-style.css">
+    <link rel="stylesheet" href="../../css/stylesMB.css">
+    <link rel="stylesheet" href="../../css/admin-style.css">
+    <link rel="stylesheet" href="../../css/breadcrumb.css">
     <link rel="stylesheet" href="../../css/table-style.css">
-
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- FooTable Bootstrap CSS -->
     <link href="../../css/footable.bootstrap.min.css" rel="stylesheet">
 
     <!-- jQuery -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" -->
-            <!-- integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" -->
-            <!-- crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
 
-    <script src="../../js/footable.min.js"></script>
-    <script src="../../js/footable.js"></script>
-
-    <script>
-        jQuery(function ($) {
-            $('.class-info').footable();
-        });</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../../js/footable.min.js" ></script>
 
 </head>
 
@@ -68,26 +61,9 @@
 <!--                       placeholder="Search examples: MATH101, Art, Barbeque" type="text" name="filter" id="filter">-->
 <!--            </form>-->
 <!--        </div>-->
-        <div class="info">
-            <table class="class-info" data-filtering="true">
-                <thead>
-                <tr>
-                    <th>Section</th>
-                    <th>Class Number</th>
-                    <th data-breakpoints="xs">Class Name</th>
-                    <th data-breakpoints="xs">Instructor</th>
-                    <th data-breakpoints="xs sm" data-filterable="false">Enrolled/Total Seats</th>
-                    <th data-breakpoints="xs sm">Meeting Info</th>
-                    <th data-breakpoints="xs sm">Semester</th>
-                    <th data-breakpoints="xs sm" data-filterable="false">Enroll</th>
-                </tr>
-                </thead>
-                <tbody id="all-courses">
-                  
-                </tr>
-                </tbody>
-            </table>
-        </div>
+<div class="main-content-area">
+    <table class="info" id="courses" data-filtering="true" data-sorting="true"></table>
+</div>
     </div>
 </div>
 </body>
