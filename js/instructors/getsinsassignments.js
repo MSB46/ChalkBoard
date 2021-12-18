@@ -60,7 +60,7 @@ const displayInsAs = (assignment) => {
          <h2>Assignment title: ${assignment[key].title}</h2>
          <h2>Due date: ${new Date(assignment[key].due_date).toLocaleString([], {year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit'})}</h2>
          <h2><a href="./iassignments-status.html" onclick="setSaID('${key}')">Check students progress</a></h2>
-        <h2><a href="./iview-assignment.html">More info about this assignment</a></h2>
+        <h2><a href="./instructor-saview.html" onclick="setSaID('${key}')">More info about this assignment</a></h2>
       </div>`;
       x++;
     }

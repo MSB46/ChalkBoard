@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Elvis Moyolema
+    Date: 11.15.2021
+    Course: CS 355
+    
+    This is the iview-assignment.html page, this is the instructor view of an individual assignment from a student, they can't not edit any of the student
+    answers they can only look at the progress of the assignment from a student
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Assignment</title>
+    <script async src="../../js/script.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/instructor.css">
+    <script async src="../../js/instructors/instructorsaview.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="./instructor.html" class="active">Instructor Summary</a>
+    <div class="dropdown">
+      <button class="dropbtn">Go too my
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="./icourses.html">Courses</a>
+        
+      </div>
+    </div>
+    <a href="./irequests.html">Course requests</a> 
+    <a href="../../index.html">Log out</a>
+   
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+      <div class="assignment-container">
+        <!-- With javascript it will collect an individual assignment that will be in instructor view -->
+      
+        <h1>Assignment #: <span id="assignment-number"></span></h1>
+        <h2>From: <span id="student-name"></span></h2>
+        <h2>Assignment title: <span id="sa-title"></span></h2>
+        <h2>Due date: <span id="due-date"></span></h2>
+        <h2>Instructions: <span id="instructions"></span></h2>
+      <div class="q-content">
+     
+     
+      </div>
+        
+      <form id='myForm'>
+        <input type="file" id="files" name="files" multiple ><br><br>
+    </form>
+        <button id="submit-assignment" onclick="saveDraft(event)">Save</button> <button onclick="upload()">Upload Files ONLY</button>
+    </div>
+</body>
+</html>

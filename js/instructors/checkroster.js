@@ -51,7 +51,8 @@ const displayCourseRoster = (course) => {
 
     let html1 = "";
     let html2 = "";
-    // document.querySelector('.course-name').textContent = 
+    let courseName = course.course_number
+    document.querySelector('.class-name').textContent = courseName;
     let instructors = course.roster.instructors;
     let students = course.roster.students;
     for(let key in instructors){

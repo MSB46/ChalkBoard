@@ -65,7 +65,8 @@ const displayCourses = (courses) => {
                 { "name": "instr", "title": "Instructor" },
                 { "name": "studentAmt", "title": "Number of Students", "breakpoints": "xs sm", "filterable": "false"},
                 { "name": "meetInfo", "title": "Meeting Info", "breakpoints": "xs sm" },
-                { "name": "semester", "title": "Semester", "breakpoints": "xs sm" }
+                { "name": "semester", "title": "Semester", "breakpoints": "xs sm" },
+                { "name": "enroll", "title": "Enroll", "breakpoints": "xs sm" }
             ],
         });
     });
@@ -81,6 +82,7 @@ const displayCourses = (courses) => {
             <th>Number of students</th>
             <th>Meeting Info</th>
             <th>Semester</th>
+            <th>Enroll</th>
         </tr>
         </thead>
         `;
