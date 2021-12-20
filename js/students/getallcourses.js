@@ -49,7 +49,7 @@ window.onload =() => {
 const displayCourses = (courses) => {
 
     console.log("lol");
-    let class_name = ['moderate', 'danger', 'safe'];
+    let class_name = ['safe', 'moderate', 'danger'];
     let x = 0;
     let userID = localStorage.getItem('userId')
     let html = "";
@@ -88,12 +88,19 @@ const displayCourses = (courses) => {
         `;
 
 
+
     for(let key in courses){
 
         if(courses[key].roster.students[userID]){
             continue;
         }
-        html += `<tr class=${class_name[x++]}>
+
+        let rosterAmt = Object.keys(courses[key].roster.students).length;
+        if(rosterAmt < 20) x = 0;
+        else if(rosterAmt >= 21 && rosterAmt < 50) x = 1;
+        else x = 2;
+
+        html += `<tr class=${class_name[x]}>
         <td>${courses[key].courseId}</td>
         <td>${courses[key].course_number}</td>
         <td>${courses[key].course_name}s</td>
@@ -106,8 +113,8 @@ const displayCourses = (courses) => {
         </td>
     </tr>`
 
-    if(x==3)
-    x=0;
+    // if(x==3)
+    // x=0;
     }
 
     courseTable.innerHTML += html;
@@ -115,9 +122,6 @@ const displayCourses = (courses) => {
 }
 
 function sendRequest (courseID, courseName) {
-
-    
-
     let API_SEND = "https://us-central1-project-93bdb.cloudfunctions.net/api/sendCourseReq";
     let data = {
         courseID: courseID,
