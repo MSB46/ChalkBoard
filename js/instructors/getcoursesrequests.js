@@ -46,7 +46,7 @@ window.onload =() => {
 
 
 
-const addStudent = async (studentID, courseID, name) =>{
+const addStudent = async (ele, studentID, courseID, name) =>{
 
 
     let data = {
@@ -73,6 +73,7 @@ const addStudent = async (studentID, courseID, name) =>{
 
     await fetch(API, requestOptions)
         .then(response => {
+                removeStudent(ele);
                 return response.json()
             }
         )
@@ -88,12 +89,21 @@ const addStudent = async (studentID, courseID, name) =>{
 
 }
 
+const removeStudent = (ele) => {
+
+   ele.parentNode.remove();
+   console.log("Denied request")
+
+
+}
+
 
 
 const displayCoursesRequests = (courses) => {
-
-
     console.log(courses);
+
+    let x = 0;
+
     let html = "";
     for(let key in courses){
         console.log(key);
@@ -101,11 +111,11 @@ const displayCoursesRequests = (courses) => {
         for(let id in course_req){
             if(id === 'course_name')
             continue;
-        html += `<div class="student-request">
+        html += `<div id="req${x}" class="student-request">
         <h2>Name: ${course_req[id]}</h2>
         <h2>Class requested: ${course_req['course_name']}</h2>
         <hr>
-        <a onclick="addStudent('${id}', '${key}', '${course_req[id]}')">Accept</a> <a href="#">Deny</a>
+        <a onclick="addStudent(this, '${id}', '${key}', '${course_req[id]}')">Accept</a> <a onclick="removeStudent(this)">Deny</a>
     </div>`
         }
     }
