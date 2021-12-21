@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--    <link rel="stylesheet" href="../../css/stylesMB.css">-->
     <link rel="stylesheet" href="../../css/register-style.css">
+    <link rel="stylesheet" href="../../css/loading.css">
     <script src="../../js/startsession.js"></script>
 
 </head>
@@ -22,6 +23,13 @@
 <div class="logoDiv">
     <a class="logo outside" href="../../index.html"> <img src="../../img/chalkboardLogo.png" alt="chalkboard logo"> </a>
 </div>
+
+<div id="load-msg" class="loading-container hide">
+    <div class="loading"></div>
+    <div id="loading-text">Logging On
+        <h5>Please wait</h5></div>
+</div>
+
 <section id="outside-error-box" class="error-message outside hide">
     <ul>
         <li class="error-1">Invalid username and/or password</li>
@@ -70,7 +78,7 @@
                 a pleasant experience using ChalkBoard.</p>
         </div>
         <div class="to-login">
-            <a href="./login.html"> Already have an account? Sign in here! </a>
+            <a href="login.html"> Already have an account? Sign in here! </a>
         </div>
     </div>
 </div>
