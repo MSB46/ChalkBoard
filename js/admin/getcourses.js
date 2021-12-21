@@ -88,6 +88,7 @@ function displayCourses(data) {
     }
 
     courseTable.innerHTML += html;
+    document.querySelector(".loadMessage").classList.add("hide");
     console.log(data);
 
 }

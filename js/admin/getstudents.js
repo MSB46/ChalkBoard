@@ -76,6 +76,7 @@ function displayStudents(data) {
 
 
     studentTable.innerHTML += html;
+    document.querySelector(".loadMessage").classList.add("hide");
     console.log(data);
 }
 

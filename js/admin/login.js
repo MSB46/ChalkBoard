@@ -1,11 +1,19 @@
 const API_LOGIN = "https://us-central1-project-93bdb.cloudfunctions.net/api/loginAdmin";
 
-
 const login = (e) => {
     e.preventDefault();
     let email = document.querySelector("#emailUser").value;
     let password = document.querySelector("#passwordUser").value;
     let errorBox = document.querySelector("#error-msg");
+
+    let inputBoxEmail = document.querySelector("#emailUser");
+    let inputBoxPw = document.querySelector("#passwordUser");
+
+    inputBoxEmail.getAttribute("disabled");
+    inputBoxPw.getAttribute("disabled");
+
+    let loading = document.getElementById("load-msg");
+    loading.classList.remove("hide");
 
     let usertype = localStorage.getItem('user');
     let res = null;
@@ -26,6 +34,7 @@ const login = (e) => {
         .then(response => {
                 res = response.status;
                 if (!response.ok) {
+                    loading.classList.add("hide");
                     errorBox.classList.remove("hide");
                     return {error: "Wrong credentials, try again"};
 
@@ -43,4 +52,9 @@ const login = (e) => {
             return window.location.href = "admin-view.html";
         })
         .catch(error => console.log('error', error));
+
+    inputBoxEmail.removeAttribute("disabled");
+    inputBoxPw.removeAttribute("disabled");
+
+
 }
