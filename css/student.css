@@ -1,9 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+body {
+    margin: 0;
+    font-family: Rubik, sans-serif, Arial;
+    background: beige;
+}
+
 /* student.html */
-  .student-summary {
+.student-summary {
     padding: 10px 10px;
-  }
+}
+
 /* scourses.html, sassignments.html */
-  .subject-title, .your-courses {
+.subject-title, .your-courses {
     text-align: center;
     position: sticky;
     top: 0;
@@ -12,10 +20,10 @@
     margin: 10px;
     border-radius: 10px;
     z-index: -1;
-  }
+}
 
-  .scourses-container,
-  .assignments-container {
+.scourses-container,
+.assignments-container {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
@@ -24,18 +32,18 @@
     height: 70vh;
     overflow: auto;
     padding: 10px 10px;
-  }
+}
 
-  .courses,
-  .student-assignments {
+.courses,
+.student-assignments {
     border: 2px solid black;
     border-radius: 10px;
     margin-top: 10px;
     padding: 15px 10px;
-  }
+}
 
-  .courses a,
-  .student-assignments a {
+.courses a,
+.student-assignments a {
     text-decoration: none;
     background-color: orange;
     color: blue;
@@ -43,59 +51,64 @@
     text-align: center;
     padding: 5px;
     border-radius: 10px;
-  }
+}
 
 
-  .your-courses {
+.your-courses {
     text-align: center;
-  }
+}
+
 /* sactual-assignments.html */
-  .indv-assignment-container {
+.indv-assignment-container {
     padding: 10px;
     width: 90%;
-  }
-  .assignment textarea {
+}
+
+.assignment textarea {
     resize: none;
-  }
+}
+
 /* Making student responsive for Nexus 5 */
 @media only screen and (max-width: 361px) {
-  .student-summary {
-    font-size: 15px;
-  }
+    .student-summary {
+        font-size: 15px;
+    }
 
-  .resources-title {
-    text-align: center;
-  }
+    .resources-title {
+        text-align: center;
+    }
 
-  ul li>a {
-    color: blue;
-  }
+    ul li > a {
+        color: blue;
+    }
 
-  .indv-assignment-container {
-    font-size: 12px;
-  }
+    .indv-assignment-container {
+        font-size: 12px;
+    }
 
-  .courses a {
-    border: 2px solid black;
-    border-radius: 10px;
-  }
-  /* sassignments.html */
-  .scourses-container, .assignments-container {
-    height: 68vh !important;
-    overflow: auto;
-  }
-  /* scourses.html */
-  .scourses-container {
-    height: 68vh;
-    overflow: auto;
-  }
+    .courses a {
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    /* sassignments.html */
+    .scourses-container, .assignments-container {
+        height: 68vh !important;
+        overflow: auto;
+    }
+
+    /* scourses.html */
+    .scourses-container {
+        height: 68vh;
+        overflow: auto;
+    }
 
 }
 
 @media only screen and (max-width: 769px) {
-  /* scourses.html, sassignments.html */
-  .scourses-container, .assignments-container {
-    height: 80vh;
-    overflow: auto;
-  }
+    /* scourses.html, sassignments.html */
+    .scourses-container, .assignments-container {
+        height: 80vh;
+        overflow: auto;
+    }
 }

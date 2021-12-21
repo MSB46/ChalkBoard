@@ -93,6 +93,17 @@ body {
   margin-right: 7px;
 }
 
+.load-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.loadMessage{
+  margin: 0 auto
+}
+
 .hide {
   display: none;
 }

@@ -1,220 +1,235 @@
-    .instructor-container{
-        padding: 10px 10px;
-    }
-    
-    .instructor-summary a {
-        text-decoration: none;
-        border: 2px solid black;
-        padding: 2px;
-        border-radius: 10px;
-        color: blue;
-        background-color: orange;
-    }
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+body {
+    margin: 0;
+    font-family: Rubik, sans-serif, Arial;
+    background: beige;
+}
+
+.instructor-container {
+    padding: 10px 10px;
+}
+
+.instructor-summary a {
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 2px;
+    border-radius: 10px;
+    color: blue;
+    background-color: orange;
+}
+
 /* irequests.html, icourses.html,   .iassignments.html */
-    .student-request {
-        border: 2px solid black;
-        margin: 10px;
-        border-radius: 2px;
-        width: 20%;
-    }
-    
-    .requests-title, .subject-title, 
-    .instructor-courses, .spr-title,
-    .roster-class-title {
-        padding: 3px;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        background-color: orange;
-        border: 2px solid black;
-        margin: 5px;
-        border-radius: 2px;
-        z-index: -1;
-    }
-    .student-request a {
-        display: inline-block;
-        border: 2px solid black;
-        text-decoration: none;
-        border-radius: 10px;
-        background-color: orange;
-        color: blue;
-        font-size: 18px;
-        text-align: center;
-        width: 20%;
-        margin: 10px;
-    }
-    .srequests-container,   
-    .course-container, 
-    .student-container {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        flex-wrap: wrap;
-        text-align: center;
-        padding: 10px 10px;
-        height: 70vh;
-        overflow: auto;
-    }
-    
-    /* .student-reason{
-        text-align: center;
-        padding: 10px 10px;
-    }
-    .reason-write1{
-        text-align: left;
-        padding: 10px;
-        word-wrap: break-word;
-        hyphens: auto;
-    } */
+.student-request {
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 2px;
+    width: 20%;
+}
+
+.requests-title, .subject-title,
+.instructor-courses, .spr-title,
+.roster-class-title {
+    padding: 3px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: orange;
+    border: 2px solid black;
+    margin: 5px;
+    border-radius: 2px;
+    z-index: -1;
+}
+
+.student-request a {
+    display: inline-block;
+    border: 2px solid black;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: orange;
+    color: blue;
+    font-size: 18px;
+    text-align: center;
+    width: 20%;
+    margin: 10px;
+}
+
+.srequests-container,
+.course-container,
+.student-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px 10px;
+    height: 70vh;
+    overflow: auto;
+}
+
+/* .student-reason{
+    text-align: center;
+    padding: 10px 10px;
+}
+.reason-write1{
+    text-align: left;
+    padding: 10px;
+    word-wrap: break-word;
+    hyphens: auto;
+} */
 /* icourses.html */
-    .create-new-course, .create-new-assignment{
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        background: orange;
-        color: blue;
-        padding: 5px;
-        border: 2px solid black;
-        border-radius: 10px;
-        font-weight: bold;
-    }    
+.create-new-course, .create-new-assignment {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: orange;
+    color: blue;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+}
 
-    .courses a, .btn{
-        text-decoration: none;
-        margin: 10px;
-        border-radius: 3px;
-        background-color: orange;
-        color: blue;
-        border: 2px solid black;
-        text-align: center;
-        /*font-size: 20px;*/
-        padding: 5px;
-        font-weight: bold;
-    }
-    
-    .courses {
-        border: 2px solid black;
-        margin: 10px;
-        border-radius: 4px;
-        padding: 10px;
-    }
-    /* iassignments.html */
-    .subject-title {
-        text-align: center;
-    }
-    
-    .student-assignments{
-        border: 2px solid black;
-        border-radius: 10px;
-        margin: 10px;
-        padding: 10px 10px;
-    }
-    
-    .student-assignments a{
-        text-decoration: none;
-        background-color: orange;
-        color: blue;
-        border: 2px solid black;
-        text-align: center;
-        padding: 5px;
-        border-radius: 10px;
-    }
-    /* iassignments-status.html  */
-    .spr-container{
-        display: flex;
-        justify-content: center;
-        height: 70vh;
-       
-    }
+.courses a, .btn {
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 3px;
+    background-color: orange;
+    color: blue;
+    border: 2px solid black;
+    text-align: center;
+    /*font-size: 20px;*/
+    padding: 5px;
+    font-weight: bold;
+}
 
-    .table-container {
-        overflow: auto;
-        width: fit-content;
-    }
+.courses {
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 4px;
+    padding: 10px;
+}
 
-    .spr-container th{
-        position: sticky;
-        top: 0;
-        background: yellow;
-        box-shadow: inset 0 2px 0 #000000,
-                    inset 0 -2px 0 #000000;
-    }
+/* iassignments.html */
+.subject-title {
+    text-align: center;
+}
 
-    table a {
-        text-decoration: none;
-        border-radius: 10px;
-        color: blue;
-        background-color: orange;
-        border: 2px solid black;
-        padding: 5px;
-    }
-    
-    table{
-        text-align: center;
-        border-collapse: collapse;
-        border: 2px solid black;
-    }
-    
-    tr:nth-child(even) {
-        background: #CCC
-    }
-    
-    tr:nth-child(odd) {
-        background: #FFF
-    }
-    
-    .class-roster-names {
-        margin: 0px 10px;
-    }
-    
-    td, th {
-        border: 2px solid #dddddd;
-        text-align: center;
-        padding: 20px 10px;
-        border: 2px solid black;
-    }
-    /* class-roster.html*/
-    .roster-container {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-    }
-    
-    .class-roster{
-        height: 70vh;
-        width: fit-content;
-        overflow: auto;
-    }
+.student-assignments {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 10px;
+}
 
-    .roster-container th{
-        position: sticky;
-        top: 0;
-        background: yellow;
-        box-shadow: inset 0 2px 0 #000000,
-                    inset 0 -2px 0 #000000;
-    }
-     /* iview-assignment.html */
-    .assignment-container {
-        padding: 10px 10px;
-    }
-    /* Making instructor pages responsive */
-  
-    @media only screen and (max-width: 361px) {
+.student-assignments a {
+    text-decoration: none;
+    background-color: orange;
+    color: blue;
+    border: 2px solid black;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* iassignments-status.html  */
+.spr-container {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+
+}
+
+.table-container {
+    overflow: auto;
+    width: fit-content;
+}
+
+.spr-container th {
+    position: sticky;
+    top: 0;
+    background: yellow;
+    box-shadow: inset 0 2px 0 #000000,
+    inset 0 -2px 0 #000000;
+}
+
+table a {
+    text-decoration: none;
+    border-radius: 10px;
+    color: blue;
+    background-color: orange;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+tr:nth-child(even) {
+    background: #CCC
+}
+
+tr:nth-child(odd) {
+    background: #FFF
+}
+
+.class-roster-names {
+    margin: 0px 10px;
+}
+
+td, th {
+    border: 2px solid #dddddd;
+    text-align: center;
+    padding: 20px 10px;
+    border: 2px solid black;
+}
+
+/* class-roster.html*/
+.roster-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.class-roster {
+    height: 70vh;
+    width: fit-content;
+    overflow: auto;
+}
+
+.roster-container th {
+    position: sticky;
+    top: 0;
+    background: yellow;
+    box-shadow: inset 0 2px 0 #000000,
+    inset 0 -2px 0 #000000;
+}
+
+/* iview-assignment.html */
+.assignment-container {
+    padding: 10px 10px;
+}
+
+/* Making instructor pages responsive */
+
+@media only screen and (max-width: 361px) {
     /* instructor.html */
-    
     .instructor-container {
         font-size: 14px;
     }
+
     /* irequests.html*/
     .student-request {
         width: 100%;
     }
-    
+
     .student-request h1 {
         font-size: 20px;
         width: 100%;
     }
-    
+
     .student-request h2 {
         font-size: 16px;
     }
@@ -231,11 +246,12 @@
         height: 68vh !important;
         overflow: auto;
     }
+
     /* icourses.html */
     .subject {
         font-size: 5vw;
     }
-    
+
     .course-container {
         height: 68vh !important;
         overflow: auto;
@@ -244,7 +260,7 @@
     .courses h2 {
         font-size: 4vw;
     }
-    
+
     .courses {
         width: 100% !important;
     }
@@ -259,8 +275,8 @@
         display: block;
         font-size: 10px;
     }
+
     /* assignments.html */
-    
     .student-assignments a {
         font-size: 5vw;
     }
@@ -269,60 +285,65 @@
         height: 68vh !important;
         overflow: auto;
     }
+
     /* iassignments-status.html */
-    .spr-container table{
+    .spr-container table {
         font-size: 10px;
     }
-    
+
     .spr-container {
         height: 72vh;
         overflow: auto;
     }
+
     .spr-container a {
         display: block;
     }
-    
-    .spr-container th,  .spr-container td {
+
+    .spr-container th, .spr-container td {
         padding: 10px;
     }
+
     /* class-roster.html */
     .class-roster {
         height: 64vh;
         overflow: auto;
     }
-    
+
     .roster-container th {
         position: sticky;
         top: 0;
         background: yellow;
         box-shadow: inset 0 2px 0 #000000,
-                    inset 0 -2px 0 #000000;
+        inset 0 -2px 0 #000000;
     }
 
     .roster-container {
         height: 65vh !important;
         overflow: hidden;
-        
+
     }
-    
+
     .class-roster {
         height: 65vh !important;
         overflow: auto;
     }
+
     /* iview-assignment.html */
     .assignment-container {
         font-size: 12px;
     }
+
     /* iassignments.status.html */
     .table-container {
         height: 75vh;
         overflow: auto;
     }
 
-    
-    }
 
-    @media only screen and (max-width: 769px) {
+}
+
+@media only screen and (max-width: 769px) {
     /* icourses.html */
     .options-courses {
         display: flex;
@@ -349,36 +370,37 @@
     .options-courses a {
         font-size: 16px;
     }
-    /* class-roster.html */
 
+    /* class-roster.html */
     .roster-container th {
         position: sticky;
         top: 0;
         background: yellow;
         box-shadow: inset 0 2px 0 #000000,
-                    inset 0 -2px 0 #000000;
+        inset 0 -2px 0 #000000;
     }
-    
+
     /* assignments-status.html */
     .spr-container table th {
         position: sticky;
         top: 0;
         background: yellow;
         box-shadow: inset 0 2px 0 #000000,
-                    inset 0 -2px 0 #000000;
+        inset 0 -2px 0 #000000;
     }
-    
+
     .table-container {
         overflow: auto;
         height: 70vh;
     }
+
     /* irequests.html */
-    .srequests-container, .student-container{
+    .srequests-container, .student-container {
         height: 80vh;
         overflow: auto;
-    } 
-    
+    }
+
     .student-request {
         width: 40%;
     }
-    }
+}

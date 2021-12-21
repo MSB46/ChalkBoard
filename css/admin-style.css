@@ -44,7 +44,7 @@ textarea {
   }
 
   .topnav a {
-    font-size: 1.5em;
+    font-size: 1.2rem;
   }
 
   .search-container {
@@ -78,7 +78,7 @@ textarea {
   .section-title {
     font-size: 2em;
     position: relative;
-    margin: 10px 0 20px;
+    margin: 10px 0 30px;
   }
 
   .class-section {
