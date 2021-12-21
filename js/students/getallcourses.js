@@ -122,7 +122,7 @@ const displayCourses = (courses) => {
 
 }
 
-function sendRequest (courseID, courseName) {
+async function sendRequest (courseID, courseName) {
     let API_SEND = "https://us-central1-project-93bdb.cloudfunctions.net/api/sendCourseReq";
     let data = {
         courseID: courseID,
@@ -142,7 +142,7 @@ function sendRequest (courseID, courseName) {
         headers: myHeaders
     };
 
-    fetch(API_SEND, requestOptions)
+    await fetch(API_SEND, requestOptions)
         .then(response => {
 
                 return response.json()
@@ -153,4 +153,6 @@ function sendRequest (courseID, courseName) {
             console.log(res);
         })
         .catch(error => console.log('error', error));
+
+        alert(`Your request for course for course: ${data.courseName} has been sent`)
 }
