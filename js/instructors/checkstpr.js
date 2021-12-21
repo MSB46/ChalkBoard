@@ -70,7 +70,7 @@ const displayInsAs = (course) => {
         else
         html +=`<td id="grade${x}">${assignments[key][searchSaID].grade}</td>`
 
-        html += `<td><a id="${x}" onclick="submitGrade('${course.courseId}', '${key}', '${searchSaID}', event)">Edit Grade</a></td>
+        html += `<td><button id="${x}" type="button" class="btn btn-primary add" data-toggle="modal" data-target="#modalGrade"  onclick="submitGrade('${course.courseId}', '${key}', '${searchSaID}', event)">Edit Grade</button></td>
         </tr>
        `
         x++;
@@ -143,5 +143,8 @@ function setStuID(id, name){
     console.log(id);
     localStorage.setItem('userId', id);
 
+}
+
+function replaceGrade(){
 
 }
