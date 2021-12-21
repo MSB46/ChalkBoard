@@ -15,9 +15,19 @@ const setUser = (user) => {
 
 const login = (e) => {
     e.preventDefault();
+
     let email = document.querySelector("#emailUser").value;
     let password = document.querySelector("#passwordUser").value;
     let errorBox = document.querySelector("#error-msg");
+
+    let inputBoxEmail = document.querySelector("#emailUser");
+    let inputBoxPw = document.querySelector("#passwordUser");
+
+    inputBoxEmail.getAttribute("disabled");
+    inputBoxPw.getAttribute("disabled");
+
+    let loading = document.getElementById("load-msg");
+    loading.classList.remove("hide");
 
     let usertype = localStorage.getItem('user');
     let res = null;
@@ -36,9 +46,11 @@ const login = (e) => {
 
     fetch(API_LOGIN, requestOptions)
         .then(response => {
+
                 res = response.status;
                 if (!response.ok) {
                     errorBox.classList.remove("hide");
+                    loading.classList.add("hide");
                     return {error: "Wrong credentials, try again"};
 
                 }
@@ -56,6 +68,10 @@ const login = (e) => {
             return window.location.href = "instructor.html";
         })
         .catch(error => console.log('error', error));
+
+    inputBoxEmail.removeAttribute("disabled");
+    inputBoxPw.removeAttribute("disabled");
+
 }
 
 const register = (e) => {
@@ -68,6 +84,9 @@ const register = (e) => {
     let confirmp = doc('#confirmPw');
 
     let usertype = localStorage.getItem('user');
+
+    let loading = document.getElementById("load-msg");
+    loading.classList.remove("hide");
 
     let errorBoxOut = document.querySelector("#outside-error-box");
     let errorBoxIn = document.querySelector("#inside-error-box");
@@ -92,6 +111,7 @@ const register = (e) => {
         }).then(user => {
             console.log(user);
         if (!user.token){
+            loading.classList.add("hide");
             errorBoxOut.classList.remove("hide");
             errorBoxIn.classList.remove("hide");
             return console.log({errors: user});
@@ -103,6 +123,7 @@ const register = (e) => {
 
     })
         .catch(error => console.log('error', error));
+
 }
 const doc = (str) => {
     return document.querySelector(str).value;
