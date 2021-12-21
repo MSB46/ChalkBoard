@@ -36,7 +36,7 @@ const getSingleStuAssignment = async () => {
             displayInsAs(courses);
 
             if (courses.error)
-                return console.log(user);
+                return console.log(courses.error);
             
         })
         .catch(error => console.log('error', error));

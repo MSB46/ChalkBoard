@@ -46,16 +46,17 @@ window.onload =() => {
 
 
 
-const addStudent = async (ele, studentID, courseID, name) =>{
+const addStudent = async (ele, studentID, courseID, name, option = 'y') =>{
 
 
     let data = {
         userId: studentID,
         courseId: courseID,
-        name: name
+        name: name,
+        option: option
     }
 
-    
+    // return console.log(option);
     let API = "https://us-central1-project-93bdb.cloudfunctions.net/api/addStudent";
 
     // Must be added when done
@@ -115,7 +116,7 @@ const displayCoursesRequests = (courses) => {
         <h2>Name: ${course_req[id]}</h2>
         <h2>Class requested: ${course_req['course_name']}</h2>
         <hr>
-        <a onclick="addStudent(this, '${id}', '${key}', '${course_req[id]}')">Accept</a> <a onclick="removeStudent(this)">Deny</a>
+        <a onclick="addStudent(this, '${id}', '${key}', '${course_req[id]}')">Accept</a> <a onclick="addStudent(this, '${id}', '${key}', '${course_req[id]}', 'n')">Deny</a>
     </div>`
         }
     }
