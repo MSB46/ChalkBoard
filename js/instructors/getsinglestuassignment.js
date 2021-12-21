@@ -5,10 +5,10 @@
 
 const getSingleStuAssignment = async () => {
 
-    let userID = localStorage.getItem('userId');
+    let userID = localStorage.getItem('stuID');
     let courseID = localStorage.getItem('courseId');
     let saID = localStorage.getItem('saID');
-    let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/getSaI/${userID}&${courseID}&${saID}`;
+    let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/getSingleSaI/${userID}&${courseID}&${saID}`;
 
     //  Must be added when done
 
