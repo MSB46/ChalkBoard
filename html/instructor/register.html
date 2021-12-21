@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--    <link rel="stylesheet" href="../../css/stylesMB.css">-->
     <link rel="stylesheet" href="../../css/register-style.css">
+    <link rel="stylesheet" href="../../css/loading.css">
     <script src="../../js/startsession.js"></script>
 
 </head>
@@ -27,6 +28,13 @@
         <li class="error-0">Something went wrong. Are you sure you filled out everything properly?</li>
     </ul>
 </section>
+
+<div id="load-msg" class="loading-container hide">
+    <div class="loading"></div>
+    <div id="loading-text">Logging On
+        <h5>Please wait</h5></div>
+</div>
+
 <div id="container">
     <div class="user-creds">
         <div class="register-area">
@@ -62,7 +70,7 @@
                 a pleasant experience using ChalkBoard.</p>
         </div>
         <div class="to-login">
-            <a href="./login.html"> Already have an account? Sign in here! </a>
+            <a href="login.html"> Already have an account? Sign in here! </a>
         </div>
     </div>
 
