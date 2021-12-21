@@ -56,7 +56,9 @@ const displayInsAs = (course) => {
     let assignments = course.s_assignments;
     console.log(Object.keys(assignments).length);
     let x = 1;
-    if(Object.keys(assignments).length >= 1)
+    if(Object.keys(assignments).length <= 0){
+        return console.log("No assignments status to show");
+    }
     for(let key in assignments){
         console.log(key);
         html += `
@@ -147,6 +149,6 @@ function setStuID(id, name){
 
     localStorage.setItem('stuName', name);
     console.log(id);
-    localStorage.setItem('userId', id);
+    localStorage.setItem('stuID', id);
 
 }

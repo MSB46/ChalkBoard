@@ -8,7 +8,7 @@ const getSingleStuAssignment = async () => {
     let userID = localStorage.getItem('stuID');
     let courseID = localStorage.getItem('courseId');
     let saID = localStorage.getItem('saID');
-    let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/getSingleSaI/${userID}&${courseID}&${saID}`;
+    let API = `https://us-central1-project-93bdb.cloudfunctions.net/getSingleSaI/${userID}&${courseID}&${saID}`;
 
     //  Must be added when done
 
@@ -18,7 +18,6 @@ const getSingleStuAssignment = async () => {
     myHeaders.append('Authorization', token)
     let requestOptions = {
         method: 'GET',
-        redirect: 'follow',
         headers: myHeaders,
     };
 

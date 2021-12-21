@@ -52,6 +52,8 @@ const removeInstructor = async (e) => {
     e.preventDefault();
     let courseID = localStorage.getItem('courseId');
     let email = document.querySelector('#email-remove-target').value;
+    console.log(email);
+    console.log(courseID);
     let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/removeIns`
 
     // Must be added when done
@@ -84,7 +86,7 @@ const removeInstructor = async (e) => {
             // displayCoursesRequests(courses);
 
             if (courses.error)
-                return console.log(user);
+                return console.log(courses.error);
             
         })
         .catch(error => console.log('error', error));
@@ -130,7 +132,7 @@ const deleteCourse = async (e) => {
             // displayCoursesRequests(courses);
 
             if (courses.error)
-                return console.log(user);
+                return console.log(courses.error);
             
         })
         .catch(error => console.log('error', error));
@@ -140,4 +142,7 @@ const deleteCourse = async (e) => {
 
 const test=()=>{
     console.log(courseID);
+}
+const setCoID = (courseID) => {
+    localStorage.setItem('courseId', courseID);
 }
