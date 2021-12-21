@@ -91,7 +91,8 @@ const displayCourses = (courses) => {
 
     for(let key in courses){
 
-        if(courses[key].roster.students[userID]){
+        if(courses[key].roster.students[userID] || courses[key].course_req[userID]){
+            
             continue;
         }
 

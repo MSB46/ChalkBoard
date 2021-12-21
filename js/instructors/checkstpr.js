@@ -56,7 +56,7 @@ const displayInsAs = (course) => {
     let assignments = course.s_assignments;
     console.log(Object.keys(assignments).length);
     let x = 1;
-    if(Object.keys(assignments).length != 1)
+    if(Object.keys(assignments).length >= 1)
     for(let key in assignments){
         console.log(key);
         html += `
