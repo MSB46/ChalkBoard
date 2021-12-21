@@ -153,6 +153,7 @@ async function sendRequest (courseID, courseName) {
             console.log(res);
         })
         .catch(error => console.log('error', error));
+        alert(`Your request for course for course: ${courseName} has been sent`);
 
-        alert(`Your request for course for course: ${data.courseName} has been sent`)
+
 }
