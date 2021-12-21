@@ -70,7 +70,7 @@ const displayInsAs = (course) => {
         else
         html +=`<td id="grade${x}">${assignments[key][searchSaID].grade}</td>`
 
-        html += `<td><button id="${x}" type="button" class="btn btn-primary add" data-toggle="modal" data-target="#modalGrade"  onclick="submitGrade('${course.courseId}', '${key}', '${searchSaID}', event)">Edit Grade</button></td>
+        html += `<td><button id="${x}" type="button" class="btn btn-primary add" data-toggle="modal" data-target="#modalGrade"  onclick="setIDs('${course.courseId}', '${key}', '${searchSaID}')">Edit Grade</button></td>
         </tr>
        `
         x++;
@@ -80,21 +80,28 @@ const displayInsAs = (course) => {
 
 }
 
-async function submitGrade(courseID, stuID, saID, e){
+function setIDs(courseID, stuID, saID) {
+    localStorage.setItem('courseId', courseID);
+    localStorage.setItem('stuID', stuID);
+    localStorage.setItem('saID', saID);
+}
 
+async function submitGrade(e){
+    e.preventDefault();
 
-console.log(e.target.id);
-    let x = e.target.id;
-    let grade = document.querySelector(`#grade${x}`).innerHTML;
+    let courseID = localStorage.getItem('courseId');
+    let stuID = localStorage.getItem('stuID');
+    let saID = localStorage.getItem('saID');
+    let grade = document.querySelector('#grade-student').value;
 
     console.log(grade);
-    return console.log("Needs to first enter input");
+    if(grade<0 || grade > 100)
+    return console.log("Input number between 0-100");
 let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/saveGrade`;
 
     //  Must be added when done
 
     // Need to get the input of the grade the instructor will submit
-    document.querySelector()
 
     let myHeaders = new Headers();
     let token = "Bearer "+localStorage.getItem('token');
@@ -126,7 +133,6 @@ let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/saveGrade`;
         .then(courses => {
             
             console.log(courses);
-            displayInsAs(courses);
 
             if (courses.error)
                 return console.log(user);
@@ -142,9 +148,5 @@ function setStuID(id, name){
     localStorage.setItem('stuName', name);
     console.log(id);
     localStorage.setItem('userId', id);
-
-}
-
-function replaceGrade(){
 
 }

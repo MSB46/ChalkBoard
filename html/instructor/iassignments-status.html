@@ -68,16 +68,16 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="grade-change-form" onsubmit="replaceGrade()">
+                <form id="grade-change-form" onsubmit="submitGrade(event)">
                     <label for="grade" class="asking-for">Enter a new grade</label> <br>
-                    <input class="cred-input" type="number" name="grade" id="grade"
+                    <input class="cred-input" type="number" name="grade" id="grade-student"
                            min="0" max="100" required> <br>
                     <!-- the email value is stored under the value of 'grade-change-form'  -->
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" id="change-grade-btn" class="btn btn-primary">Save changes</button>
+                <button type="button" id="change-grade-btn" class="btn btn-primary" onclick="submitGrade(event)">Save changes</button>
             </div>
         </div>
     </div>
