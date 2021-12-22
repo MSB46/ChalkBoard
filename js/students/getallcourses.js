@@ -45,6 +45,7 @@ window.onload =() => {
 } 
 
 
+var index = 1;
 
 const displayCourses = (courses) => {
 
@@ -86,9 +87,8 @@ const displayCourses = (courses) => {
         </tr>
         </thead>
         `;
-
-
-
+        html += `
+        <tbody class="coursesEle">`
     for(let key in courses){
 
         if(courses[key].roster.students[userID] || courses[key].course_req[userID]){
@@ -97,11 +97,13 @@ const displayCourses = (courses) => {
         }
 
         let rosterAmt = Object.keys(courses[key].roster.students).length;
+        // Check if roster surpassed the number available to display a different color
         if(rosterAmt < 20) x = 0;
         else if(rosterAmt >= 21 && rosterAmt < 50) x = 1;
         else x = 2;
 
-        html += `<tr class=${class_name[x]}>
+        html += `
+        <tr class="${class_name[x]} courses${index}">
         <td>${courses[key].courseId}</td>
         <td>${courses[key].course_number}</td>
         <td>${courses[key].course_name}s</td>
@@ -110,19 +112,31 @@ const displayCourses = (courses) => {
         <td>${courses[key].meeting}</td>
         <td>${courses[key].semester}</td>
         <td>
-            <button class="enrollBtn" onclick="sendRequest('${courses[key].courseId}','${courses[key].course_number}')" id="${courses[key].courseId}"'>Enroll</button>
+            <button class="enrollBtn" onclick="sendRequest('${courses[key].courseId}','${courses[key].course_number}', 'courses${index}')" id="${courses[key].courseId}"'>Enroll</button>
         </td>
-    </tr>`
+    </tr>
+    `
 
-    // if(x==3)
-    // x=0;
+    if(x==3)
+    x=0;
+    index++;
     }
-
+    html += `</tbody>`
     courseTable.innerHTML += html;
 
 }
 
-async function sendRequest (courseID, courseName) {
+async function sendRequest (courseID, courseName, ind) {
+   
+    index--;
+    console.log(index);
+    let tableRow = document.querySelector(`.${ind}`);
+    console.log(tableRow);
+    tableRow.style.display = 'none';
+    console.log(typeof ind);
+    if(index == 1)
+    document.querySelector(".coursesEle").innerHTML = `<tr class="footable-empty"><td colspan="8">No results</td></tr>`
+    // return console.log(ind);
     let API_SEND = "https://us-central1-project-93bdb.cloudfunctions.net/api/sendCourseReq";
     let data = {
         courseID: courseID,
