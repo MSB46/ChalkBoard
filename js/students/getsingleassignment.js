@@ -74,6 +74,17 @@ function displayAssignment(assignment) {
             html += `<textarea name="${key}" id="answer${x++}" cols="30" rows="4"></textarea> <br> <br>`
         }
     }
+    let sauploads = assignment.uploads;
+    let html2 = "";
+    if(sauploads){
+        html2 += `<ul><h2>My Uploads:</h2>`
+
+    for(let key in sauploads){
+        html2 += `<li><a href="${sauploads[key].link}" download>${sauploads[key].name}</a></li>`
+    }
+    html2 += `</ul>`
+    document.querySelector('.stu-files').innerHTML = html2;
+    }
     document.querySelector('.q-content').innerHTML = html;
     console.log(document.querySelectorAll('.q-content > h2').values);
 }
