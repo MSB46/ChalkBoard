@@ -37,11 +37,12 @@ const addInstructor = async (e) => {
         .then(courses => {
          
             console.log(courses);
-            // displayCoursesRequests(courses);
 
-            if (courses.error)
-                return console.log(user);
-            
+            if (courses.error){
+                alert(courses.error)
+                return console.log(courses.error)
+            }
+                alert(courses.message);
         })
         .catch(error => console.log('error', error));
 
@@ -83,10 +84,12 @@ const removeInstructor = async (e) => {
         .then(courses => {
          
             console.log(courses);
-            // displayCoursesRequests(courses);
 
-            if (courses.error)
-                return console.log(courses.error);
+            if (courses.error){
+                alert(courses.error)
+                return console.log(courses.error)
+            }
+                alert(courses.message);
             
         })
         .catch(error => console.log('error', error));
@@ -129,10 +132,13 @@ const deleteCourse = async (e) => {
         .then(courses => {
          
             console.log(courses);
-            // displayCoursesRequests(courses);
 
-            if (courses.error)
-                return console.log(courses.error);
+            if (courses.error){
+                alert(courses.error)
+                return console.log(courses.error)
+            }
+                alert(courses.success);
+                return window.location.reload();
             
         })
         .catch(error => console.log('error', error));

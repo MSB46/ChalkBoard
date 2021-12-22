@@ -26,10 +26,11 @@ const getRelatedCourses = () => {
         .then(courses => {
 
             console.log(courses);
-            displayCourses(courses);
 
             if (courses.error)
-                return console.log(user);
+                return alert(courses.error);
+            displayCourses(courses);
+
 
         })
         .catch(error => console.log('error', error));
@@ -45,10 +46,7 @@ const displayCourses = (courses) => {
 
     console.log(courses);
     let html = "";
-
-
     for (let key in courses) {
-
         html += `
     <div class="courses">
         <h2><span class="course-name">${courses[key].course_number}</span></h2>
