@@ -73,14 +73,15 @@ const displayInsAs = (assignment) => {
     for(let key in questions){
         html += `<h2 class=${key}>Question: ${questions[key]}</h2>`;
         if(assignment.answers){
-            html += `<textarea name="${key}" id="answer${x}" cols="30" rows="4" disabled>${assignment.answers[key]}</textarea> <br> <br>`;
+            html += `<textarea name="${key}" id="answer${x++}" cols="30" rows="4" disabled>${assignment.answers[key]}</textarea> <br> <br>`;
             continue;
         }
-        html += `<textarea name="${key}" id="answer${x}" cols="30" rows="4" disabled></textarea> <br> <br>`;
+        html += `<textarea name="${key}" id="answer${x++}" cols="30" rows="4" disabled></textarea> <br> <br>`;
         
     }
 
     console.log(assignment.uploads);
+    console.log(assignment);
     if(assignment.uploads){
         html += 
             `<h2>Student uploads:</h2>

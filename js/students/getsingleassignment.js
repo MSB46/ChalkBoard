@@ -139,8 +139,8 @@ const saveDraft = async (e)=>{
             if (response.error)
                 return console.log(response.error);
                 if(data.s)
-                return alert('Your assignment has been submitted!')
-                return alert('Your assignment has been saved!')
+                alert('Your assignment has been submitted!')
+                alert('Your assignment has been saved!')
                
             
         })
@@ -158,6 +158,8 @@ let files= document.getElementById('files').files
 }
 
 async function uploadFiles(){
+
+    console.log("it executes");
 
     let courseID = localStorage.getItem('courseId');
     let assignmentID = localStorage.getItem('saID');
