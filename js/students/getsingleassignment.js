@@ -61,13 +61,18 @@ function displayAssignment(assignment) {
 
 
     let questions = assignment.questions;
+    let answers = assignment.answers;
     console.log(questions);
     let x = 1;
     for(let key in questions){
-        html += `
-        <h2 class=${key}>Question: ${questions[key]}</h2>
-            <textarea name="${key}" id="answer${x++}" cols="30" rows="4"></textarea> <br> <br>
-        `
+        html += `<h2 class=${key}>Question: ${questions[key]}</h2>`
+        console.log();
+        if(answers[key]){
+            html += `<textarea name="${answers[key]}" id="answer${x}" cols="30" rows="4">${answers[key]}</textarea> <br> <br>`
+            continue;
+        } else{
+            html += `<textarea name="${key}" id="answer${x++}" cols="30" rows="4"></textarea> <br> <br>`
+        }
     }
     document.querySelector('.q-content').innerHTML = html;
     console.log(document.querySelectorAll('.q-content > h2').values);
