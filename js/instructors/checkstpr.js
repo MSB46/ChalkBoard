@@ -1,8 +1,3 @@
-
-
-
-
-
 const getStuSaProgress = async () => {
 
     let courseID = localStorage.getItem('courseId');
@@ -72,7 +67,7 @@ const displayInsAs = (course) => {
         else
         html +=`<td id="grade${x}">${assignments[key][searchSaID].grade}</td>`
 
-        html += `<td><button id="${x}" type="button" class="btn btn-primary add" data-toggle="modal" data-target="#modalGrade"  onclick="setIDs('${course.courseId}', '${key}', '${searchSaID}')">Edit Grade</button></td>
+        html += `<td><button id="${x}" type="button" class="btn btn-primary add" data-toggle="modal" data-target="#modalGrade"  onclick="setIDs('${course.courseId}', '${key}', '${searchSaID}', 'grade${x}')">Edit Grade</button></td>
         </tr>
        `
         x++;
@@ -82,10 +77,11 @@ const displayInsAs = (course) => {
 
 }
 
-function setIDs(courseID, stuID, saID) {
+function setIDs(courseID, stuID, saID, grade) {
     localStorage.setItem('courseId', courseID);
     localStorage.setItem('stuID', stuID);
     localStorage.setItem('saID', saID);
+    localStorage.setItem('idGrade', grade);
 }
 
 async function submitGrade(e){
@@ -138,6 +134,8 @@ let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/saveGrade`;
 
             if (courses.error)
                 return console.log(user);
+
+            document.querySelector(`#${localStorage.getItem('idGrade')}`).innerHTML = grade;
             
         })
         .catch(error => console.log('error', error));
