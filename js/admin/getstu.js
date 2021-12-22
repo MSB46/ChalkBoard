@@ -86,6 +86,7 @@ function displayStudent(student) {
 }
 
 async function displayCourses(student) {
+    console.log(student);
     let name = `${student.firstname} ${student.lastname}`;
     let API_C = `https://us-central1-project-93bdb.cloudfunctions.net/api/getCourses/${student.id}&${student.usertype}&${name}`
 
@@ -94,6 +95,8 @@ async function displayCourses(student) {
             console.log("Message for users with no courses");
         return data.json();
     }).then(data => {
+        console.log(data);
+        console.log(data.eror);
         console.log(data);
         if (data.error){
             return alert(`No courses to show for student: ${name}`)

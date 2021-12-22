@@ -91,13 +91,15 @@ function displayCourses(instructor) {
 
     fetch(API_C, requestOptions).then(data => {
         if (!data.ok) {
-            console.log({error: data.error});
-            return alert(`No courses to show for instructor: ${name}`)
+            return data.json();
         }
         return data.json();
     }).then(data => {
+        console.log({error: data.error});
+
+        console.log(data);
         if (data.error)
-            return console.log({error: data.error});
+        return alert(`No courses to show for instructor: ${name}`)
 
         let courseTable = document.querySelector(".course-info");
 
