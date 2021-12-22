@@ -73,7 +73,7 @@ function displayInstructor(instructor) {
 
     console.log(instructor);
     let name = `${instructor.firstname} ${instructor.lastname}`;
-    document.querySelector('.section-title').textContent = name;
+    document.querySelector('.section-title').textContent = "Instructor: " + name;
 
     let html = ` <tr>
     <td>${instructor.id}</td>
@@ -91,7 +91,8 @@ function displayCourses(instructor) {
 
     fetch(API_C, requestOptions).then(data => {
         if (!data.ok) {
-            console.log("Message for users with no courses");
+            console.log({error: data.error});
+            return alert(`No courses to show for instructor: ${name}`)
         }
         return data.json();
     }).then(data => {

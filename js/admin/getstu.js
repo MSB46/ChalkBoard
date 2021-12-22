@@ -13,10 +13,10 @@ var requestOptions = {
 };
 
 
-const getInsCourse = () => {
+const getInsCourse = async  () => {
 
 
-    fetch(API_INS, requestOptions)
+    await fetch(API_INS, requestOptions)
         .then(response => {
             // Change this is temporary
             return response.json();
@@ -31,7 +31,7 @@ const getInsCourse = () => {
             displayCourses(courses);
         })
         .catch(error => {
-            console.log('error', error)
+            console.log(error)
 
         });
     console.log("hi after");
@@ -40,7 +40,8 @@ const getInsCourse = () => {
 }
 
 const setUserId = (id) => {
-    localStorage.setItem('userId', id)
+    localStorage.setItem('userId', id);
+    localStorage.setItem('searchUser', 'instructors');
 }
 
 const setCourse = (id) => {
@@ -72,7 +73,7 @@ function displayStudent(student) {
 
     console.log(student);
     let name = `${student.firstname} ${student.lastname}`;
-    document.querySelector('.section-title').textContent = name;
+    document.querySelector('.section-title').textContent = "Student: " +  name;
 
     let html = ` 
          <tr>
@@ -84,17 +85,20 @@ function displayStudent(student) {
 
 }
 
-function displayCourses(student) {
+async function displayCourses(student) {
     let name = `${student.firstname} ${student.lastname}`;
     let API_C = `https://us-central1-project-93bdb.cloudfunctions.net/api/getCourses/${student.id}&${student.usertype}&${name}`
 
-    fetch(API_C, requestOptions).then(data => {
+    await fetch(API_C, requestOptions).then(data => {
         if (!data.ok)
             console.log("Message for users with no courses");
         return data.json();
     }).then(data => {
-        if (data.error)
-            return console.log({error: data.error});
+        console.log(data);
+        if (data.error){
+            return alert(`No courses to show for student: ${name}`)
+        }
+    
 
         let courseTable = document.querySelector(".course-info");
 
@@ -133,7 +137,7 @@ function displayCourses(student) {
             html += `<tr><td>${data[key].courseId}</td>
     <td><a href="./course-data.html" class="test" onclick="setCourse(${data[key].courseId})">${data[key].course_number}</a></td>
     <td>${data[key].course_name}</td>
-    <td><a href="./student-data.html" onclick="setUserId(${data[key].main_ins.student_id})">${data[key].main_ins.name}</a></td>
+    <td><a href="./student-data.html" onclick="setUserId(${data[key].main_ins.instructor_id})">${data[key].main_ins.name}</a></td>
     <td>${Object.keys(data[key].roster.students).length}</td>
     <td>${data[key].meeting}</td>
     <td>${data[key].semester}</td>

@@ -42,7 +42,8 @@ const addInstructor = async (e) => {
                 alert(courses.error)
                 return console.log(courses.error)
             }
-                alert(courses.message);
+            document.querySelector(".add-ins-btn").click();
+            alert(courses.message);
         })
         .catch(error => console.log('error', error));
 
@@ -89,8 +90,9 @@ const removeInstructor = async (e) => {
                 alert(courses.error)
                 return console.log(courses.error)
             }
-                alert(courses.message);
-            
+
+            document.querySelector(".remove-ins-btn").click();
+            alert(courses.message);
         })
         .catch(error => console.log('error', error));
 
