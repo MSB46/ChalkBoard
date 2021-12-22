@@ -62,7 +62,7 @@ const displayCourseRoster = (course) => {
         </tr>`
    
     }
-    if(Object.keys(students).length != 1)
+    if(Object.keys(students).length > 0)
     for(let key in students){
         html2 += `
         <tr>
