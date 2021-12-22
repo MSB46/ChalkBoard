@@ -138,6 +138,10 @@ const saveDraft = async (e)=>{
 
             if (response.error)
                 return console.log(response.error);
+                if(data.s)
+                return alert('Your assignment has been submitted!')
+                return alert('Your assignment has been saved!')
+               
             
         })
         .catch(error => console.log('error', error));
