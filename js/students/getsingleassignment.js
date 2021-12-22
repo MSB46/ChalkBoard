@@ -67,7 +67,7 @@ function displayAssignment(assignment) {
     for(let key in questions){
         html += `<h2 class=${key}>Question: ${questions[key]}</h2>`
         console.log();
-        if(answers[key]){
+        if(answers){
             html += `<textarea name="${answers[key]}" id="answer${x}" cols="30" rows="4">${answers[key]}</textarea> <br> <br>`
             continue;
         } else{
