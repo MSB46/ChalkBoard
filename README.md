@@ -6,6 +6,17 @@ https://msb46.github.io/chalkboard/
 Elvis: Responsive CSS and HTML of homepage, student homepage, student view of courses, student view of assignments, instructor view of class roster/students/assignments, and instructor view of student enroll requests
 
 Michael: Responsive CSS and HTML of student enroll, instructor/student/admin login, instructor/student register, admin view of classes, courses, instructors, and students
+
+
+## Choice of front-end / client-side technologies
+For the front-end of this project, we have decided to use HTML/CSS, JS, Visual Studio Code, and GitHub, since we both felt comfortable using them, and we facilitated our communication by using the same tools. Along with CSS we used Bootsrap, so it saved us time from designing the HTML piece by piece. VS Code and GitHub definitely helped us to work faster and implement the features required while at the same time keeping track of the progress thanks to some extensions in VS code like Live Server. GitHub allowed us to push our changes remotely and once one of us pushed changes all we had to do was pull the repository to be up to date with the most recent project code.
+
+## Choice of back-end / server-side technologies
+For the back-end of this project, we used Node.js, Express.js, NPM, BusBoy, JS, we also agreed to use Firebase because one of us already had experience using it and it even had a database option. So, all that was left was to work out the logic of the database and read some documentation about Firebase, so we could both be on the same page. 
+<ul><li>Firebase is the core of our project because all of our APIs have been created using 'Cloud Functions,' which is a serverless framework that lets you automatically run backend code in response to events triggered by Firebase features and HTTPS requests.</li> <li>To store all of the data such as courses, student info, instructor info, we used 'Firestore' because it is a NoSQL document database built for automatic scaling, high performance, and ease of application development.</li>
+<li>To implement the hardest feature (upload files) again we relied on Firebase Cloud Storage. It is a service that developers can use to store and download files generated directly by clients. No server-side code is needed</li>
+</ul>
+
 ### Sitemap by Elvis:
 After finishing the sitemap for this project I learned new syntax for adding images, differents headers, links, and lists to a Markdown file.
 It was a bit challenging at first because for some reason it did not want to upload local images, so I then found about [this](https://gist.github.com/vinkla/dca76249ba6b73c5dd66a4e986df4c8d) website that taught me how to upload images to a Markdown file. It is useful to learn about editing a Markdown file because in almost any GitHub project the READ.md file is crucial because it explains your project "in a nutshell." And adding visuals, links, and more features to explain your project helps anyone to understand what it is about. I wil definelty put it in practice on my future personal web projects because it could help me to land interships, or even attract potential clients with a great presentation about my personal web projects. And this sitemap will give a broad idea to my partner and me about what pages we should include in our project, along the wireframes it will be a great guide to follow.
