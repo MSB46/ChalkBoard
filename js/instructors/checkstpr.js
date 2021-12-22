@@ -136,7 +136,8 @@ let API = `https://us-central1-project-93bdb.cloudfunctions.net/api/saveGrade`;
                 return console.log(user);
 
             document.querySelector(`#${localStorage.getItem('idGrade')}`).innerHTML = grade;
-            
+            document.querySelector('.btn-secondary').click();      
+            document.querySelector('#grade-student').value = "";      
         })
         .catch(error => console.log('error', error));
 }
