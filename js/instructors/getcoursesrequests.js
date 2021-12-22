@@ -55,6 +55,12 @@ const addStudent = async (ele, studentID, courseID, name, option = 'y') =>{
         name: name,
         option: option
     }
+    if(option == 'y'){
+        alert(`${name} has been accepted to join ${ele.id}`)
+    }
+    else{
+        alert(`You have rejected ${name} request from joining ${ele.className}`)
+    }
 
     // return console.log(option);
     let API = "https://us-central1-project-93bdb.cloudfunctions.net/api/addStudent";
@@ -116,7 +122,7 @@ const displayCoursesRequests = (courses) => {
         <h2>Name: ${course_req[id]}</h2>
         <h2>Class requested: ${course_req['course_name']}</h2>
         <hr>
-        <a onclick="addStudent(this, '${id}', '${key}', '${course_req[id]}')">Accept</a> <a onclick="addStudent(this, '${id}', '${key}', '${course_req[id]}', 'n')">Deny</a>
+        <a id='${course_req['course_name']}' onclick="addStudent(this, '${id}', '${key}', '${course_req[id]}')">Accept</a> <a class="${course_req['course_name']}" onclick="addStudent(this, '${id}', '${key}', '${course_req[id]}', 'n')">Deny</a>
     </div>`
         }
     }
